@@ -68,7 +68,13 @@ def check_quote_approvals(quote, qli, approval_rules):
     if annual_commit > 500000:
         reasons.append(approval_rules["annual_commit_over_500k"])
 
-    has_non_eligible = (qli["cross_service_discount_eligible"].astype(str).str.strip().str.lower() == "no").any()
+    has_non_eligible = (
+        qli["cross_service_discount_eligible"]
+        .astype(str)
+        .str.strip()
+        .str.lower()
+        == "no"
+    ).any()
     if has_non_eligible:
         reasons.append(approval_rules["contains_non_eligible_skus"])
 
@@ -132,10 +138,81 @@ def get_consumption_summary(data, account_id: str):
     }
 
 
+def get_industry_quote_context(data, selected_quote_id: str, limit: int = 10):
+    quotes = data["quotes"].copy()
+    opportunities = data["opportunities"].copy()
+    accounts = data["accounts"].copy()
+
+    quote_context = quotes.merge(
+        opportunities[["opportunity_id", "account_id"]],
+        on="opportunity_id",
+        how="left"
+    ).merge(
+        accounts[["account_id", "account_name", "industry", "region"]],
+        on="account_id",
+        how="left"
+    )
+
+    selected_row = quote_context[quote_context["quote_id"] == selected_quote_id]
+    if selected_row.empty:
+        return {
+            "selected_industry": None,
+            "industry_benchmark_summary": "No industry context found.",
+            "peer_quotes": []
+        }
+
+    selected_industry = selected_row.iloc[0]["industry"]
+
+    peer_quotes = quote_context[
+        (quote_context["industry"] == selected_industry) &
+        (quote_context["quote_id"] != selected_quote_id)
+    ].copy()
+
+    if peer_quotes.empty:
+        return {
+            "selected_industry": selected_industry,
+            "industry_benchmark_summary": "No peer quotes found in this industry.",
+            "peer_quotes": []
+        }
+
+    peer_quotes = peer_quotes.sort_values(
+        by=["cross_service_discount_percent", "annual_commit"],
+        ascending=[False, False]
+    )
+
+    avg_discount = round(float(peer_quotes["cross_service_discount_percent"].mean()), 2)
+    max_discount = round(float(peer_quotes["cross_service_discount_percent"].max()), 2)
+    avg_annual_commit = round(float(peer_quotes["annual_commit"].mean()), 2)
+    peer_count = int(len(peer_quotes))
+
+    peer_quotes_sample = peer_quotes.head(limit)[[
+        "quote_id",
+        "account_name",
+        "industry",
+        "region",
+        "annual_commit",
+        "term_months",
+        "total_contract_value",
+        "cross_service_discount_percent"
+    ]].to_dict(orient="records")
+
+    return {
+        "selected_industry": selected_industry,
+        "industry_benchmark_summary": {
+            "peer_quote_count": peer_count,
+            "average_discount_percent": avg_discount,
+            "max_discount_percent": max_discount,
+            "average_annual_commit": avg_annual_commit
+        },
+        "peer_quotes": peer_quotes_sample
+    }
+
+
 def build_review_payload(data, quote_id: str):
     quote, opportunity, account, qli = get_quote_package(data, quote_id)
     approval_reasons = check_quote_approvals(quote, qli, data["approval_rules"])
     consumption_summary = get_consumption_summary(data, account["account_id"])
+    industry_context = get_industry_quote_context(data, quote_id)
 
     payload = {
         "quote_id": quote["quote_id"],
@@ -167,6 +244,7 @@ def build_review_payload(data, quote_id: str):
         ]].to_dict(orient="records"),
         "approval_reasons": approval_reasons,
         "consumption_summary": consumption_summary,
+        "industry_quote_context": industry_context,
     }
     return payload
 
@@ -189,12 +267,19 @@ Here is the review payload:
 {json.dumps(payload, indent=2)}
 
 Please answer with:
-1. Whether approval is needed
+1. Whether approval is needed based on the business rules
 2. Why it is needed
-3. Whether there is an expansion signal from consumption
-4. A short recommended next step
+3. Whether the business case justification strengthens the request, if the business case justification is blank, reject the quote
+4. Whether this quote looks aggressive, typical, or favorable compared with peer quotes in the same industry
+5. Whether there is an expansion signal from consumption
+6. A short recommended next step, if the business case justification is blank, inform the user to supply one and resubmit
 
-Keep it simple, warm, and under 200 words.
+Important:
+- Do not override the business rules decision
+- Use the business_case_justification as additional context
+- Use the industry_quote_context to compare this quote against peer quotes
+- If the justification is weak or empty, say so gently
+- Keep it simple, warm, and under 200 words
 """
     )
     return response.output_text, response.usage
@@ -216,6 +301,7 @@ def main():
 
     print("\n=== USAGE ===")
     print(usage)
+
 
 if __name__ == "__main__":
     main()
