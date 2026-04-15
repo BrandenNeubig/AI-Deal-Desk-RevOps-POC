@@ -1,0 +1,8 @@
+{
+  "cross_service_discount_over_20": "Deal Desk approval required",
+  "cross_service_discount_over_25": "Finance approval required",
+  "term_over_24_months": "Finance approval required",
+  "annual_commit_over_500k": "VP approval required",
+  "contains_non_eligible_skus": "Review non-eligible SKUs; cross-service discount does not apply to those lines",
+  "multi_product_quote": "Legal review recommended"
+}

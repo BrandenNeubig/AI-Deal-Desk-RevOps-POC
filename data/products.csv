@@ -1,0 +1,32 @@
+product_id,product_name,product_category,pricing_model,cross_service_discount_eligible
+P001,AWS Enterprise Jobs Light Compute,Jobs,Commit-Based,Yes
+P002,AWS Enterprise Jobs Compute,Jobs,Commit-Based,Yes
+P003,AWS Enterprise Jobs Compute (Photon),Jobs,Commit-Based,Yes
+P004,AWS Enterprise All-Purpose Compute,All-Purpose,Commit-Based,Yes
+P005,AWS Enterprise All-Purpose Compute (Photon),All-Purpose,Commit-Based,Yes
+P006,AWS Enterprise DLT Core Compute,DLT,Commit-Based,Yes
+P007,AWS Enterprise DLT Pro Compute,DLT,Commit-Based,Yes
+P008,AWS Enterprise DLT Advanced Compute,DLT,Commit-Based,Yes
+P009,AWS Enterprise DLT Core Compute (Photon),DLT,Commit-Based,Yes
+P010,AWS Enterprise DLT Pro Compute (Photon),DLT,Commit-Based,Yes
+P011,AWS Enterprise DLT Advanced Compute (Photon),DLT,Commit-Based,Yes
+P012,AWS Enterprise SQL Compute,SQL,Commit-Based,Yes
+P013,AWS Enterprise SQL Pro Compute,SQL,Commit-Based,Yes
+P014,AWS Enterprise Serverless SQL Compute,SQL,Consumption,Yes
+P015,AWS Enterprise Jobs Serverless Compute,Jobs,Consumption,Yes
+P016,AWS Enterprise All-Purpose Serverless Compute,All-Purpose,Consumption,Yes
+P017,AWS Enhanced Security and Compliance,Security,Subscription,Yes
+P018,AWS Enterprise Clean Rooms Collaborator,Clean Rooms,Subscription,Yes
+P019,AWS Enterprise Database Serverless Compute,Database,Consumption,Yes
+P020,AWS Enterprise Serverless Real-Time Inference,Model Inference,Consumption,No
+P021,AWS Enterprise Model Training,Model Training,Consumption,No
+P022,AWS Public Connectivity Data Processed,Networking,Usage-Based,No
+P023,AWS Private Connectivity Data Processed,Networking,Usage-Based,No
+P024,AWS Private Connectivity Endpoint,Networking,Usage-Based,No
+P025,AWS Inter-Region Egress,Networking,Usage-Based,No
+P026,AWS Inter-Availability Zone Egress,Networking,Usage-Based,No
+P027,AWS Internet Egress,Networking,Usage-Based,No
+P028,AWS Databricks Storage,Storage,Capacity-Based,No
+P029,AWS Enterprise OpenAI Model Serving,Model Serving,Consumption,No
+P030,AWS Enterprise Anthropic Model Serving,Model Serving,Consumption,No
+P031,AWS Enterprise Gemini Model Serving,Model Serving,Consumption,No

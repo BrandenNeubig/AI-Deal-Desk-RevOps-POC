@@ -1,0 +1,36 @@
+opportunity_id,account_id,stage,amount,type,close_date
+O0011,A001,Closed Won,2800000,New Business,14-Jul-2026
+O0021,A002,Negotiation,2450000,New Business,03-Oct-2026
+O0022,A002,Qualification,1200000,New Business,20-Nov-2026
+O0031,A003,Prospecting,2650000,New Business,02-Dec-2026
+O0032,A003,Closed Won,1000000,New Business,06-May-2026
+O0041,A004,Qualification,2050000,Renewal,07-Apr-2026
+O0051,A005,Prospecting,2000000,Renewal,21-Feb-2026
+O0061,A006,Negotiation,1150000,Expansion,15-Mar-2026
+O0071,A007,Qualification,2250000,New Business,12-Mar-2026
+O0072,A007,Prospecting,1650000,New Business,07-Sep-2026
+O0081,A008,Negotiation,2800000,Expansion,25-May-2026
+O0082,A008,Closed Won,300000,Expansion,18-Aug-2026
+O0091,A009,Closed Lost,1400000,Expansion,09-Oct-2026
+O0101,A010,Qualification,1650000,Expansion,18-Oct-2026
+O0102,A010,Negotiation,1250000,Expansion,20-Jun-2026
+O0111,A011,Qualification,400000,Expansion,10-Feb-2026
+O0112,A011,Closed Won,400000,Expansion,16-Jun-2026
+O0121,A012,Qualification,1400000,New Business,08-May-2026
+O0131,A013,Negotiation,2600000,New Business,12-Nov-2026
+O0141,A014,Prospecting,1200000,New Business,12-Mar-2026
+O0151,A015,Negotiation,300000,New Business,05-Nov-2026
+O0161,A016,Negotiation,900000,New Business,13-Mar-2026
+O0162,A016,Qualification,2350000,Expansion,03-May-2026
+O0171,A017,Closed Won,1550000,Expansion,09-Nov-2026
+O0172,A017,Negotiation,2700000,Renewal,12-Oct-2026
+O0181,A018,Prospecting,300000,Expansion,26-Dec-2026
+O0182,A018,Qualification,2600000,Renewal,23-Aug-2026
+O0191,A019,Closed Lost,2700000,New Business,19-Jul-2026
+O0192,A019,Closed Lost,2150000,Expansion,10-Jun-2026
+O0201,A020,Prospecting,2400000,Renewal,12-Dec-2026
+O0211,A021,Closed Lost,2850000,New Business,03-Nov-2026
+O0221,A022,Prospecting,2450000,New Business,23-Jun-2026
+O0231,A023,Closed Won,1000000,Expansion,07-Jul-2026
+O0241,A024,Qualification,1950000,New Business,05-Feb-2026
+O0251,A025,Prospecting,1450000,New Business,23-Oct-2026

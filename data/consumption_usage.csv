@@ -1,0 +1,1273 @@
+usage_id,contract_id,product_name,month,consumed_value,cross_service_discount_eligible
+U307033,C001,AWS Enterprise Serverless SQL Compute,01-Jan-2026,100000,Yes
+U865497,C001,AWS Enterprise Serverless SQL Compute,01-Feb-2026,100000,Yes
+U163241,C001,AWS Enterprise Serverless SQL Compute,01-Mar-2026,100000,Yes
+U609635,C001,AWS Enterprise Serverless SQL Compute,01-Apr-2026,100000,Yes
+U539516,C001,AWS Enterprise Serverless SQL Compute,01-May-2026,100000,Yes
+U458418,C001,AWS Enterprise Serverless SQL Compute,01-Jun-2026,100000,Yes
+U827722,C001,AWS Enterprise Serverless SQL Compute,01-Jul-2026,100000,Yes
+U246113,C001,AWS Enterprise Serverless SQL Compute,01-Aug-2026,100000,Yes
+U436972,C001,AWS Enterprise Serverless SQL Compute,01-Sep-2026,100000,Yes
+U482548,C001,AWS Enterprise Serverless SQL Compute,01-Oct-2026,100000,Yes
+U506481,C001,AWS Enterprise Serverless SQL Compute,01-Nov-2026,100000,Yes
+U569224,C001,AWS Enterprise Serverless SQL Compute,01-Dec-2026,100000,Yes
+U934661,C001,AWS Enterprise Database Serverless Compute,01-Jan-2026,100000,Yes
+U929731,C001,AWS Enterprise Database Serverless Compute,01-Feb-2026,100000,Yes
+U492634,C001,AWS Enterprise Database Serverless Compute,01-Mar-2026,100000,Yes
+U555637,C001,AWS Enterprise Database Serverless Compute,01-Apr-2026,100000,Yes
+U722263,C001,AWS Enterprise Database Serverless Compute,01-May-2026,100000,Yes
+U768410,C001,AWS Enterprise Database Serverless Compute,01-Jun-2026,100000,Yes
+U290335,C001,AWS Enterprise Database Serverless Compute,01-Jul-2026,100000,Yes
+U237207,C001,AWS Enterprise Database Serverless Compute,01-Aug-2026,100000,Yes
+U323904,C001,AWS Enterprise Database Serverless Compute,01-Sep-2026,100000,Yes
+U821008,C001,AWS Enterprise Database Serverless Compute,01-Oct-2026,100000,Yes
+U717270,C001,AWS Enterprise Database Serverless Compute,01-Nov-2026,100000,Yes
+U846284,C001,AWS Enterprise Database Serverless Compute,01-Dec-2026,100000,Yes
+U624088,C001,AWS Enhanced Security and Compliance,01-Jan-2026,100000,Yes
+U656601,C001,AWS Enhanced Security and Compliance,01-Feb-2026,100000,Yes
+U367063,C001,AWS Enhanced Security and Compliance,01-Mar-2026,100000,Yes
+U211135,C001,AWS Enhanced Security and Compliance,01-Apr-2026,100000,Yes
+U640432,C001,AWS Enhanced Security and Compliance,01-May-2026,100000,Yes
+U208437,C001,AWS Enhanced Security and Compliance,01-Jun-2026,100000,Yes
+U423319,C001,AWS Enhanced Security and Compliance,01-Jul-2026,100000,Yes
+U367204,C001,AWS Enhanced Security and Compliance,01-Aug-2026,100000,Yes
+U698521,C001,AWS Enhanced Security and Compliance,01-Sep-2026,100000,Yes
+U512234,C001,AWS Enhanced Security and Compliance,01-Oct-2026,100000,Yes
+U703636,C001,AWS Enhanced Security and Compliance,01-Nov-2026,100000,Yes
+U581458,C001,AWS Enhanced Security and Compliance,01-Dec-2026,100000,Yes
+U211733,C001,AWS Enterprise Jobs Compute (Photon),01-Jan-2026,100000,Yes
+U852460,C001,AWS Enterprise Jobs Compute (Photon),01-Feb-2026,100000,Yes
+U958059,C001,AWS Enterprise Jobs Compute (Photon),01-Mar-2026,100000,Yes
+U212881,C001,AWS Enterprise Jobs Compute (Photon),01-Apr-2026,100000,Yes
+U315571,C001,AWS Enterprise Jobs Compute (Photon),01-May-2026,100000,Yes
+U191914,C001,AWS Enterprise Jobs Compute (Photon),01-Jun-2026,100000,Yes
+U670288,C001,AWS Enterprise Jobs Compute (Photon),01-Jul-2026,100000,Yes
+U254503,C001,AWS Enterprise Jobs Compute (Photon),01-Aug-2026,100000,Yes
+U476133,C001,AWS Enterprise Jobs Compute (Photon),01-Sep-2026,100000,Yes
+U377958,C001,AWS Enterprise Jobs Compute (Photon),01-Oct-2026,100000,Yes
+U144994,C001,AWS Enterprise Jobs Compute (Photon),01-Nov-2026,100000,Yes
+U683199,C001,AWS Enterprise Jobs Compute (Photon),01-Dec-2026,100000,Yes
+U759180,C001,AWS Enterprise OpenAI Model Serving,01-Jan-2026,100000,No
+U440945,C001,AWS Enterprise OpenAI Model Serving,01-Feb-2026,100000,No
+U534589,C001,AWS Enterprise OpenAI Model Serving,01-Mar-2026,100000,No
+U112027,C001,AWS Enterprise OpenAI Model Serving,01-Apr-2026,100000,No
+U187416,C001,AWS Enterprise OpenAI Model Serving,01-May-2026,100000,No
+U209480,C001,AWS Enterprise OpenAI Model Serving,01-Jun-2026,100000,No
+U743836,C001,AWS Enterprise OpenAI Model Serving,01-Jul-2026,100000,No
+U144663,C001,AWS Enterprise OpenAI Model Serving,01-Aug-2026,100000,No
+U141246,C001,AWS Enterprise OpenAI Model Serving,01-Sep-2026,100000,No
+U204273,C001,AWS Enterprise OpenAI Model Serving,01-Oct-2026,100000,No
+U175733,C001,AWS Enterprise OpenAI Model Serving,01-Nov-2026,100000,No
+U626161,C001,AWS Enterprise OpenAI Model Serving,01-Dec-2026,100000,No
+U581837,C002,AWS Enterprise DLT Advanced Compute,01-Jan-2026,100000,Yes
+U874058,C002,AWS Enterprise DLT Advanced Compute,01-Feb-2026,100000,Yes
+U558063,C002,AWS Enterprise DLT Advanced Compute,01-Mar-2026,100000,Yes
+U608446,C002,AWS Enterprise DLT Advanced Compute,01-Apr-2026,100000,Yes
+U647847,C002,AWS Enterprise DLT Advanced Compute,01-May-2026,100000,Yes
+U262087,C002,AWS Enterprise DLT Advanced Compute,01-Jun-2026,100000,Yes
+U706685,C002,AWS Enterprise DLT Advanced Compute,01-Jul-2026,100000,Yes
+U217782,C002,AWS Enterprise DLT Advanced Compute,01-Aug-2026,100000,Yes
+U181208,C002,AWS Enterprise DLT Advanced Compute,01-Sep-2026,100000,Yes
+U228900,C002,AWS Enterprise DLT Advanced Compute,01-Oct-2026,100000,Yes
+U962467,C002,AWS Enterprise DLT Advanced Compute,01-Nov-2026,100000,Yes
+U824977,C002,AWS Enterprise DLT Advanced Compute,01-Dec-2026,100000,Yes
+U900326,C002,AWS Enterprise DLT Core Compute (Photon),01-Jan-2026,100000,Yes
+U353551,C002,AWS Enterprise DLT Core Compute (Photon),01-Feb-2026,100000,Yes
+U207322,C002,AWS Enterprise DLT Core Compute (Photon),01-Mar-2026,100000,Yes
+U235624,C002,AWS Enterprise DLT Core Compute (Photon),01-Apr-2026,100000,Yes
+U648388,C002,AWS Enterprise DLT Core Compute (Photon),01-May-2026,100000,Yes
+U787506,C002,AWS Enterprise DLT Core Compute (Photon),01-Jun-2026,100000,Yes
+U553487,C002,AWS Enterprise DLT Core Compute (Photon),01-Jul-2026,100000,Yes
+U167240,C002,AWS Enterprise DLT Core Compute (Photon),01-Aug-2026,100000,Yes
+U788799,C002,AWS Enterprise DLT Core Compute (Photon),01-Sep-2026,100000,Yes
+U682309,C002,AWS Enterprise DLT Core Compute (Photon),01-Oct-2026,100000,Yes
+U949637,C002,AWS Enterprise DLT Core Compute (Photon),01-Nov-2026,100000,Yes
+U123455,C002,AWS Enterprise DLT Core Compute (Photon),01-Dec-2026,100000,Yes
+U706272,C002,AWS Enterprise Clean Rooms Collaborator,01-Jan-2026,100000,Yes
+U396695,C002,AWS Enterprise Clean Rooms Collaborator,01-Feb-2026,100000,Yes
+U669393,C002,AWS Enterprise Clean Rooms Collaborator,01-Mar-2026,100000,Yes
+U858362,C002,AWS Enterprise Clean Rooms Collaborator,01-Apr-2026,100000,Yes
+U130103,C002,AWS Enterprise Clean Rooms Collaborator,01-May-2026,100000,Yes
+U161759,C002,AWS Enterprise Clean Rooms Collaborator,01-Jun-2026,100000,Yes
+U384069,C002,AWS Enterprise Clean Rooms Collaborator,01-Jul-2026,100000,Yes
+U664785,C002,AWS Enterprise Clean Rooms Collaborator,01-Aug-2026,100000,Yes
+U473759,C002,AWS Enterprise Clean Rooms Collaborator,01-Sep-2026,100000,Yes
+U133968,C002,AWS Enterprise Clean Rooms Collaborator,01-Oct-2026,100000,Yes
+U775428,C002,AWS Enterprise Clean Rooms Collaborator,01-Nov-2026,100000,Yes
+U920658,C002,AWS Enterprise Clean Rooms Collaborator,01-Dec-2026,100000,Yes
+U185103,C002,AWS Enterprise SQL Pro Compute,01-Jan-2026,100000,Yes
+U932026,C002,AWS Enterprise SQL Pro Compute,01-Feb-2026,100000,Yes
+U668666,C002,AWS Enterprise SQL Pro Compute,01-Mar-2026,100000,Yes
+U446667,C002,AWS Enterprise SQL Pro Compute,01-Apr-2026,100000,Yes
+U570355,C002,AWS Enterprise SQL Pro Compute,01-May-2026,100000,Yes
+U214946,C002,AWS Enterprise SQL Pro Compute,01-Jun-2026,100000,Yes
+U627685,C002,AWS Enterprise SQL Pro Compute,01-Jul-2026,100000,Yes
+U214669,C002,AWS Enterprise SQL Pro Compute,01-Aug-2026,100000,Yes
+U553977,C002,AWS Enterprise SQL Pro Compute,01-Sep-2026,100000,Yes
+U332622,C002,AWS Enterprise SQL Pro Compute,01-Oct-2026,100000,Yes
+U856387,C002,AWS Enterprise SQL Pro Compute,01-Nov-2026,100000,Yes
+U618418,C002,AWS Enterprise SQL Pro Compute,01-Dec-2026,100000,Yes
+U430099,C002,AWS Enterprise Anthropic Model Serving,01-Jan-2026,100000,No
+U213577,C002,AWS Enterprise Anthropic Model Serving,01-Feb-2026,100000,No
+U748366,C002,AWS Enterprise Anthropic Model Serving,01-Mar-2026,100000,No
+U840584,C002,AWS Enterprise Anthropic Model Serving,01-Apr-2026,100000,No
+U678704,C002,AWS Enterprise Anthropic Model Serving,01-May-2026,100000,No
+U867978,C002,AWS Enterprise Anthropic Model Serving,01-Jun-2026,100000,No
+U971167,C002,AWS Enterprise Anthropic Model Serving,01-Jul-2026,100000,No
+U976644,C002,AWS Enterprise Anthropic Model Serving,01-Aug-2026,100000,No
+U522199,C002,AWS Enterprise Anthropic Model Serving,01-Sep-2026,100000,No
+U136998,C002,AWS Enterprise Anthropic Model Serving,01-Oct-2026,100000,No
+U903041,C002,AWS Enterprise Anthropic Model Serving,01-Nov-2026,100000,No
+U405014,C002,AWS Enterprise Anthropic Model Serving,01-Dec-2026,100000,No
+U625960,C003,AWS Enterprise SQL Compute,01-Jan-2026,100000,Yes
+U163569,C003,AWS Enterprise SQL Compute,01-Feb-2026,100000,Yes
+U236712,C003,AWS Enterprise SQL Compute,01-Mar-2026,100000,Yes
+U225894,C003,AWS Enterprise SQL Compute,01-Apr-2026,100000,Yes
+U882022,C003,AWS Enterprise SQL Compute,01-May-2026,100000,Yes
+U254974,C003,AWS Enterprise SQL Compute,01-Jun-2026,100000,Yes
+U130187,C003,AWS Enterprise SQL Compute,01-Jul-2026,100000,Yes
+U195874,C003,AWS Enterprise SQL Compute,01-Aug-2026,100000,Yes
+U280564,C003,AWS Enterprise SQL Compute,01-Sep-2026,100000,Yes
+U626112,C003,AWS Enterprise SQL Compute,01-Oct-2026,100000,Yes
+U275011,C003,AWS Enterprise SQL Compute,01-Nov-2026,100000,Yes
+U413878,C003,AWS Enterprise SQL Compute,01-Dec-2026,100000,Yes
+U771310,C003,AWS Enterprise DLT Advanced Compute (Photon),01-Jan-2026,100000,Yes
+U172357,C003,AWS Enterprise DLT Advanced Compute (Photon),01-Feb-2026,100000,Yes
+U569275,C003,AWS Enterprise DLT Advanced Compute (Photon),01-Mar-2026,100000,Yes
+U960393,C003,AWS Enterprise DLT Advanced Compute (Photon),01-Apr-2026,100000,Yes
+U604332,C003,AWS Enterprise DLT Advanced Compute (Photon),01-May-2026,100000,Yes
+U893577,C003,AWS Enterprise DLT Advanced Compute (Photon),01-Jun-2026,100000,Yes
+U233803,C003,AWS Enterprise DLT Advanced Compute (Photon),01-Jul-2026,100000,Yes
+U398962,C003,AWS Enterprise DLT Advanced Compute (Photon),01-Aug-2026,100000,Yes
+U164168,C003,AWS Enterprise DLT Advanced Compute (Photon),01-Sep-2026,100000,Yes
+U756442,C003,AWS Enterprise DLT Advanced Compute (Photon),01-Oct-2026,100000,Yes
+U723105,C003,AWS Enterprise DLT Advanced Compute (Photon),01-Nov-2026,100000,Yes
+U718655,C003,AWS Enterprise DLT Advanced Compute (Photon),01-Dec-2026,100000,Yes
+U708608,C003,AWS Inter-Availability Zone Egress,01-Jan-2026,100000,No
+U292474,C003,AWS Inter-Availability Zone Egress,01-Feb-2026,100000,No
+U861363,C003,AWS Inter-Availability Zone Egress,01-Mar-2026,100000,No
+U839071,C003,AWS Inter-Availability Zone Egress,01-Apr-2026,100000,No
+U410834,C003,AWS Inter-Availability Zone Egress,01-May-2026,100000,No
+U549004,C003,AWS Inter-Availability Zone Egress,01-Jun-2026,100000,No
+U444327,C003,AWS Inter-Availability Zone Egress,01-Jul-2026,100000,No
+U341303,C003,AWS Inter-Availability Zone Egress,01-Aug-2026,100000,No
+U433892,C003,AWS Inter-Availability Zone Egress,01-Sep-2026,100000,No
+U830175,C003,AWS Inter-Availability Zone Egress,01-Oct-2026,100000,No
+U131849,C003,AWS Inter-Availability Zone Egress,01-Nov-2026,100000,No
+U396678,C003,AWS Inter-Availability Zone Egress,01-Dec-2026,100000,No
+U993669,C003,AWS Enterprise OpenAI Model Serving,01-Jan-2026,100000,No
+U699113,C003,AWS Enterprise OpenAI Model Serving,01-Feb-2026,100000,No
+U995466,C003,AWS Enterprise OpenAI Model Serving,01-Mar-2026,100000,No
+U597499,C003,AWS Enterprise OpenAI Model Serving,01-Apr-2026,100000,No
+U230477,C003,AWS Enterprise OpenAI Model Serving,01-May-2026,100000,No
+U238158,C003,AWS Enterprise OpenAI Model Serving,01-Jun-2026,100000,No
+U829713,C003,AWS Enterprise OpenAI Model Serving,01-Jul-2026,100000,No
+U697383,C003,AWS Enterprise OpenAI Model Serving,01-Aug-2026,100000,No
+U465338,C003,AWS Enterprise OpenAI Model Serving,01-Sep-2026,100000,No
+U650933,C003,AWS Enterprise OpenAI Model Serving,01-Oct-2026,100000,No
+U938824,C003,AWS Enterprise OpenAI Model Serving,01-Nov-2026,100000,No
+U129346,C003,AWS Enterprise OpenAI Model Serving,01-Dec-2026,100000,No
+U196910,C004,AWS Enterprise All-Purpose Compute,01-Jan-2026,150000,Yes
+U427084,C004,AWS Enterprise All-Purpose Compute,01-Feb-2026,150000,Yes
+U469268,C004,AWS Enterprise All-Purpose Compute,01-Mar-2026,150000,Yes
+U591963,C004,AWS Enterprise All-Purpose Compute,01-Apr-2026,150000,Yes
+U192238,C004,AWS Enterprise All-Purpose Compute,01-May-2026,150000,Yes
+U778575,C004,AWS Enterprise All-Purpose Compute,01-Jun-2026,150000,Yes
+U149178,C004,AWS Enterprise All-Purpose Compute,01-Jul-2026,150000,Yes
+U502396,C004,AWS Enterprise All-Purpose Compute,01-Aug-2026,150000,Yes
+U550661,C004,AWS Enterprise All-Purpose Compute,01-Sep-2026,150000,Yes
+U939586,C004,AWS Enterprise All-Purpose Compute,01-Oct-2026,150000,Yes
+U975274,C004,AWS Enterprise All-Purpose Compute,01-Nov-2026,150000,Yes
+U636998,C004,AWS Enterprise All-Purpose Compute,01-Dec-2026,150000,Yes
+U881008,C004,AWS Enterprise DLT Advanced Compute,01-Jan-2026,100000,Yes
+U576539,C004,AWS Enterprise DLT Advanced Compute,01-Feb-2026,100000,Yes
+U117455,C004,AWS Enterprise DLT Advanced Compute,01-Mar-2026,100000,Yes
+U524213,C004,AWS Enterprise DLT Advanced Compute,01-Apr-2026,100000,Yes
+U602331,C004,AWS Enterprise DLT Advanced Compute,01-May-2026,100000,Yes
+U590918,C004,AWS Enterprise DLT Advanced Compute,01-Jun-2026,100000,Yes
+U223103,C004,AWS Enterprise DLT Advanced Compute,01-Jul-2026,100000,Yes
+U775912,C004,AWS Enterprise DLT Advanced Compute,01-Aug-2026,100000,Yes
+U533382,C004,AWS Enterprise DLT Advanced Compute,01-Sep-2026,100000,Yes
+U844378,C004,AWS Enterprise DLT Advanced Compute,01-Oct-2026,100000,Yes
+U686656,C004,AWS Enterprise DLT Advanced Compute,01-Nov-2026,100000,Yes
+U865834,C004,AWS Enterprise DLT Advanced Compute,01-Dec-2026,100000,Yes
+U942003,C004,AWS Enterprise DLT Advanced Compute (Photon),01-Jan-2026,100000,Yes
+U337924,C004,AWS Enterprise DLT Advanced Compute (Photon),01-Feb-2026,100000,Yes
+U501557,C004,AWS Enterprise DLT Advanced Compute (Photon),01-Mar-2026,100000,Yes
+U747059,C004,AWS Enterprise DLT Advanced Compute (Photon),01-Apr-2026,100000,Yes
+U860527,C004,AWS Enterprise DLT Advanced Compute (Photon),01-May-2026,100000,Yes
+U988971,C004,AWS Enterprise DLT Advanced Compute (Photon),01-Jun-2026,100000,Yes
+U206167,C004,AWS Enterprise DLT Advanced Compute (Photon),01-Jul-2026,100000,Yes
+U399211,C004,AWS Enterprise DLT Advanced Compute (Photon),01-Aug-2026,100000,Yes
+U476655,C004,AWS Enterprise DLT Advanced Compute (Photon),01-Sep-2026,100000,Yes
+U490451,C004,AWS Enterprise DLT Advanced Compute (Photon),01-Oct-2026,100000,Yes
+U585168,C004,AWS Enterprise DLT Advanced Compute (Photon),01-Nov-2026,100000,Yes
+U631150,C004,AWS Enterprise DLT Advanced Compute (Photon),01-Dec-2026,100000,Yes
+U195410,C005,AWS Enterprise Jobs Light Compute,01-Jan-2026,100000,Yes
+U685332,C005,AWS Enterprise Jobs Light Compute,01-Feb-2026,100000,Yes
+U193393,C005,AWS Enterprise Jobs Light Compute,01-Mar-2026,100000,Yes
+U284423,C005,AWS Enterprise Jobs Light Compute,01-Apr-2026,100000,Yes
+U424254,C005,AWS Enterprise Jobs Light Compute,01-May-2026,100000,Yes
+U612094,C005,AWS Enterprise Jobs Light Compute,01-Jun-2026,100000,Yes
+U113136,C005,AWS Enterprise Jobs Light Compute,01-Jul-2026,100000,Yes
+U134520,C005,AWS Enterprise Jobs Light Compute,01-Aug-2026,100000,Yes
+U965114,C005,AWS Enterprise Jobs Light Compute,01-Sep-2026,100000,Yes
+U953590,C005,AWS Enterprise Jobs Light Compute,01-Oct-2026,100000,Yes
+U188905,C005,AWS Enterprise Jobs Light Compute,01-Nov-2026,100000,Yes
+U824683,C005,AWS Enterprise Jobs Light Compute,01-Dec-2026,100000,Yes
+U117140,C005,AWS Enterprise DLT Core Compute,01-Jan-2026,100000,Yes
+U392401,C005,AWS Enterprise DLT Core Compute,01-Feb-2026,100000,Yes
+U934264,C005,AWS Enterprise DLT Core Compute,01-Mar-2026,100000,Yes
+U131832,C005,AWS Enterprise DLT Core Compute,01-Apr-2026,100000,Yes
+U326804,C005,AWS Enterprise DLT Core Compute,01-May-2026,100000,Yes
+U736336,C005,AWS Enterprise DLT Core Compute,01-Jun-2026,100000,Yes
+U577763,C005,AWS Enterprise DLT Core Compute,01-Jul-2026,100000,Yes
+U376752,C005,AWS Enterprise DLT Core Compute,01-Aug-2026,100000,Yes
+U144652,C005,AWS Enterprise DLT Core Compute,01-Sep-2026,100000,Yes
+U619849,C005,AWS Enterprise DLT Core Compute,01-Oct-2026,100000,Yes
+U360804,C005,AWS Enterprise DLT Core Compute,01-Nov-2026,100000,Yes
+U740387,C005,AWS Enterprise DLT Core Compute,01-Dec-2026,100000,Yes
+U957122,C005,AWS Enterprise Database Serverless Compute,01-Jan-2026,100000,Yes
+U839093,C005,AWS Enterprise Database Serverless Compute,01-Feb-2026,100000,Yes
+U134845,C005,AWS Enterprise Database Serverless Compute,01-Mar-2026,100000,Yes
+U572949,C005,AWS Enterprise Database Serverless Compute,01-Apr-2026,100000,Yes
+U223285,C005,AWS Enterprise Database Serverless Compute,01-May-2026,100000,Yes
+U209522,C005,AWS Enterprise Database Serverless Compute,01-Jun-2026,100000,Yes
+U534413,C005,AWS Enterprise Database Serverless Compute,01-Jul-2026,100000,Yes
+U966674,C005,AWS Enterprise Database Serverless Compute,01-Aug-2026,100000,Yes
+U550567,C005,AWS Enterprise Database Serverless Compute,01-Sep-2026,100000,Yes
+U721067,C005,AWS Enterprise Database Serverless Compute,01-Oct-2026,100000,Yes
+U909512,C005,AWS Enterprise Database Serverless Compute,01-Nov-2026,100000,Yes
+U923456,C005,AWS Enterprise Database Serverless Compute,01-Dec-2026,100000,Yes
+U283558,C005,AWS Enterprise Serverless SQL Compute,01-Jan-2026,100000,Yes
+U180881,C005,AWS Enterprise Serverless SQL Compute,01-Feb-2026,100000,Yes
+U221904,C005,AWS Enterprise Serverless SQL Compute,01-Mar-2026,100000,Yes
+U876381,C005,AWS Enterprise Serverless SQL Compute,01-Apr-2026,100000,Yes
+U116071,C005,AWS Enterprise Serverless SQL Compute,01-May-2026,100000,Yes
+U890391,C005,AWS Enterprise Serverless SQL Compute,01-Jun-2026,100000,Yes
+U924321,C005,AWS Enterprise Serverless SQL Compute,01-Jul-2026,100000,Yes
+U817625,C005,AWS Enterprise Serverless SQL Compute,01-Aug-2026,100000,Yes
+U846483,C005,AWS Enterprise Serverless SQL Compute,01-Sep-2026,100000,Yes
+U228253,C005,AWS Enterprise Serverless SQL Compute,01-Oct-2026,100000,Yes
+U146577,C005,AWS Enterprise Serverless SQL Compute,01-Nov-2026,100000,Yes
+U913240,C005,AWS Enterprise Serverless SQL Compute,01-Dec-2026,100000,Yes
+U974808,C005,AWS Enterprise Model Training,01-Jan-2026,100000,No
+U239167,C005,AWS Enterprise Model Training,01-Feb-2026,100000,No
+U387685,C005,AWS Enterprise Model Training,01-Mar-2026,100000,No
+U345909,C005,AWS Enterprise Model Training,01-Apr-2026,100000,No
+U149009,C005,AWS Enterprise Model Training,01-May-2026,100000,No
+U592734,C005,AWS Enterprise Model Training,01-Jun-2026,100000,No
+U447969,C005,AWS Enterprise Model Training,01-Jul-2026,100000,No
+U800957,C005,AWS Enterprise Model Training,01-Aug-2026,100000,No
+U999873,C005,AWS Enterprise Model Training,01-Sep-2026,100000,No
+U675802,C005,AWS Enterprise Model Training,01-Oct-2026,100000,No
+U626203,C005,AWS Enterprise Model Training,01-Nov-2026,100000,No
+U625338,C005,AWS Enterprise Model Training,01-Dec-2026,100000,No
+U214298,C005,AWS Enterprise Anthropic Model Serving,01-Jan-2026,100000,No
+U852227,C005,AWS Enterprise Anthropic Model Serving,01-Feb-2026,100000,No
+U737375,C005,AWS Enterprise Anthropic Model Serving,01-Mar-2026,100000,No
+U886301,C005,AWS Enterprise Anthropic Model Serving,01-Apr-2026,100000,No
+U239428,C005,AWS Enterprise Anthropic Model Serving,01-May-2026,100000,No
+U469141,C005,AWS Enterprise Anthropic Model Serving,01-Jun-2026,100000,No
+U929225,C005,AWS Enterprise Anthropic Model Serving,01-Jul-2026,100000,No
+U736083,C005,AWS Enterprise Anthropic Model Serving,01-Aug-2026,100000,No
+U567856,C005,AWS Enterprise Anthropic Model Serving,01-Sep-2026,100000,No
+U235623,C005,AWS Enterprise Anthropic Model Serving,01-Oct-2026,100000,No
+U371375,C005,AWS Enterprise Anthropic Model Serving,01-Nov-2026,100000,No
+U882056,C005,AWS Enterprise Anthropic Model Serving,01-Dec-2026,100000,No
+U462170,C006,AWS Enterprise SQL Pro Compute,01-Jan-2026,100000,Yes
+U330889,C006,AWS Enterprise SQL Pro Compute,01-Feb-2026,100000,Yes
+U632714,C006,AWS Enterprise SQL Pro Compute,01-Mar-2026,100000,Yes
+U465505,C006,AWS Enterprise SQL Pro Compute,01-Apr-2026,100000,Yes
+U185175,C006,AWS Enterprise SQL Pro Compute,01-May-2026,100000,Yes
+U949381,C006,AWS Enterprise SQL Pro Compute,01-Jun-2026,100000,Yes
+U132662,C006,AWS Enterprise SQL Pro Compute,01-Jul-2026,100000,Yes
+U609362,C006,AWS Enterprise SQL Pro Compute,01-Aug-2026,100000,Yes
+U272013,C006,AWS Enterprise SQL Pro Compute,01-Sep-2026,100000,Yes
+U650313,C006,AWS Enterprise SQL Pro Compute,01-Oct-2026,100000,Yes
+U900144,C006,AWS Enterprise SQL Pro Compute,01-Nov-2026,100000,Yes
+U968057,C006,AWS Enterprise SQL Pro Compute,01-Dec-2026,100000,Yes
+U149166,C006,AWS Enterprise Serverless SQL Compute,01-Jan-2026,100000,Yes
+U249371,C006,AWS Enterprise Serverless SQL Compute,01-Feb-2026,100000,Yes
+U694026,C006,AWS Enterprise Serverless SQL Compute,01-Mar-2026,100000,Yes
+U887640,C006,AWS Enterprise Serverless SQL Compute,01-Apr-2026,100000,Yes
+U979267,C006,AWS Enterprise Serverless SQL Compute,01-May-2026,100000,Yes
+U315610,C006,AWS Enterprise Serverless SQL Compute,01-Jun-2026,100000,Yes
+U981874,C006,AWS Enterprise Serverless SQL Compute,01-Jul-2026,100000,Yes
+U756334,C006,AWS Enterprise Serverless SQL Compute,01-Aug-2026,100000,Yes
+U206777,C006,AWS Enterprise Serverless SQL Compute,01-Sep-2026,100000,Yes
+U710000,C006,AWS Enterprise Serverless SQL Compute,01-Oct-2026,100000,Yes
+U697019,C006,AWS Enterprise Serverless SQL Compute,01-Nov-2026,100000,Yes
+U967501,C006,AWS Enterprise Serverless SQL Compute,01-Dec-2026,100000,Yes
+U819960,C006,AWS Enterprise Clean Rooms Collaborator,01-Jan-2026,100000,Yes
+U637942,C006,AWS Enterprise Clean Rooms Collaborator,01-Feb-2026,100000,Yes
+U542709,C006,AWS Enterprise Clean Rooms Collaborator,01-Mar-2026,100000,Yes
+U107335,C006,AWS Enterprise Clean Rooms Collaborator,01-Apr-2026,100000,Yes
+U936229,C006,AWS Enterprise Clean Rooms Collaborator,01-May-2026,100000,Yes
+U271787,C006,AWS Enterprise Clean Rooms Collaborator,01-Jun-2026,100000,Yes
+U187582,C006,AWS Enterprise Clean Rooms Collaborator,01-Jul-2026,100000,Yes
+U580822,C006,AWS Enterprise Clean Rooms Collaborator,01-Aug-2026,100000,Yes
+U750763,C006,AWS Enterprise Clean Rooms Collaborator,01-Sep-2026,100000,Yes
+U928054,C006,AWS Enterprise Clean Rooms Collaborator,01-Oct-2026,100000,Yes
+U128357,C006,AWS Enterprise Clean Rooms Collaborator,01-Nov-2026,100000,Yes
+U596112,C006,AWS Enterprise Clean Rooms Collaborator,01-Dec-2026,100000,Yes
+U777550,C006,AWS Enterprise Anthropic Model Serving,01-Jan-2026,100000,No
+U643303,C006,AWS Enterprise Anthropic Model Serving,01-Feb-2026,100000,No
+U324282,C006,AWS Enterprise Anthropic Model Serving,01-Mar-2026,100000,No
+U943404,C006,AWS Enterprise Anthropic Model Serving,01-Apr-2026,100000,No
+U999371,C006,AWS Enterprise Anthropic Model Serving,01-May-2026,100000,No
+U974670,C006,AWS Enterprise Anthropic Model Serving,01-Jun-2026,100000,No
+U270625,C006,AWS Enterprise Anthropic Model Serving,01-Jul-2026,100000,No
+U797527,C006,AWS Enterprise Anthropic Model Serving,01-Aug-2026,100000,No
+U500965,C006,AWS Enterprise Anthropic Model Serving,01-Sep-2026,100000,No
+U976935,C006,AWS Enterprise Anthropic Model Serving,01-Oct-2026,100000,No
+U590587,C006,AWS Enterprise Anthropic Model Serving,01-Nov-2026,100000,No
+U338728,C006,AWS Enterprise Anthropic Model Serving,01-Dec-2026,100000,No
+U761454,C006,AWS Enterprise Serverless Real-Time Inference,01-Jan-2026,100000,No
+U518442,C006,AWS Enterprise Serverless Real-Time Inference,01-Feb-2026,100000,No
+U412501,C006,AWS Enterprise Serverless Real-Time Inference,01-Mar-2026,100000,No
+U234266,C006,AWS Enterprise Serverless Real-Time Inference,01-Apr-2026,100000,No
+U470296,C006,AWS Enterprise Serverless Real-Time Inference,01-May-2026,100000,No
+U578765,C006,AWS Enterprise Serverless Real-Time Inference,01-Jun-2026,100000,No
+U461234,C006,AWS Enterprise Serverless Real-Time Inference,01-Jul-2026,100000,No
+U576428,C006,AWS Enterprise Serverless Real-Time Inference,01-Aug-2026,100000,No
+U983058,C006,AWS Enterprise Serverless Real-Time Inference,01-Sep-2026,100000,No
+U668381,C006,AWS Enterprise Serverless Real-Time Inference,01-Oct-2026,100000,No
+U135764,C006,AWS Enterprise Serverless Real-Time Inference,01-Nov-2026,100000,No
+U994226,C006,AWS Enterprise Serverless Real-Time Inference,01-Dec-2026,100000,No
+U980122,C007,AWS Enterprise DLT Pro Compute,01-Jan-2026,100000,Yes
+U616876,C007,AWS Enterprise DLT Pro Compute,01-Feb-2026,100000,Yes
+U116112,C007,AWS Enterprise DLT Pro Compute,01-Mar-2026,100000,Yes
+U325064,C007,AWS Enterprise DLT Pro Compute,01-Apr-2026,100000,Yes
+U222400,C007,AWS Enterprise DLT Pro Compute,01-May-2026,100000,Yes
+U164288,C007,AWS Enterprise DLT Pro Compute,01-Jun-2026,100000,Yes
+U685176,C007,AWS Enterprise DLT Pro Compute,01-Jul-2026,100000,Yes
+U565789,C007,AWS Enterprise DLT Pro Compute,01-Aug-2026,100000,Yes
+U540252,C007,AWS Enterprise DLT Pro Compute,01-Sep-2026,100000,Yes
+U301112,C007,AWS Enterprise DLT Pro Compute,01-Oct-2026,100000,Yes
+U719750,C007,AWS Enterprise DLT Pro Compute,01-Nov-2026,100000,Yes
+U366528,C007,AWS Enterprise DLT Pro Compute,01-Dec-2026,100000,Yes
+U181978,C007,AWS Enterprise Serverless SQL Compute,01-Jan-2026,100000,Yes
+U139028,C007,AWS Enterprise Serverless SQL Compute,01-Feb-2026,100000,Yes
+U644636,C007,AWS Enterprise Serverless SQL Compute,01-Mar-2026,100000,Yes
+U796815,C007,AWS Enterprise Serverless SQL Compute,01-Apr-2026,100000,Yes
+U189020,C007,AWS Enterprise Serverless SQL Compute,01-May-2026,100000,Yes
+U995646,C007,AWS Enterprise Serverless SQL Compute,01-Jun-2026,100000,Yes
+U463268,C007,AWS Enterprise Serverless SQL Compute,01-Jul-2026,100000,Yes
+U255350,C007,AWS Enterprise Serverless SQL Compute,01-Aug-2026,100000,Yes
+U565643,C007,AWS Enterprise Serverless SQL Compute,01-Sep-2026,100000,Yes
+U456133,C007,AWS Enterprise Serverless SQL Compute,01-Oct-2026,100000,Yes
+U984932,C007,AWS Enterprise Serverless SQL Compute,01-Nov-2026,100000,Yes
+U697282,C007,AWS Enterprise Serverless SQL Compute,01-Dec-2026,100000,Yes
+U869680,C007,AWS Enterprise DLT Core Compute,01-Jan-2026,100000,Yes
+U424988,C007,AWS Enterprise DLT Core Compute,01-Feb-2026,150000,Yes
+U351821,C007,AWS Enterprise DLT Core Compute,01-Mar-2026,100000,Yes
+U689055,C007,AWS Enterprise DLT Core Compute,01-Apr-2026,100000,Yes
+U251944,C007,AWS Enterprise DLT Core Compute,01-May-2026,150000,Yes
+U495410,C007,AWS Enterprise DLT Core Compute,01-Jun-2026,150000,Yes
+U637569,C007,AWS Enterprise DLT Core Compute,01-Jul-2026,150000,Yes
+U934988,C007,AWS Enterprise DLT Core Compute,01-Aug-2026,100000,Yes
+U217037,C007,AWS Enterprise DLT Core Compute,01-Sep-2026,100000,Yes
+U796170,C007,AWS Enterprise DLT Core Compute,01-Oct-2026,100000,Yes
+U614999,C007,AWS Enterprise DLT Core Compute,01-Nov-2026,150000,Yes
+U374599,C007,AWS Enterprise DLT Core Compute,01-Dec-2026,150000,Yes
+U119399,C007,AWS Inter-Region Egress,01-Jan-2026,100000,No
+U122821,C007,AWS Inter-Region Egress,01-Feb-2026,100000,No
+U241194,C007,AWS Inter-Region Egress,01-Mar-2026,100000,No
+U795732,C007,AWS Inter-Region Egress,01-Apr-2026,100000,No
+U498981,C007,AWS Inter-Region Egress,01-May-2026,100000,No
+U644339,C007,AWS Inter-Region Egress,01-Jun-2026,100000,No
+U606906,C007,AWS Inter-Region Egress,01-Jul-2026,100000,No
+U816459,C007,AWS Inter-Region Egress,01-Aug-2026,100000,No
+U102744,C007,AWS Inter-Region Egress,01-Sep-2026,100000,No
+U217824,C007,AWS Inter-Region Egress,01-Oct-2026,100000,No
+U202745,C007,AWS Inter-Region Egress,01-Nov-2026,100000,No
+U619426,C007,AWS Inter-Region Egress,01-Dec-2026,100000,No
+U184507,C008,AWS Enterprise All-Purpose Compute,01-Jan-2026,100000,Yes
+U706466,C008,AWS Enterprise All-Purpose Compute,01-Feb-2026,100000,Yes
+U755385,C008,AWS Enterprise All-Purpose Compute,01-Mar-2026,100000,Yes
+U527873,C008,AWS Enterprise All-Purpose Compute,01-Apr-2026,100000,Yes
+U473027,C008,AWS Enterprise All-Purpose Compute,01-May-2026,100000,Yes
+U400641,C008,AWS Enterprise All-Purpose Compute,01-Jun-2026,100000,Yes
+U170850,C008,AWS Enterprise All-Purpose Compute,01-Jul-2026,100000,Yes
+U192377,C008,AWS Enterprise All-Purpose Compute,01-Aug-2026,100000,Yes
+U658036,C008,AWS Enterprise All-Purpose Compute,01-Sep-2026,100000,Yes
+U586910,C008,AWS Enterprise All-Purpose Compute,01-Oct-2026,100000,Yes
+U869964,C008,AWS Enterprise All-Purpose Compute,01-Nov-2026,100000,Yes
+U975756,C008,AWS Enterprise All-Purpose Compute,01-Dec-2026,100000,Yes
+U827555,C008,AWS Enterprise DLT Advanced Compute,01-Jan-2026,100000,Yes
+U253037,C008,AWS Enterprise DLT Advanced Compute,01-Feb-2026,100000,Yes
+U247346,C008,AWS Enterprise DLT Advanced Compute,01-Mar-2026,100000,Yes
+U990796,C008,AWS Enterprise DLT Advanced Compute,01-Apr-2026,100000,Yes
+U336065,C008,AWS Enterprise DLT Advanced Compute,01-May-2026,100000,Yes
+U812624,C008,AWS Enterprise DLT Advanced Compute,01-Jun-2026,100000,Yes
+U918013,C008,AWS Enterprise DLT Advanced Compute,01-Jul-2026,100000,Yes
+U655219,C008,AWS Enterprise DLT Advanced Compute,01-Aug-2026,100000,Yes
+U813921,C008,AWS Enterprise DLT Advanced Compute,01-Sep-2026,100000,Yes
+U786817,C008,AWS Enterprise DLT Advanced Compute,01-Oct-2026,100000,Yes
+U798577,C008,AWS Enterprise DLT Advanced Compute,01-Nov-2026,100000,Yes
+U528199,C008,AWS Enterprise DLT Advanced Compute,01-Dec-2026,100000,Yes
+U133583,C008,AWS Enterprise DLT Pro Compute,01-Jan-2026,100000,Yes
+U121186,C008,AWS Enterprise DLT Pro Compute,01-Feb-2026,100000,Yes
+U576069,C008,AWS Enterprise DLT Pro Compute,01-Mar-2026,100000,Yes
+U940476,C008,AWS Enterprise DLT Pro Compute,01-Apr-2026,100000,Yes
+U196693,C008,AWS Enterprise DLT Pro Compute,01-May-2026,100000,Yes
+U349603,C008,AWS Enterprise DLT Pro Compute,01-Jun-2026,100000,Yes
+U833759,C008,AWS Enterprise DLT Pro Compute,01-Jul-2026,100000,Yes
+U752607,C008,AWS Enterprise DLT Pro Compute,01-Aug-2026,100000,Yes
+U741145,C008,AWS Enterprise DLT Pro Compute,01-Sep-2026,100000,Yes
+U262167,C008,AWS Enterprise DLT Pro Compute,01-Oct-2026,100000,Yes
+U685963,C008,AWS Enterprise DLT Pro Compute,01-Nov-2026,100000,Yes
+U750847,C008,AWS Enterprise DLT Pro Compute,01-Dec-2026,100000,Yes
+U947441,C009,AWS Enterprise DLT Core Compute,01-Jan-2026,100000,Yes
+U930324,C009,AWS Enterprise DLT Core Compute,01-Feb-2026,100000,Yes
+U551782,C009,AWS Enterprise DLT Core Compute,01-Mar-2026,100000,Yes
+U105100,C009,AWS Enterprise DLT Core Compute,01-Apr-2026,100000,Yes
+U208532,C009,AWS Enterprise DLT Core Compute,01-May-2026,100000,Yes
+U921905,C009,AWS Enterprise DLT Core Compute,01-Jun-2026,100000,Yes
+U144937,C009,AWS Enterprise DLT Core Compute,01-Jul-2026,100000,Yes
+U496923,C009,AWS Enterprise DLT Core Compute,01-Aug-2026,100000,Yes
+U473839,C009,AWS Enterprise DLT Core Compute,01-Sep-2026,100000,Yes
+U954786,C009,AWS Enterprise DLT Core Compute,01-Oct-2026,100000,Yes
+U858583,C009,AWS Enterprise DLT Core Compute,01-Nov-2026,100000,Yes
+U900483,C009,AWS Enterprise DLT Core Compute,01-Dec-2026,100000,Yes
+U357251,C009,AWS Enterprise DLT Advanced Compute (Photon),01-Jan-2026,100000,Yes
+U692706,C009,AWS Enterprise DLT Advanced Compute (Photon),01-Feb-2026,100000,Yes
+U571480,C009,AWS Enterprise DLT Advanced Compute (Photon),01-Mar-2026,100000,Yes
+U765839,C009,AWS Enterprise DLT Advanced Compute (Photon),01-Apr-2026,100000,Yes
+U888722,C009,AWS Enterprise DLT Advanced Compute (Photon),01-May-2026,100000,Yes
+U507076,C009,AWS Enterprise DLT Advanced Compute (Photon),01-Jun-2026,100000,Yes
+U913616,C009,AWS Enterprise DLT Advanced Compute (Photon),01-Jul-2026,100000,Yes
+U356705,C009,AWS Enterprise DLT Advanced Compute (Photon),01-Aug-2026,100000,Yes
+U282732,C009,AWS Enterprise DLT Advanced Compute (Photon),01-Sep-2026,100000,Yes
+U622997,C009,AWS Enterprise DLT Advanced Compute (Photon),01-Oct-2026,100000,Yes
+U157465,C009,AWS Enterprise DLT Advanced Compute (Photon),01-Nov-2026,100000,Yes
+U950232,C009,AWS Enterprise DLT Advanced Compute (Photon),01-Dec-2026,100000,Yes
+U971639,C009,AWS Enterprise Clean Rooms Collaborator,01-Jan-2026,100000,Yes
+U454032,C009,AWS Enterprise Clean Rooms Collaborator,01-Feb-2026,100000,Yes
+U385105,C009,AWS Enterprise Clean Rooms Collaborator,01-Mar-2026,100000,Yes
+U326842,C009,AWS Enterprise Clean Rooms Collaborator,01-Apr-2026,100000,Yes
+U898987,C009,AWS Enterprise Clean Rooms Collaborator,01-May-2026,100000,Yes
+U618924,C009,AWS Enterprise Clean Rooms Collaborator,01-Jun-2026,100000,Yes
+U390701,C009,AWS Enterprise Clean Rooms Collaborator,01-Jul-2026,100000,Yes
+U890562,C009,AWS Enterprise Clean Rooms Collaborator,01-Aug-2026,100000,Yes
+U706062,C009,AWS Enterprise Clean Rooms Collaborator,01-Sep-2026,100000,Yes
+U188903,C009,AWS Enterprise Clean Rooms Collaborator,01-Oct-2026,100000,Yes
+U647559,C009,AWS Enterprise Clean Rooms Collaborator,01-Nov-2026,100000,Yes
+U429847,C009,AWS Enterprise Clean Rooms Collaborator,01-Dec-2026,100000,Yes
+U248297,C009,AWS Enterprise All-Purpose Serverless Compute,01-Jan-2026,100000,Yes
+U188225,C009,AWS Enterprise All-Purpose Serverless Compute,01-Feb-2026,100000,Yes
+U372713,C009,AWS Enterprise All-Purpose Serverless Compute,01-Mar-2026,100000,Yes
+U315237,C009,AWS Enterprise All-Purpose Serverless Compute,01-Apr-2026,100000,Yes
+U650005,C009,AWS Enterprise All-Purpose Serverless Compute,01-May-2026,100000,Yes
+U657642,C009,AWS Enterprise All-Purpose Serverless Compute,01-Jun-2026,100000,Yes
+U495841,C009,AWS Enterprise All-Purpose Serverless Compute,01-Jul-2026,100000,Yes
+U806386,C009,AWS Enterprise All-Purpose Serverless Compute,01-Aug-2026,100000,Yes
+U323633,C009,AWS Enterprise All-Purpose Serverless Compute,01-Sep-2026,100000,Yes
+U148660,C009,AWS Enterprise All-Purpose Serverless Compute,01-Oct-2026,100000,Yes
+U767764,C009,AWS Enterprise All-Purpose Serverless Compute,01-Nov-2026,100000,Yes
+U665532,C009,AWS Enterprise All-Purpose Serverless Compute,01-Dec-2026,100000,Yes
+U468552,C009,AWS Enterprise Serverless Real-Time Inference,01-Jan-2026,100000,No
+U292821,C009,AWS Enterprise Serverless Real-Time Inference,01-Feb-2026,100000,No
+U580785,C009,AWS Enterprise Serverless Real-Time Inference,01-Mar-2026,100000,No
+U399541,C009,AWS Enterprise Serverless Real-Time Inference,01-Apr-2026,100000,No
+U967035,C009,AWS Enterprise Serverless Real-Time Inference,01-May-2026,100000,No
+U314369,C009,AWS Enterprise Serverless Real-Time Inference,01-Jun-2026,100000,No
+U995357,C009,AWS Enterprise Serverless Real-Time Inference,01-Jul-2026,100000,No
+U771443,C009,AWS Enterprise Serverless Real-Time Inference,01-Aug-2026,100000,No
+U711728,C009,AWS Enterprise Serverless Real-Time Inference,01-Sep-2026,100000,No
+U879346,C009,AWS Enterprise Serverless Real-Time Inference,01-Oct-2026,100000,No
+U687647,C009,AWS Enterprise Serverless Real-Time Inference,01-Nov-2026,100000,No
+U867389,C009,AWS Enterprise Serverless Real-Time Inference,01-Dec-2026,100000,No
+U822508,C010,AWS Enterprise Jobs Serverless Compute,01-Jan-2026,100000,Yes
+U997294,C010,AWS Enterprise Jobs Serverless Compute,01-Feb-2026,100000,Yes
+U716553,C010,AWS Enterprise Jobs Serverless Compute,01-Mar-2026,100000,Yes
+U430389,C010,AWS Enterprise Jobs Serverless Compute,01-Apr-2026,100000,Yes
+U471777,C010,AWS Enterprise Jobs Serverless Compute,01-May-2026,100000,Yes
+U253507,C010,AWS Enterprise Jobs Serverless Compute,01-Jun-2026,100000,Yes
+U293433,C010,AWS Enterprise Jobs Serverless Compute,01-Jul-2026,100000,Yes
+U753726,C010,AWS Enterprise Jobs Serverless Compute,01-Aug-2026,100000,Yes
+U619531,C010,AWS Enterprise Jobs Serverless Compute,01-Sep-2026,100000,Yes
+U204077,C010,AWS Enterprise Jobs Serverless Compute,01-Oct-2026,100000,Yes
+U547593,C010,AWS Enterprise Jobs Serverless Compute,01-Nov-2026,100000,Yes
+U790795,C010,AWS Enterprise Jobs Serverless Compute,01-Dec-2026,100000,Yes
+U763462,C010,AWS Enterprise DLT Core Compute,01-Jan-2026,100000,Yes
+U233319,C010,AWS Enterprise DLT Core Compute,01-Feb-2026,100000,Yes
+U749394,C010,AWS Enterprise DLT Core Compute,01-Mar-2026,100000,Yes
+U688909,C010,AWS Enterprise DLT Core Compute,01-Apr-2026,100000,Yes
+U274117,C010,AWS Enterprise DLT Core Compute,01-May-2026,100000,Yes
+U889836,C010,AWS Enterprise DLT Core Compute,01-Jun-2026,100000,Yes
+U775935,C010,AWS Enterprise DLT Core Compute,01-Jul-2026,100000,Yes
+U625961,C010,AWS Enterprise DLT Core Compute,01-Aug-2026,100000,Yes
+U203050,C010,AWS Enterprise DLT Core Compute,01-Sep-2026,100000,Yes
+U284508,C010,AWS Enterprise DLT Core Compute,01-Oct-2026,100000,Yes
+U334873,C010,AWS Enterprise DLT Core Compute,01-Nov-2026,100000,Yes
+U561630,C010,AWS Enterprise DLT Core Compute,01-Dec-2026,100000,Yes
+U873429,C010,AWS Enterprise All-Purpose Compute (Photon),01-Jan-2026,100000,Yes
+U976331,C010,AWS Enterprise All-Purpose Compute (Photon),01-Feb-2026,100000,Yes
+U226329,C010,AWS Enterprise All-Purpose Compute (Photon),01-Mar-2026,100000,Yes
+U303720,C010,AWS Enterprise All-Purpose Compute (Photon),01-Apr-2026,100000,Yes
+U416072,C010,AWS Enterprise All-Purpose Compute (Photon),01-May-2026,100000,Yes
+U651682,C010,AWS Enterprise All-Purpose Compute (Photon),01-Jun-2026,100000,Yes
+U571652,C010,AWS Enterprise All-Purpose Compute (Photon),01-Jul-2026,100000,Yes
+U810248,C010,AWS Enterprise All-Purpose Compute (Photon),01-Aug-2026,100000,Yes
+U517224,C010,AWS Enterprise All-Purpose Compute (Photon),01-Sep-2026,100000,Yes
+U272264,C010,AWS Enterprise All-Purpose Compute (Photon),01-Oct-2026,100000,Yes
+U538147,C010,AWS Enterprise All-Purpose Compute (Photon),01-Nov-2026,100000,Yes
+U451619,C010,AWS Enterprise All-Purpose Compute (Photon),01-Dec-2026,100000,Yes
+U846727,C010,AWS Enhanced Security and Compliance,01-Jan-2026,100000,Yes
+U670988,C010,AWS Enhanced Security and Compliance,01-Feb-2026,100000,Yes
+U730336,C010,AWS Enhanced Security and Compliance,01-Mar-2026,100000,Yes
+U270312,C010,AWS Enhanced Security and Compliance,01-Apr-2026,100000,Yes
+U535026,C010,AWS Enhanced Security and Compliance,01-May-2026,100000,Yes
+U749065,C010,AWS Enhanced Security and Compliance,01-Jun-2026,100000,Yes
+U813659,C010,AWS Enhanced Security and Compliance,01-Jul-2026,100000,Yes
+U734879,C010,AWS Enhanced Security and Compliance,01-Aug-2026,100000,Yes
+U976470,C010,AWS Enhanced Security and Compliance,01-Sep-2026,100000,Yes
+U827408,C010,AWS Enhanced Security and Compliance,01-Oct-2026,100000,Yes
+U846748,C010,AWS Enhanced Security and Compliance,01-Nov-2026,100000,Yes
+U170910,C010,AWS Enhanced Security and Compliance,01-Dec-2026,100000,Yes
+U932383,C011,AWS Enterprise All-Purpose Serverless Compute,01-Jan-2026,100000,Yes
+U590549,C011,AWS Enterprise All-Purpose Serverless Compute,01-Feb-2026,100000,Yes
+U223914,C011,AWS Enterprise All-Purpose Serverless Compute,01-Mar-2026,100000,Yes
+U516248,C011,AWS Enterprise All-Purpose Serverless Compute,01-Apr-2026,100000,Yes
+U737085,C011,AWS Enterprise All-Purpose Serverless Compute,01-May-2026,100000,Yes
+U415496,C011,AWS Enterprise All-Purpose Serverless Compute,01-Jun-2026,100000,Yes
+U986063,C011,AWS Enterprise All-Purpose Serverless Compute,01-Jul-2026,100000,Yes
+U267728,C011,AWS Enterprise All-Purpose Serverless Compute,01-Aug-2026,100000,Yes
+U316403,C011,AWS Enterprise All-Purpose Serverless Compute,01-Sep-2026,100000,Yes
+U270265,C011,AWS Enterprise All-Purpose Serverless Compute,01-Oct-2026,100000,Yes
+U252826,C011,AWS Enterprise All-Purpose Serverless Compute,01-Nov-2026,100000,Yes
+U967152,C011,AWS Enterprise All-Purpose Serverless Compute,01-Dec-2026,100000,Yes
+U906025,C011,AWS Enterprise Clean Rooms Collaborator,01-Jan-2026,100000,Yes
+U539482,C011,AWS Enterprise Clean Rooms Collaborator,01-Feb-2026,100000,Yes
+U865393,C011,AWS Enterprise Clean Rooms Collaborator,01-Mar-2026,100000,Yes
+U403484,C011,AWS Enterprise Clean Rooms Collaborator,01-Apr-2026,100000,Yes
+U377035,C011,AWS Enterprise Clean Rooms Collaborator,01-May-2026,100000,Yes
+U414710,C011,AWS Enterprise Clean Rooms Collaborator,01-Jun-2026,100000,Yes
+U494576,C011,AWS Enterprise Clean Rooms Collaborator,01-Jul-2026,100000,Yes
+U240281,C011,AWS Enterprise Clean Rooms Collaborator,01-Aug-2026,100000,Yes
+U495548,C011,AWS Enterprise Clean Rooms Collaborator,01-Sep-2026,100000,Yes
+U361587,C011,AWS Enterprise Clean Rooms Collaborator,01-Oct-2026,100000,Yes
+U518160,C011,AWS Enterprise Clean Rooms Collaborator,01-Nov-2026,100000,Yes
+U933657,C011,AWS Enterprise Clean Rooms Collaborator,01-Dec-2026,100000,Yes
+U671201,C011,AWS Enterprise All-Purpose Compute,01-Jan-2026,100000,Yes
+U817128,C011,AWS Enterprise All-Purpose Compute,01-Feb-2026,100000,Yes
+U255403,C011,AWS Enterprise All-Purpose Compute,01-Mar-2026,100000,Yes
+U994561,C011,AWS Enterprise All-Purpose Compute,01-Apr-2026,100000,Yes
+U574329,C011,AWS Enterprise All-Purpose Compute,01-May-2026,100000,Yes
+U220626,C011,AWS Enterprise All-Purpose Compute,01-Jun-2026,100000,Yes
+U513816,C011,AWS Enterprise All-Purpose Compute,01-Jul-2026,100000,Yes
+U794902,C011,AWS Enterprise All-Purpose Compute,01-Aug-2026,100000,Yes
+U332482,C011,AWS Enterprise All-Purpose Compute,01-Sep-2026,100000,Yes
+U534083,C011,AWS Enterprise All-Purpose Compute,01-Oct-2026,100000,Yes
+U595015,C011,AWS Enterprise All-Purpose Compute,01-Nov-2026,100000,Yes
+U517246,C011,AWS Enterprise All-Purpose Compute,01-Dec-2026,100000,Yes
+U629560,C012,AWS Enterprise DLT Core Compute (Photon),01-Jan-2026,100000,Yes
+U990973,C012,AWS Enterprise DLT Core Compute (Photon),01-Feb-2026,100000,Yes
+U497369,C012,AWS Enterprise DLT Core Compute (Photon),01-Mar-2026,100000,Yes
+U693644,C012,AWS Enterprise DLT Core Compute (Photon),01-Apr-2026,100000,Yes
+U220784,C012,AWS Enterprise DLT Core Compute (Photon),01-May-2026,100000,Yes
+U470506,C012,AWS Enterprise DLT Core Compute (Photon),01-Jun-2026,100000,Yes
+U886502,C012,AWS Enterprise DLT Core Compute (Photon),01-Jul-2026,100000,Yes
+U679282,C012,AWS Enterprise DLT Core Compute (Photon),01-Aug-2026,100000,Yes
+U218059,C012,AWS Enterprise DLT Core Compute (Photon),01-Sep-2026,100000,Yes
+U228862,C012,AWS Enterprise DLT Core Compute (Photon),01-Oct-2026,100000,Yes
+U690800,C012,AWS Enterprise DLT Core Compute (Photon),01-Nov-2026,100000,Yes
+U950364,C012,AWS Enterprise DLT Core Compute (Photon),01-Dec-2026,100000,Yes
+U606270,C012,AWS Enterprise Clean Rooms Collaborator,01-Jan-2026,100000,Yes
+U999105,C012,AWS Enterprise Clean Rooms Collaborator,01-Feb-2026,100000,Yes
+U617059,C012,AWS Enterprise Clean Rooms Collaborator,01-Mar-2026,100000,Yes
+U655505,C012,AWS Enterprise Clean Rooms Collaborator,01-Apr-2026,100000,Yes
+U203181,C012,AWS Enterprise Clean Rooms Collaborator,01-May-2026,100000,Yes
+U799020,C012,AWS Enterprise Clean Rooms Collaborator,01-Jun-2026,150000,Yes
+U301531,C012,AWS Enterprise Clean Rooms Collaborator,01-Jul-2026,150000,Yes
+U416033,C012,AWS Enterprise Clean Rooms Collaborator,01-Aug-2026,150000,Yes
+U288677,C012,AWS Enterprise Clean Rooms Collaborator,01-Sep-2026,150000,Yes
+U887447,C012,AWS Enterprise Clean Rooms Collaborator,01-Oct-2026,200000,Yes
+U192116,C012,AWS Enterprise Clean Rooms Collaborator,01-Nov-2026,200000,Yes
+U958957,C012,AWS Enterprise Clean Rooms Collaborator,01-Dec-2026,200000,Yes
+U568774,C012,AWS Enterprise Model Training,01-Jan-2026,100000,No
+U988477,C012,AWS Enterprise Model Training,01-Feb-2026,100000,No
+U645306,C012,AWS Enterprise Model Training,01-Mar-2026,100000,No
+U228932,C012,AWS Enterprise Model Training,01-Apr-2026,100000,No
+U130961,C012,AWS Enterprise Model Training,01-May-2026,100000,No
+U670938,C012,AWS Enterprise Model Training,01-Jun-2026,100000,No
+U445889,C012,AWS Enterprise Model Training,01-Jul-2026,100000,No
+U392492,C012,AWS Enterprise Model Training,01-Aug-2026,100000,No
+U430261,C012,AWS Enterprise Model Training,01-Sep-2026,100000,No
+U555940,C012,AWS Enterprise Model Training,01-Oct-2026,100000,No
+U272550,C012,AWS Enterprise Model Training,01-Nov-2026,100000,No
+U720376,C012,AWS Enterprise Model Training,01-Dec-2026,100000,No
+U959307,C013,AWS Enterprise DLT Core Compute,01-Jan-2026,100000,Yes
+U102359,C013,AWS Enterprise DLT Core Compute,01-Feb-2026,100000,Yes
+U939293,C013,AWS Enterprise DLT Core Compute,01-Mar-2026,100000,Yes
+U571162,C013,AWS Enterprise DLT Core Compute,01-Apr-2026,100000,Yes
+U135319,C013,AWS Enterprise DLT Core Compute,01-May-2026,100000,Yes
+U903679,C013,AWS Enterprise DLT Core Compute,01-Jun-2026,100000,Yes
+U157059,C013,AWS Enterprise DLT Core Compute,01-Jul-2026,100000,Yes
+U980110,C013,AWS Enterprise DLT Core Compute,01-Aug-2026,100000,Yes
+U114886,C013,AWS Enterprise DLT Core Compute,01-Sep-2026,100000,Yes
+U315983,C013,AWS Enterprise DLT Core Compute,01-Oct-2026,100000,Yes
+U857624,C013,AWS Enterprise DLT Core Compute,01-Nov-2026,100000,Yes
+U721349,C013,AWS Enterprise DLT Core Compute,01-Dec-2026,100000,Yes
+U177636,C013,AWS Enterprise DLT Pro Compute,01-Jan-2026,100000,Yes
+U403007,C013,AWS Enterprise DLT Pro Compute,01-Feb-2026,100000,Yes
+U234373,C013,AWS Enterprise DLT Pro Compute,01-Mar-2026,100000,Yes
+U830255,C013,AWS Enterprise DLT Pro Compute,01-Apr-2026,100000,Yes
+U573320,C013,AWS Enterprise DLT Pro Compute,01-May-2026,100000,Yes
+U842592,C013,AWS Enterprise DLT Pro Compute,01-Jun-2026,100000,Yes
+U825507,C013,AWS Enterprise DLT Pro Compute,01-Jul-2026,100000,Yes
+U983430,C013,AWS Enterprise DLT Pro Compute,01-Aug-2026,100000,Yes
+U171655,C013,AWS Enterprise DLT Pro Compute,01-Sep-2026,100000,Yes
+U293200,C013,AWS Enterprise DLT Pro Compute,01-Oct-2026,100000,Yes
+U997496,C013,AWS Enterprise DLT Pro Compute,01-Nov-2026,100000,Yes
+U519324,C013,AWS Enterprise DLT Pro Compute,01-Dec-2026,100000,Yes
+U630713,C013,AWS Enterprise Jobs Serverless Compute,01-Jan-2026,100000,Yes
+U690412,C013,AWS Enterprise Jobs Serverless Compute,01-Feb-2026,100000,Yes
+U356261,C013,AWS Enterprise Jobs Serverless Compute,01-Mar-2026,100000,Yes
+U690087,C013,AWS Enterprise Jobs Serverless Compute,01-Apr-2026,100000,Yes
+U704834,C013,AWS Enterprise Jobs Serverless Compute,01-May-2026,100000,Yes
+U573425,C013,AWS Enterprise Jobs Serverless Compute,01-Jun-2026,100000,Yes
+U955457,C013,AWS Enterprise Jobs Serverless Compute,01-Jul-2026,100000,Yes
+U316851,C013,AWS Enterprise Jobs Serverless Compute,01-Aug-2026,100000,Yes
+U250173,C013,AWS Enterprise Jobs Serverless Compute,01-Sep-2026,100000,Yes
+U911225,C013,AWS Enterprise Jobs Serverless Compute,01-Oct-2026,100000,Yes
+U381243,C013,AWS Enterprise Jobs Serverless Compute,01-Nov-2026,100000,Yes
+U749378,C013,AWS Enterprise Jobs Serverless Compute,01-Dec-2026,100000,Yes
+U763025,C014,AWS Enterprise DLT Core Compute,01-Jan-2026,100000,Yes
+U100107,C014,AWS Enterprise DLT Core Compute,01-Feb-2026,100000,Yes
+U224101,C014,AWS Enterprise DLT Core Compute,01-Mar-2026,100000,Yes
+U782744,C014,AWS Enterprise DLT Core Compute,01-Apr-2026,100000,Yes
+U236216,C014,AWS Enterprise DLT Core Compute,01-May-2026,100000,Yes
+U858024,C014,AWS Enterprise DLT Core Compute,01-Jun-2026,100000,Yes
+U902067,C014,AWS Enterprise DLT Core Compute,01-Jul-2026,100000,Yes
+U300590,C014,AWS Enterprise DLT Core Compute,01-Aug-2026,100000,Yes
+U790186,C014,AWS Enterprise DLT Core Compute,01-Sep-2026,100000,Yes
+U799643,C014,AWS Enterprise DLT Core Compute,01-Oct-2026,100000,Yes
+U467834,C014,AWS Enterprise DLT Core Compute,01-Nov-2026,100000,Yes
+U260633,C014,AWS Enterprise DLT Core Compute,01-Dec-2026,100000,Yes
+U795141,C014,AWS Enterprise DLT Advanced Compute (Photon),01-Jan-2026,100000,Yes
+U300391,C014,AWS Enterprise DLT Advanced Compute (Photon),01-Feb-2026,100000,Yes
+U540908,C014,AWS Enterprise DLT Advanced Compute (Photon),01-Mar-2026,100000,Yes
+U204616,C014,AWS Enterprise DLT Advanced Compute (Photon),01-Apr-2026,100000,Yes
+U722323,C014,AWS Enterprise DLT Advanced Compute (Photon),01-May-2026,100000,Yes
+U675097,C014,AWS Enterprise DLT Advanced Compute (Photon),01-Jun-2026,100000,Yes
+U745714,C014,AWS Enterprise DLT Advanced Compute (Photon),01-Jul-2026,100000,Yes
+U990328,C014,AWS Enterprise DLT Advanced Compute (Photon),01-Aug-2026,100000,Yes
+U516724,C014,AWS Enterprise DLT Advanced Compute (Photon),01-Sep-2026,100000,Yes
+U952446,C014,AWS Enterprise DLT Advanced Compute (Photon),01-Oct-2026,100000,Yes
+U971252,C014,AWS Enterprise DLT Advanced Compute (Photon),01-Nov-2026,100000,Yes
+U206520,C014,AWS Enterprise DLT Advanced Compute (Photon),01-Dec-2026,100000,Yes
+U697479,C015,AWS Enterprise Clean Rooms Collaborator,01-Jan-2026,100000,Yes
+U120193,C015,AWS Enterprise Clean Rooms Collaborator,01-Feb-2026,100000,Yes
+U347113,C015,AWS Enterprise Clean Rooms Collaborator,01-Mar-2026,100000,Yes
+U966997,C015,AWS Enterprise Clean Rooms Collaborator,01-Apr-2026,100000,Yes
+U834590,C015,AWS Enterprise Clean Rooms Collaborator,01-May-2026,100000,Yes
+U579878,C015,AWS Enterprise Clean Rooms Collaborator,01-Jun-2026,100000,Yes
+U912729,C015,AWS Enterprise Clean Rooms Collaborator,01-Jul-2026,100000,Yes
+U878420,C015,AWS Enterprise Clean Rooms Collaborator,01-Aug-2026,100000,Yes
+U702155,C015,AWS Enterprise Clean Rooms Collaborator,01-Sep-2026,100000,Yes
+U706675,C015,AWS Enterprise Clean Rooms Collaborator,01-Oct-2026,100000,Yes
+U272031,C015,AWS Enterprise Clean Rooms Collaborator,01-Nov-2026,100000,Yes
+U301202,C015,AWS Enterprise Clean Rooms Collaborator,01-Dec-2026,100000,Yes
+U444285,C015,AWS Enterprise Serverless SQL Compute,01-Jan-2026,100000,Yes
+U802251,C015,AWS Enterprise Serverless SQL Compute,01-Feb-2026,100000,Yes
+U554749,C015,AWS Enterprise Serverless SQL Compute,01-Mar-2026,100000,Yes
+U287205,C015,AWS Enterprise Serverless SQL Compute,01-Apr-2026,100000,Yes
+U477313,C015,AWS Enterprise Serverless SQL Compute,01-May-2026,100000,Yes
+U321780,C015,AWS Enterprise Serverless SQL Compute,01-Jun-2026,100000,Yes
+U647917,C015,AWS Enterprise Serverless SQL Compute,01-Jul-2026,100000,Yes
+U111182,C015,AWS Enterprise Serverless SQL Compute,01-Aug-2026,100000,Yes
+U937688,C015,AWS Enterprise Serverless SQL Compute,01-Sep-2026,100000,Yes
+U750306,C015,AWS Enterprise Serverless SQL Compute,01-Oct-2026,100000,Yes
+U111263,C015,AWS Enterprise Serverless SQL Compute,01-Nov-2026,100000,Yes
+U631877,C015,AWS Enterprise Serverless SQL Compute,01-Dec-2026,100000,Yes
+U898836,C015,AWS Enterprise DLT Core Compute,01-Jan-2026,100000,Yes
+U535318,C015,AWS Enterprise DLT Core Compute,01-Feb-2026,100000,Yes
+U448797,C015,AWS Enterprise DLT Core Compute,01-Mar-2026,100000,Yes
+U505366,C015,AWS Enterprise DLT Core Compute,01-Apr-2026,100000,Yes
+U344133,C015,AWS Enterprise DLT Core Compute,01-May-2026,100000,Yes
+U497866,C015,AWS Enterprise DLT Core Compute,01-Jun-2026,100000,Yes
+U718243,C015,AWS Enterprise DLT Core Compute,01-Jul-2026,100000,Yes
+U451822,C015,AWS Enterprise DLT Core Compute,01-Aug-2026,100000,Yes
+U318299,C015,AWS Enterprise DLT Core Compute,01-Sep-2026,100000,Yes
+U285882,C015,AWS Enterprise DLT Core Compute,01-Oct-2026,100000,Yes
+U601516,C015,AWS Enterprise DLT Core Compute,01-Nov-2026,100000,Yes
+U967102,C015,AWS Enterprise DLT Core Compute,01-Dec-2026,100000,Yes
+U699620,C015,AWS Databricks Storage,01-Jan-2026,100000,No
+U926676,C015,AWS Databricks Storage,01-Feb-2026,100000,No
+U318271,C015,AWS Databricks Storage,01-Mar-2026,100000,No
+U232225,C015,AWS Databricks Storage,01-Apr-2026,100000,No
+U411510,C015,AWS Databricks Storage,01-May-2026,100000,No
+U470416,C015,AWS Databricks Storage,01-Jun-2026,100000,No
+U808794,C015,AWS Databricks Storage,01-Jul-2026,100000,No
+U786744,C015,AWS Databricks Storage,01-Aug-2026,100000,No
+U522732,C015,AWS Databricks Storage,01-Sep-2026,100000,No
+U792623,C015,AWS Databricks Storage,01-Oct-2026,100000,No
+U176894,C015,AWS Databricks Storage,01-Nov-2026,100000,No
+U205448,C015,AWS Databricks Storage,01-Dec-2026,100000,No
+U716229,C015,AWS Inter-Availability Zone Egress,01-Jan-2026,150000,No
+U589549,C015,AWS Inter-Availability Zone Egress,01-Feb-2026,150000,No
+U382645,C015,AWS Inter-Availability Zone Egress,01-Mar-2026,150000,No
+U630409,C015,AWS Inter-Availability Zone Egress,01-Apr-2026,150000,No
+U694246,C015,AWS Inter-Availability Zone Egress,01-May-2026,150000,No
+U728691,C015,AWS Inter-Availability Zone Egress,01-Jun-2026,150000,No
+U171319,C015,AWS Inter-Availability Zone Egress,01-Jul-2026,100000,No
+U736143,C015,AWS Inter-Availability Zone Egress,01-Aug-2026,150000,No
+U204604,C015,AWS Inter-Availability Zone Egress,01-Sep-2026,100000,No
+U660606,C015,AWS Inter-Availability Zone Egress,01-Oct-2026,100000,No
+U712878,C015,AWS Inter-Availability Zone Egress,01-Nov-2026,150000,No
+U643355,C015,AWS Inter-Availability Zone Egress,01-Dec-2026,150000,No
+U263058,C016,AWS Enterprise Jobs Serverless Compute,01-Jan-2026,100000,Yes
+U894799,C016,AWS Enterprise Jobs Serverless Compute,01-Feb-2026,100000,Yes
+U977041,C016,AWS Enterprise Jobs Serverless Compute,01-Mar-2026,100000,Yes
+U795656,C016,AWS Enterprise Jobs Serverless Compute,01-Apr-2026,100000,Yes
+U496943,C016,AWS Enterprise Jobs Serverless Compute,01-May-2026,100000,Yes
+U567605,C016,AWS Enterprise Jobs Serverless Compute,01-Jun-2026,100000,Yes
+U821397,C016,AWS Enterprise Jobs Serverless Compute,01-Jul-2026,100000,Yes
+U620882,C016,AWS Enterprise Jobs Serverless Compute,01-Aug-2026,100000,Yes
+U526014,C016,AWS Enterprise Jobs Serverless Compute,01-Sep-2026,100000,Yes
+U685593,C016,AWS Enterprise Jobs Serverless Compute,01-Oct-2026,100000,Yes
+U886733,C016,AWS Enterprise Jobs Serverless Compute,01-Nov-2026,100000,Yes
+U534417,C016,AWS Enterprise Jobs Serverless Compute,01-Dec-2026,100000,Yes
+U299829,C016,AWS Enterprise Jobs Compute,01-Jan-2026,100000,Yes
+U270249,C016,AWS Enterprise Jobs Compute,01-Feb-2026,100000,Yes
+U605581,C016,AWS Enterprise Jobs Compute,01-Mar-2026,100000,Yes
+U442138,C016,AWS Enterprise Jobs Compute,01-Apr-2026,100000,Yes
+U698464,C016,AWS Enterprise Jobs Compute,01-May-2026,100000,Yes
+U403894,C016,AWS Enterprise Jobs Compute,01-Jun-2026,100000,Yes
+U182700,C016,AWS Enterprise Jobs Compute,01-Jul-2026,100000,Yes
+U681199,C016,AWS Enterprise Jobs Compute,01-Aug-2026,100000,Yes
+U853624,C016,AWS Enterprise Jobs Compute,01-Sep-2026,100000,Yes
+U235439,C016,AWS Enterprise Jobs Compute,01-Oct-2026,100000,Yes
+U428890,C016,AWS Enterprise Jobs Compute,01-Nov-2026,100000,Yes
+U386509,C016,AWS Enterprise Jobs Compute,01-Dec-2026,100000,Yes
+U163577,C016,AWS Enterprise Database Serverless Compute,01-Jan-2026,100000,Yes
+U419071,C016,AWS Enterprise Database Serverless Compute,01-Feb-2026,100000,Yes
+U395293,C016,AWS Enterprise Database Serverless Compute,01-Mar-2026,100000,Yes
+U697198,C016,AWS Enterprise Database Serverless Compute,01-Apr-2026,100000,Yes
+U123252,C016,AWS Enterprise Database Serverless Compute,01-May-2026,100000,Yes
+U113583,C016,AWS Enterprise Database Serverless Compute,01-Jun-2026,100000,Yes
+U212656,C016,AWS Enterprise Database Serverless Compute,01-Jul-2026,100000,Yes
+U980689,C016,AWS Enterprise Database Serverless Compute,01-Aug-2026,100000,Yes
+U730317,C016,AWS Enterprise Database Serverless Compute,01-Sep-2026,100000,Yes
+U162299,C016,AWS Enterprise Database Serverless Compute,01-Oct-2026,100000,Yes
+U988172,C016,AWS Enterprise Database Serverless Compute,01-Nov-2026,100000,Yes
+U895065,C016,AWS Enterprise Database Serverless Compute,01-Dec-2026,100000,Yes
+U712678,C016,AWS Enterprise Jobs Light Compute,01-Jan-2026,100000,Yes
+U459059,C016,AWS Enterprise Jobs Light Compute,01-Feb-2026,100000,Yes
+U239705,C016,AWS Enterprise Jobs Light Compute,01-Mar-2026,100000,Yes
+U992354,C016,AWS Enterprise Jobs Light Compute,01-Apr-2026,100000,Yes
+U674526,C016,AWS Enterprise Jobs Light Compute,01-May-2026,100000,Yes
+U944857,C016,AWS Enterprise Jobs Light Compute,01-Jun-2026,100000,Yes
+U827078,C016,AWS Enterprise Jobs Light Compute,01-Jul-2026,100000,Yes
+U729270,C016,AWS Enterprise Jobs Light Compute,01-Aug-2026,100000,Yes
+U436942,C016,AWS Enterprise Jobs Light Compute,01-Sep-2026,100000,Yes
+U476046,C016,AWS Enterprise Jobs Light Compute,01-Oct-2026,100000,Yes
+U452690,C016,AWS Enterprise Jobs Light Compute,01-Nov-2026,100000,Yes
+U996084,C016,AWS Enterprise Jobs Light Compute,01-Dec-2026,100000,Yes
+U643287,C016,AWS Internet Egress,01-Jan-2026,100000,No
+U325863,C016,AWS Internet Egress,01-Feb-2026,100000,No
+U680405,C016,AWS Internet Egress,01-Mar-2026,100000,No
+U167809,C016,AWS Internet Egress,01-Apr-2026,100000,No
+U627061,C016,AWS Internet Egress,01-May-2026,100000,No
+U605137,C016,AWS Internet Egress,01-Jun-2026,100000,No
+U226729,C016,AWS Internet Egress,01-Jul-2026,100000,No
+U903530,C016,AWS Internet Egress,01-Aug-2026,100000,No
+U483854,C016,AWS Internet Egress,01-Sep-2026,100000,No
+U421591,C016,AWS Internet Egress,01-Oct-2026,100000,No
+U776648,C016,AWS Internet Egress,01-Nov-2026,100000,No
+U595283,C016,AWS Internet Egress,01-Dec-2026,100000,No
+U495662,C017,AWS Enterprise Jobs Light Compute,01-Jan-2026,100000,Yes
+U848144,C017,AWS Enterprise Jobs Light Compute,01-Feb-2026,100000,Yes
+U844945,C017,AWS Enterprise Jobs Light Compute,01-Mar-2026,100000,Yes
+U364451,C017,AWS Enterprise Jobs Light Compute,01-Apr-2026,100000,Yes
+U573579,C017,AWS Enterprise Jobs Light Compute,01-May-2026,100000,Yes
+U986265,C017,AWS Enterprise Jobs Light Compute,01-Jun-2026,100000,Yes
+U363682,C017,AWS Enterprise Jobs Light Compute,01-Jul-2026,100000,Yes
+U915310,C017,AWS Enterprise Jobs Light Compute,01-Aug-2026,100000,Yes
+U559863,C017,AWS Enterprise Jobs Light Compute,01-Sep-2026,100000,Yes
+U984432,C017,AWS Enterprise Jobs Light Compute,01-Oct-2026,100000,Yes
+U910019,C017,AWS Enterprise Jobs Light Compute,01-Nov-2026,100000,Yes
+U155528,C017,AWS Enterprise Jobs Light Compute,01-Dec-2026,100000,Yes
+U448835,C017,AWS Enterprise DLT Core Compute (Photon),01-Jan-2026,100000,Yes
+U526119,C017,AWS Enterprise DLT Core Compute (Photon),01-Feb-2026,100000,Yes
+U573264,C017,AWS Enterprise DLT Core Compute (Photon),01-Mar-2026,100000,Yes
+U224867,C017,AWS Enterprise DLT Core Compute (Photon),01-Apr-2026,100000,Yes
+U451008,C017,AWS Enterprise DLT Core Compute (Photon),01-May-2026,100000,Yes
+U946028,C017,AWS Enterprise DLT Core Compute (Photon),01-Jun-2026,100000,Yes
+U403100,C017,AWS Enterprise DLT Core Compute (Photon),01-Jul-2026,100000,Yes
+U343706,C017,AWS Enterprise DLT Core Compute (Photon),01-Aug-2026,100000,Yes
+U644808,C017,AWS Enterprise DLT Core Compute (Photon),01-Sep-2026,100000,Yes
+U214143,C017,AWS Enterprise DLT Core Compute (Photon),01-Oct-2026,100000,Yes
+U485730,C017,AWS Enterprise DLT Core Compute (Photon),01-Nov-2026,100000,Yes
+U791133,C017,AWS Enterprise DLT Core Compute (Photon),01-Dec-2026,100000,Yes
+U719806,C017,AWS Enterprise Jobs Serverless Compute,01-Jan-2026,100000,Yes
+U568221,C017,AWS Enterprise Jobs Serverless Compute,01-Feb-2026,100000,Yes
+U342399,C017,AWS Enterprise Jobs Serverless Compute,01-Mar-2026,100000,Yes
+U625969,C017,AWS Enterprise Jobs Serverless Compute,01-Apr-2026,100000,Yes
+U498893,C017,AWS Enterprise Jobs Serverless Compute,01-May-2026,100000,Yes
+U198465,C017,AWS Enterprise Jobs Serverless Compute,01-Jun-2026,100000,Yes
+U239317,C017,AWS Enterprise Jobs Serverless Compute,01-Jul-2026,100000,Yes
+U715566,C017,AWS Enterprise Jobs Serverless Compute,01-Aug-2026,100000,Yes
+U266844,C017,AWS Enterprise Jobs Serverless Compute,01-Sep-2026,100000,Yes
+U283201,C017,AWS Enterprise Jobs Serverless Compute,01-Oct-2026,100000,Yes
+U770156,C017,AWS Enterprise Jobs Serverless Compute,01-Nov-2026,100000,Yes
+U229801,C017,AWS Enterprise Jobs Serverless Compute,01-Dec-2026,100000,Yes
+U811637,C017,AWS Enterprise All-Purpose Compute,01-Jan-2026,100000,Yes
+U115079,C017,AWS Enterprise All-Purpose Compute,01-Feb-2026,100000,Yes
+U827946,C017,AWS Enterprise All-Purpose Compute,01-Mar-2026,100000,Yes
+U901764,C017,AWS Enterprise All-Purpose Compute,01-Apr-2026,100000,Yes
+U639976,C017,AWS Enterprise All-Purpose Compute,01-May-2026,100000,Yes
+U441175,C017,AWS Enterprise All-Purpose Compute,01-Jun-2026,100000,Yes
+U378205,C017,AWS Enterprise All-Purpose Compute,01-Jul-2026,100000,Yes
+U422644,C017,AWS Enterprise All-Purpose Compute,01-Aug-2026,100000,Yes
+U526737,C017,AWS Enterprise All-Purpose Compute,01-Sep-2026,100000,Yes
+U966682,C017,AWS Enterprise All-Purpose Compute,01-Oct-2026,100000,Yes
+U426178,C017,AWS Enterprise All-Purpose Compute,01-Nov-2026,100000,Yes
+U888048,C017,AWS Enterprise All-Purpose Compute,01-Dec-2026,100000,Yes
+U557665,C017,AWS Inter-Region Egress,01-Jan-2026,100000,No
+U970426,C017,AWS Inter-Region Egress,01-Feb-2026,100000,No
+U834880,C017,AWS Inter-Region Egress,01-Mar-2026,100000,No
+U636339,C017,AWS Inter-Region Egress,01-Apr-2026,100000,No
+U922256,C017,AWS Inter-Region Egress,01-May-2026,100000,No
+U151514,C017,AWS Inter-Region Egress,01-Jun-2026,100000,No
+U147990,C017,AWS Inter-Region Egress,01-Jul-2026,100000,No
+U209936,C017,AWS Inter-Region Egress,01-Aug-2026,100000,No
+U950652,C017,AWS Inter-Region Egress,01-Sep-2026,100000,No
+U436675,C017,AWS Inter-Region Egress,01-Oct-2026,100000,No
+U496834,C017,AWS Inter-Region Egress,01-Nov-2026,100000,No
+U440413,C017,AWS Inter-Region Egress,01-Dec-2026,100000,No
+U868439,C017,AWS Private Connectivity Endpoint,01-Jan-2026,100000,No
+U495381,C017,AWS Private Connectivity Endpoint,01-Feb-2026,100000,No
+U454112,C017,AWS Private Connectivity Endpoint,01-Mar-2026,100000,No
+U242511,C017,AWS Private Connectivity Endpoint,01-Apr-2026,100000,No
+U103990,C017,AWS Private Connectivity Endpoint,01-May-2026,100000,No
+U272982,C017,AWS Private Connectivity Endpoint,01-Jun-2026,100000,No
+U308877,C017,AWS Private Connectivity Endpoint,01-Jul-2026,100000,No
+U233677,C017,AWS Private Connectivity Endpoint,01-Aug-2026,100000,No
+U779582,C017,AWS Private Connectivity Endpoint,01-Sep-2026,100000,No
+U878974,C017,AWS Private Connectivity Endpoint,01-Oct-2026,100000,No
+U964100,C017,AWS Private Connectivity Endpoint,01-Nov-2026,100000,No
+U595976,C017,AWS Private Connectivity Endpoint,01-Dec-2026,100000,No
+U737619,C018,AWS Enterprise Clean Rooms Collaborator,01-Jan-2026,100000,Yes
+U952224,C018,AWS Enterprise Clean Rooms Collaborator,01-Feb-2026,100000,Yes
+U105879,C018,AWS Enterprise Clean Rooms Collaborator,01-Mar-2026,100000,Yes
+U459381,C018,AWS Enterprise Clean Rooms Collaborator,01-Apr-2026,100000,Yes
+U596273,C018,AWS Enterprise Clean Rooms Collaborator,01-May-2026,100000,Yes
+U298269,C018,AWS Enterprise Clean Rooms Collaborator,01-Jun-2026,100000,Yes
+U549620,C018,AWS Enterprise Clean Rooms Collaborator,01-Jul-2026,100000,Yes
+U571390,C018,AWS Enterprise Clean Rooms Collaborator,01-Aug-2026,100000,Yes
+U261223,C018,AWS Enterprise Clean Rooms Collaborator,01-Sep-2026,100000,Yes
+U698422,C018,AWS Enterprise Clean Rooms Collaborator,01-Oct-2026,100000,Yes
+U550559,C018,AWS Enterprise Clean Rooms Collaborator,01-Nov-2026,100000,Yes
+U154271,C018,AWS Enterprise Clean Rooms Collaborator,01-Dec-2026,100000,Yes
+U859161,C018,AWS Enterprise DLT Advanced Compute,01-Jan-2026,100000,Yes
+U460543,C018,AWS Enterprise DLT Advanced Compute,01-Feb-2026,100000,Yes
+U281449,C018,AWS Enterprise DLT Advanced Compute,01-Mar-2026,100000,Yes
+U565205,C018,AWS Enterprise DLT Advanced Compute,01-Apr-2026,100000,Yes
+U166332,C018,AWS Enterprise DLT Advanced Compute,01-May-2026,100000,Yes
+U737064,C018,AWS Enterprise DLT Advanced Compute,01-Jun-2026,100000,Yes
+U420805,C018,AWS Enterprise DLT Advanced Compute,01-Jul-2026,100000,Yes
+U774276,C018,AWS Enterprise DLT Advanced Compute,01-Aug-2026,100000,Yes
+U671144,C018,AWS Enterprise DLT Advanced Compute,01-Sep-2026,100000,Yes
+U210249,C018,AWS Enterprise DLT Advanced Compute,01-Oct-2026,100000,Yes
+U436100,C018,AWS Enterprise DLT Advanced Compute,01-Nov-2026,100000,Yes
+U466629,C018,AWS Enterprise DLT Advanced Compute,01-Dec-2026,100000,Yes
+U709619,C018,AWS Enterprise SQL Compute,01-Jan-2026,100000,Yes
+U181123,C018,AWS Enterprise SQL Compute,01-Feb-2026,100000,Yes
+U527527,C018,AWS Enterprise SQL Compute,01-Mar-2026,100000,Yes
+U462341,C018,AWS Enterprise SQL Compute,01-Apr-2026,100000,Yes
+U330819,C018,AWS Enterprise SQL Compute,01-May-2026,100000,Yes
+U701696,C018,AWS Enterprise SQL Compute,01-Jun-2026,100000,Yes
+U709498,C018,AWS Enterprise SQL Compute,01-Jul-2026,100000,Yes
+U470912,C018,AWS Enterprise SQL Compute,01-Aug-2026,100000,Yes
+U730244,C018,AWS Enterprise SQL Compute,01-Sep-2026,100000,Yes
+U924757,C018,AWS Enterprise SQL Compute,01-Oct-2026,100000,Yes
+U688516,C018,AWS Enterprise SQL Compute,01-Nov-2026,100000,Yes
+U205782,C018,AWS Enterprise SQL Compute,01-Dec-2026,100000,Yes
+U571544,C018,AWS Enterprise Jobs Light Compute,01-Jan-2026,100000,Yes
+U708126,C018,AWS Enterprise Jobs Light Compute,01-Feb-2026,100000,Yes
+U355071,C018,AWS Enterprise Jobs Light Compute,01-Mar-2026,100000,Yes
+U394737,C018,AWS Enterprise Jobs Light Compute,01-Apr-2026,100000,Yes
+U562038,C018,AWS Enterprise Jobs Light Compute,01-May-2026,100000,Yes
+U483405,C018,AWS Enterprise Jobs Light Compute,01-Jun-2026,100000,Yes
+U897152,C018,AWS Enterprise Jobs Light Compute,01-Jul-2026,100000,Yes
+U670853,C018,AWS Enterprise Jobs Light Compute,01-Aug-2026,100000,Yes
+U206940,C018,AWS Enterprise Jobs Light Compute,01-Sep-2026,100000,Yes
+U891852,C018,AWS Enterprise Jobs Light Compute,01-Oct-2026,100000,Yes
+U726111,C018,AWS Enterprise Jobs Light Compute,01-Nov-2026,100000,Yes
+U199746,C018,AWS Enterprise Jobs Light Compute,01-Dec-2026,100000,Yes
+U946662,C018,AWS Inter-Region Egress,01-Jan-2026,100000,No
+U743611,C018,AWS Inter-Region Egress,01-Feb-2026,100000,No
+U858454,C018,AWS Inter-Region Egress,01-Mar-2026,100000,No
+U698817,C018,AWS Inter-Region Egress,01-Apr-2026,100000,No
+U336153,C018,AWS Inter-Region Egress,01-May-2026,100000,No
+U794519,C018,AWS Inter-Region Egress,01-Jun-2026,100000,No
+U568689,C018,AWS Inter-Region Egress,01-Jul-2026,100000,No
+U846944,C018,AWS Inter-Region Egress,01-Aug-2026,100000,No
+U533436,C018,AWS Inter-Region Egress,01-Sep-2026,100000,No
+U757504,C018,AWS Inter-Region Egress,01-Oct-2026,100000,No
+U320156,C018,AWS Inter-Region Egress,01-Nov-2026,100000,No
+U985813,C018,AWS Inter-Region Egress,01-Dec-2026,100000,No
+U478317,C018,AWS Enterprise Anthropic Model Serving,01-Jan-2026,100000,No
+U160205,C018,AWS Enterprise Anthropic Model Serving,01-Feb-2026,100000,No
+U334162,C018,AWS Enterprise Anthropic Model Serving,01-Mar-2026,100000,No
+U962174,C018,AWS Enterprise Anthropic Model Serving,01-Apr-2026,100000,No
+U873235,C018,AWS Enterprise Anthropic Model Serving,01-May-2026,100000,No
+U262469,C018,AWS Enterprise Anthropic Model Serving,01-Jun-2026,100000,No
+U848019,C018,AWS Enterprise Anthropic Model Serving,01-Jul-2026,100000,No
+U606154,C018,AWS Enterprise Anthropic Model Serving,01-Aug-2026,100000,No
+U726400,C018,AWS Enterprise Anthropic Model Serving,01-Sep-2026,100000,No
+U528018,C018,AWS Enterprise Anthropic Model Serving,01-Oct-2026,100000,No
+U337203,C018,AWS Enterprise Anthropic Model Serving,01-Nov-2026,100000,No
+U948623,C018,AWS Enterprise Anthropic Model Serving,01-Dec-2026,100000,No
+U894787,C019,AWS Enhanced Security and Compliance,01-Jan-2026,100000,Yes
+U872076,C019,AWS Enhanced Security and Compliance,01-Feb-2026,100000,Yes
+U509831,C019,AWS Enhanced Security and Compliance,01-Mar-2026,100000,Yes
+U680463,C019,AWS Enhanced Security and Compliance,01-Apr-2026,100000,Yes
+U522874,C019,AWS Enhanced Security and Compliance,01-May-2026,100000,Yes
+U795692,C019,AWS Enhanced Security and Compliance,01-Jun-2026,100000,Yes
+U669324,C019,AWS Enhanced Security and Compliance,01-Jul-2026,100000,Yes
+U721280,C019,AWS Enhanced Security and Compliance,01-Aug-2026,100000,Yes
+U486576,C019,AWS Enhanced Security and Compliance,01-Sep-2026,100000,Yes
+U472740,C019,AWS Enhanced Security and Compliance,01-Oct-2026,100000,Yes
+U639404,C019,AWS Enhanced Security and Compliance,01-Nov-2026,100000,Yes
+U691550,C019,AWS Enhanced Security and Compliance,01-Dec-2026,100000,Yes
+U491747,C019,AWS Enterprise SQL Compute,01-Jan-2026,100000,Yes
+U115797,C019,AWS Enterprise SQL Compute,01-Feb-2026,100000,Yes
+U820912,C019,AWS Enterprise SQL Compute,01-Mar-2026,100000,Yes
+U763422,C019,AWS Enterprise SQL Compute,01-Apr-2026,100000,Yes
+U493128,C019,AWS Enterprise SQL Compute,01-May-2026,100000,Yes
+U437878,C019,AWS Enterprise SQL Compute,01-Jun-2026,100000,Yes
+U929573,C019,AWS Enterprise SQL Compute,01-Jul-2026,100000,Yes
+U391503,C019,AWS Enterprise SQL Compute,01-Aug-2026,100000,Yes
+U434098,C019,AWS Enterprise SQL Compute,01-Sep-2026,100000,Yes
+U503649,C019,AWS Enterprise SQL Compute,01-Oct-2026,100000,Yes
+U825080,C019,AWS Enterprise SQL Compute,01-Nov-2026,100000,Yes
+U946433,C019,AWS Enterprise SQL Compute,01-Dec-2026,100000,Yes
+U520785,C020,AWS Enterprise DLT Core Compute (Photon),01-Jan-2026,100000,Yes
+U694606,C020,AWS Enterprise DLT Core Compute (Photon),01-Feb-2026,100000,Yes
+U159996,C020,AWS Enterprise DLT Core Compute (Photon),01-Mar-2026,100000,Yes
+U643748,C020,AWS Enterprise DLT Core Compute (Photon),01-Apr-2026,100000,Yes
+U202167,C020,AWS Enterprise DLT Core Compute (Photon),01-May-2026,100000,Yes
+U345402,C020,AWS Enterprise DLT Core Compute (Photon),01-Jun-2026,100000,Yes
+U523928,C020,AWS Enterprise DLT Core Compute (Photon),01-Jul-2026,100000,Yes
+U324688,C020,AWS Enterprise DLT Core Compute (Photon),01-Aug-2026,100000,Yes
+U387640,C020,AWS Enterprise DLT Core Compute (Photon),01-Sep-2026,100000,Yes
+U982526,C020,AWS Enterprise DLT Core Compute (Photon),01-Oct-2026,100000,Yes
+U550915,C020,AWS Enterprise DLT Core Compute (Photon),01-Nov-2026,100000,Yes
+U632388,C020,AWS Enterprise DLT Core Compute (Photon),01-Dec-2026,100000,Yes
+U920898,C020,AWS Enterprise Serverless SQL Compute,01-Jan-2026,100000,Yes
+U551226,C020,AWS Enterprise Serverless SQL Compute,01-Feb-2026,100000,Yes
+U483921,C020,AWS Enterprise Serverless SQL Compute,01-Mar-2026,100000,Yes
+U496911,C020,AWS Enterprise Serverless SQL Compute,01-Apr-2026,100000,Yes
+U638007,C020,AWS Enterprise Serverless SQL Compute,01-May-2026,100000,Yes
+U298968,C020,AWS Enterprise Serverless SQL Compute,01-Jun-2026,100000,Yes
+U845514,C020,AWS Enterprise Serverless SQL Compute,01-Jul-2026,100000,Yes
+U911941,C020,AWS Enterprise Serverless SQL Compute,01-Aug-2026,100000,Yes
+U922673,C020,AWS Enterprise Serverless SQL Compute,01-Sep-2026,100000,Yes
+U614082,C020,AWS Enterprise Serverless SQL Compute,01-Oct-2026,100000,Yes
+U530459,C020,AWS Enterprise Serverless SQL Compute,01-Nov-2026,100000,Yes
+U526196,C020,AWS Enterprise Serverless SQL Compute,01-Dec-2026,100000,Yes
+U546149,C020,AWS Enterprise All-Purpose Compute,01-Jan-2026,100000,Yes
+U662859,C020,AWS Enterprise All-Purpose Compute,01-Feb-2026,100000,Yes
+U608160,C020,AWS Enterprise All-Purpose Compute,01-Mar-2026,100000,Yes
+U874045,C020,AWS Enterprise All-Purpose Compute,01-Apr-2026,100000,Yes
+U457707,C020,AWS Enterprise All-Purpose Compute,01-May-2026,100000,Yes
+U135053,C020,AWS Enterprise All-Purpose Compute,01-Jun-2026,100000,Yes
+U261427,C020,AWS Enterprise All-Purpose Compute,01-Jul-2026,100000,Yes
+U628256,C020,AWS Enterprise All-Purpose Compute,01-Aug-2026,100000,Yes
+U398092,C020,AWS Enterprise All-Purpose Compute,01-Sep-2026,100000,Yes
+U681120,C020,AWS Enterprise All-Purpose Compute,01-Oct-2026,100000,Yes
+U379016,C020,AWS Enterprise All-Purpose Compute,01-Nov-2026,100000,Yes
+U867756,C020,AWS Enterprise All-Purpose Compute,01-Dec-2026,100000,Yes
+U927075,C020,AWS Public Connectivity Data Processed,01-Jan-2026,100000,No
+U282800,C020,AWS Public Connectivity Data Processed,01-Feb-2026,100000,No
+U429325,C020,AWS Public Connectivity Data Processed,01-Mar-2026,100000,No
+U677524,C020,AWS Public Connectivity Data Processed,01-Apr-2026,100000,No
+U863607,C020,AWS Public Connectivity Data Processed,01-May-2026,100000,No
+U728567,C020,AWS Public Connectivity Data Processed,01-Jun-2026,100000,No
+U126321,C020,AWS Public Connectivity Data Processed,01-Jul-2026,100000,No
+U832828,C020,AWS Public Connectivity Data Processed,01-Aug-2026,100000,No
+U944816,C020,AWS Public Connectivity Data Processed,01-Sep-2026,100000,No
+U337055,C020,AWS Public Connectivity Data Processed,01-Oct-2026,100000,No
+U364293,C020,AWS Public Connectivity Data Processed,01-Nov-2026,100000,No
+U263837,C020,AWS Public Connectivity Data Processed,01-Dec-2026,100000,No
+U714693,C021,AWS Enterprise All-Purpose Serverless Compute,01-Jan-2026,100000,Yes
+U557544,C021,AWS Enterprise All-Purpose Serverless Compute,01-Feb-2026,100000,Yes
+U944346,C021,AWS Enterprise All-Purpose Serverless Compute,01-Mar-2026,100000,Yes
+U307927,C021,AWS Enterprise All-Purpose Serverless Compute,01-Apr-2026,100000,Yes
+U799472,C021,AWS Enterprise All-Purpose Serverless Compute,01-May-2026,100000,Yes
+U648098,C021,AWS Enterprise All-Purpose Serverless Compute,01-Jun-2026,100000,Yes
+U203130,C021,AWS Enterprise All-Purpose Serverless Compute,01-Jul-2026,100000,Yes
+U150885,C021,AWS Enterprise All-Purpose Serverless Compute,01-Aug-2026,100000,Yes
+U939773,C021,AWS Enterprise All-Purpose Serverless Compute,01-Sep-2026,100000,Yes
+U540692,C021,AWS Enterprise All-Purpose Serverless Compute,01-Oct-2026,100000,Yes
+U189184,C021,AWS Enterprise All-Purpose Serverless Compute,01-Nov-2026,100000,Yes
+U317933,C021,AWS Enterprise All-Purpose Serverless Compute,01-Dec-2026,100000,Yes
+U762420,C021,AWS Enterprise SQL Compute,01-Jan-2026,100000,Yes
+U150148,C021,AWS Enterprise SQL Compute,01-Feb-2026,100000,Yes
+U195392,C021,AWS Enterprise SQL Compute,01-Mar-2026,100000,Yes
+U261938,C021,AWS Enterprise SQL Compute,01-Apr-2026,100000,Yes
+U247724,C021,AWS Enterprise SQL Compute,01-May-2026,100000,Yes
+U393616,C021,AWS Enterprise SQL Compute,01-Jun-2026,100000,Yes
+U971067,C021,AWS Enterprise SQL Compute,01-Jul-2026,100000,Yes
+U617665,C021,AWS Enterprise SQL Compute,01-Aug-2026,100000,Yes
+U340509,C021,AWS Enterprise SQL Compute,01-Sep-2026,100000,Yes
+U628918,C021,AWS Enterprise SQL Compute,01-Oct-2026,100000,Yes
+U950572,C021,AWS Enterprise SQL Compute,01-Nov-2026,100000,Yes
+U379119,C021,AWS Enterprise SQL Compute,01-Dec-2026,100000,Yes
+U488316,C021,AWS Enterprise DLT Advanced Compute,01-Jan-2026,100000,Yes
+U562151,C021,AWS Enterprise DLT Advanced Compute,01-Feb-2026,100000,Yes
+U119209,C021,AWS Enterprise DLT Advanced Compute,01-Mar-2026,100000,Yes
+U926108,C021,AWS Enterprise DLT Advanced Compute,01-Apr-2026,100000,Yes
+U528852,C021,AWS Enterprise DLT Advanced Compute,01-May-2026,100000,Yes
+U491759,C021,AWS Enterprise DLT Advanced Compute,01-Jun-2026,100000,Yes
+U567505,C021,AWS Enterprise DLT Advanced Compute,01-Jul-2026,100000,Yes
+U362160,C021,AWS Enterprise DLT Advanced Compute,01-Aug-2026,100000,Yes
+U726643,C021,AWS Enterprise DLT Advanced Compute,01-Sep-2026,100000,Yes
+U148771,C021,AWS Enterprise DLT Advanced Compute,01-Oct-2026,100000,Yes
+U901917,C021,AWS Enterprise DLT Advanced Compute,01-Nov-2026,100000,Yes
+U479683,C021,AWS Enterprise DLT Advanced Compute,01-Dec-2026,100000,Yes
+U491188,C021,AWS Inter-Region Egress,01-Jan-2026,100000,No
+U891608,C021,AWS Inter-Region Egress,01-Feb-2026,100000,No
+U786111,C021,AWS Inter-Region Egress,01-Mar-2026,100000,No
+U699729,C021,AWS Inter-Region Egress,01-Apr-2026,100000,No
+U438671,C021,AWS Inter-Region Egress,01-May-2026,100000,No
+U445836,C021,AWS Inter-Region Egress,01-Jun-2026,100000,No
+U576075,C021,AWS Inter-Region Egress,01-Jul-2026,100000,No
+U343544,C021,AWS Inter-Region Egress,01-Aug-2026,100000,No
+U914391,C021,AWS Inter-Region Egress,01-Sep-2026,100000,No
+U816028,C021,AWS Inter-Region Egress,01-Oct-2026,100000,No
+U960308,C021,AWS Inter-Region Egress,01-Nov-2026,100000,No
+U697682,C021,AWS Inter-Region Egress,01-Dec-2026,100000,No
+U577936,C021,AWS Enterprise OpenAI Model Serving,01-Jan-2026,100000,No
+U846499,C021,AWS Enterprise OpenAI Model Serving,01-Feb-2026,100000,No
+U901576,C021,AWS Enterprise OpenAI Model Serving,01-Mar-2026,100000,No
+U457306,C021,AWS Enterprise OpenAI Model Serving,01-Apr-2026,100000,No
+U606609,C021,AWS Enterprise OpenAI Model Serving,01-May-2026,100000,No
+U258380,C021,AWS Enterprise OpenAI Model Serving,01-Jun-2026,100000,No
+U398952,C021,AWS Enterprise OpenAI Model Serving,01-Jul-2026,100000,No
+U113922,C021,AWS Enterprise OpenAI Model Serving,01-Aug-2026,100000,No
+U980384,C021,AWS Enterprise OpenAI Model Serving,01-Sep-2026,100000,No
+U312043,C021,AWS Enterprise OpenAI Model Serving,01-Oct-2026,100000,No
+U173343,C021,AWS Enterprise OpenAI Model Serving,01-Nov-2026,100000,No
+U438736,C021,AWS Enterprise OpenAI Model Serving,01-Dec-2026,100000,No
+U665660,C022,AWS Enterprise All-Purpose Serverless Compute,01-Jan-2026,100000,Yes
+U325814,C022,AWS Enterprise All-Purpose Serverless Compute,01-Feb-2026,100000,Yes
+U624512,C022,AWS Enterprise All-Purpose Serverless Compute,01-Mar-2026,100000,Yes
+U172570,C022,AWS Enterprise All-Purpose Serverless Compute,01-Apr-2026,100000,Yes
+U800834,C022,AWS Enterprise All-Purpose Serverless Compute,01-May-2026,100000,Yes
+U273954,C022,AWS Enterprise All-Purpose Serverless Compute,01-Jun-2026,100000,Yes
+U920696,C022,AWS Enterprise All-Purpose Serverless Compute,01-Jul-2026,100000,Yes
+U161285,C022,AWS Enterprise All-Purpose Serverless Compute,01-Aug-2026,100000,Yes
+U435789,C022,AWS Enterprise All-Purpose Serverless Compute,01-Sep-2026,100000,Yes
+U696920,C022,AWS Enterprise All-Purpose Serverless Compute,01-Oct-2026,100000,Yes
+U848076,C022,AWS Enterprise All-Purpose Serverless Compute,01-Nov-2026,100000,Yes
+U911083,C022,AWS Enterprise All-Purpose Serverless Compute,01-Dec-2026,150000,Yes
+U422292,C022,AWS Enterprise Jobs Compute,01-Jan-2026,100000,Yes
+U703648,C022,AWS Enterprise Jobs Compute,01-Feb-2026,100000,Yes
+U371162,C022,AWS Enterprise Jobs Compute,01-Mar-2026,100000,Yes
+U964088,C022,AWS Enterprise Jobs Compute,01-Apr-2026,100000,Yes
+U122827,C022,AWS Enterprise Jobs Compute,01-May-2026,100000,Yes
+U216990,C022,AWS Enterprise Jobs Compute,01-Jun-2026,100000,Yes
+U215679,C022,AWS Enterprise Jobs Compute,01-Jul-2026,100000,Yes
+U501588,C022,AWS Enterprise Jobs Compute,01-Aug-2026,100000,Yes
+U176666,C022,AWS Enterprise Jobs Compute,01-Sep-2026,100000,Yes
+U815313,C022,AWS Enterprise Jobs Compute,01-Oct-2026,100000,Yes
+U447247,C022,AWS Enterprise Jobs Compute,01-Nov-2026,100000,Yes
+U124932,C022,AWS Enterprise Jobs Compute,01-Dec-2026,100000,Yes
+U979819,C022,AWS Public Connectivity Data Processed,01-Jan-2026,100000,No
+U504802,C022,AWS Public Connectivity Data Processed,01-Feb-2026,100000,No
+U776962,C022,AWS Public Connectivity Data Processed,01-Mar-2026,100000,No
+U672034,C022,AWS Public Connectivity Data Processed,01-Apr-2026,100000,No
+U597026,C022,AWS Public Connectivity Data Processed,01-May-2026,100000,No
+U832607,C022,AWS Public Connectivity Data Processed,01-Jun-2026,100000,No
+U508117,C022,AWS Public Connectivity Data Processed,01-Jul-2026,100000,No
+U388489,C022,AWS Public Connectivity Data Processed,01-Aug-2026,100000,No
+U424732,C022,AWS Public Connectivity Data Processed,01-Sep-2026,100000,No
+U547183,C022,AWS Public Connectivity Data Processed,01-Oct-2026,100000,No
+U415387,C022,AWS Public Connectivity Data Processed,01-Nov-2026,100000,No
+U677436,C022,AWS Public Connectivity Data Processed,01-Dec-2026,100000,No
+U989062,C023,AWS Enterprise DLT Advanced Compute (Photon),01-Jan-2026,100000,Yes
+U713643,C023,AWS Enterprise DLT Advanced Compute (Photon),01-Feb-2026,100000,Yes
+U865931,C023,AWS Enterprise DLT Advanced Compute (Photon),01-Mar-2026,100000,Yes
+U381850,C023,AWS Enterprise DLT Advanced Compute (Photon),01-Apr-2026,100000,Yes
+U993875,C023,AWS Enterprise DLT Advanced Compute (Photon),01-May-2026,100000,Yes
+U645951,C023,AWS Enterprise DLT Advanced Compute (Photon),01-Jun-2026,100000,Yes
+U499004,C023,AWS Enterprise DLT Advanced Compute (Photon),01-Jul-2026,100000,Yes
+U811385,C023,AWS Enterprise DLT Advanced Compute (Photon),01-Aug-2026,100000,Yes
+U330606,C023,AWS Enterprise DLT Advanced Compute (Photon),01-Sep-2026,100000,Yes
+U614317,C023,AWS Enterprise DLT Advanced Compute (Photon),01-Oct-2026,100000,Yes
+U201377,C023,AWS Enterprise DLT Advanced Compute (Photon),01-Nov-2026,100000,Yes
+U362258,C023,AWS Enterprise DLT Advanced Compute (Photon),01-Dec-2026,100000,Yes
+U151556,C023,AWS Enterprise Jobs Serverless Compute,01-Jan-2026,100000,Yes
+U133582,C023,AWS Enterprise Jobs Serverless Compute,01-Feb-2026,100000,Yes
+U368094,C023,AWS Enterprise Jobs Serverless Compute,01-Mar-2026,100000,Yes
+U825838,C023,AWS Enterprise Jobs Serverless Compute,01-Apr-2026,100000,Yes
+U797762,C023,AWS Enterprise Jobs Serverless Compute,01-May-2026,100000,Yes
+U538976,C023,AWS Enterprise Jobs Serverless Compute,01-Jun-2026,100000,Yes
+U827195,C023,AWS Enterprise Jobs Serverless Compute,01-Jul-2026,100000,Yes
+U689261,C023,AWS Enterprise Jobs Serverless Compute,01-Aug-2026,100000,Yes
+U420713,C023,AWS Enterprise Jobs Serverless Compute,01-Sep-2026,100000,Yes
+U699343,C023,AWS Enterprise Jobs Serverless Compute,01-Oct-2026,100000,Yes
+U918461,C023,AWS Enterprise Jobs Serverless Compute,01-Nov-2026,100000,Yes
+U573821,C023,AWS Enterprise Jobs Serverless Compute,01-Dec-2026,100000,Yes
+U570376,C023,AWS Enterprise Gemini Model Serving,01-Jan-2026,100000,No
+U639919,C023,AWS Enterprise Gemini Model Serving,01-Feb-2026,100000,No
+U509781,C023,AWS Enterprise Gemini Model Serving,01-Mar-2026,100000,No
+U552183,C023,AWS Enterprise Gemini Model Serving,01-Apr-2026,100000,No
+U595549,C023,AWS Enterprise Gemini Model Serving,01-May-2026,100000,No
+U791868,C023,AWS Enterprise Gemini Model Serving,01-Jun-2026,100000,No
+U591711,C023,AWS Enterprise Gemini Model Serving,01-Jul-2026,100000,No
+U971900,C023,AWS Enterprise Gemini Model Serving,01-Aug-2026,100000,No
+U699743,C023,AWS Enterprise Gemini Model Serving,01-Sep-2026,100000,No
+U300973,C023,AWS Enterprise Gemini Model Serving,01-Oct-2026,100000,No
+U303789,C023,AWS Enterprise Gemini Model Serving,01-Nov-2026,100000,No
+U885892,C023,AWS Enterprise Gemini Model Serving,01-Dec-2026,100000,No
+U463059,C023,AWS Inter-Availability Zone Egress,01-Jan-2026,100000,No
+U373644,C023,AWS Inter-Availability Zone Egress,01-Feb-2026,100000,No
+U419488,C023,AWS Inter-Availability Zone Egress,01-Mar-2026,100000,No
+U371668,C023,AWS Inter-Availability Zone Egress,01-Apr-2026,100000,No
+U145169,C023,AWS Inter-Availability Zone Egress,01-May-2026,100000,No
+U235243,C023,AWS Inter-Availability Zone Egress,01-Jun-2026,100000,No
+U807282,C023,AWS Inter-Availability Zone Egress,01-Jul-2026,100000,No
+U384782,C023,AWS Inter-Availability Zone Egress,01-Aug-2026,100000,No
+U832516,C023,AWS Inter-Availability Zone Egress,01-Sep-2026,100000,No
+U899684,C023,AWS Inter-Availability Zone Egress,01-Oct-2026,100000,No
+U579558,C023,AWS Inter-Availability Zone Egress,01-Nov-2026,100000,No
+U271280,C023,AWS Inter-Availability Zone Egress,01-Dec-2026,100000,No
+U108665,C024,AWS Enhanced Security and Compliance,01-Jan-2026,100000,Yes
+U414747,C024,AWS Enhanced Security and Compliance,01-Feb-2026,100000,Yes
+U101001,C024,AWS Enhanced Security and Compliance,01-Mar-2026,100000,Yes
+U718163,C024,AWS Enhanced Security and Compliance,01-Apr-2026,100000,Yes
+U325613,C024,AWS Enhanced Security and Compliance,01-May-2026,100000,Yes
+U584252,C024,AWS Enhanced Security and Compliance,01-Jun-2026,100000,Yes
+U700489,C024,AWS Enhanced Security and Compliance,01-Jul-2026,100000,Yes
+U439363,C024,AWS Enhanced Security and Compliance,01-Aug-2026,100000,Yes
+U278285,C024,AWS Enhanced Security and Compliance,01-Sep-2026,100000,Yes
+U755130,C024,AWS Enhanced Security and Compliance,01-Oct-2026,100000,Yes
+U984038,C024,AWS Enhanced Security and Compliance,01-Nov-2026,100000,Yes
+U746460,C024,AWS Enhanced Security and Compliance,01-Dec-2026,100000,Yes
+U516087,C024,AWS Enterprise DLT Pro Compute (Photon),01-Jan-2026,100000,Yes
+U847858,C024,AWS Enterprise DLT Pro Compute (Photon),01-Feb-2026,100000,Yes
+U799795,C024,AWS Enterprise DLT Pro Compute (Photon),01-Mar-2026,100000,Yes
+U162448,C024,AWS Enterprise DLT Pro Compute (Photon),01-Apr-2026,100000,Yes
+U354607,C024,AWS Enterprise DLT Pro Compute (Photon),01-May-2026,100000,Yes
+U240334,C024,AWS Enterprise DLT Pro Compute (Photon),01-Jun-2026,100000,Yes
+U872926,C024,AWS Enterprise DLT Pro Compute (Photon),01-Jul-2026,100000,Yes
+U677124,C024,AWS Enterprise DLT Pro Compute (Photon),01-Aug-2026,100000,Yes
+U740890,C024,AWS Enterprise DLT Pro Compute (Photon),01-Sep-2026,100000,Yes
+U202050,C024,AWS Enterprise DLT Pro Compute (Photon),01-Oct-2026,100000,Yes
+U855740,C024,AWS Enterprise DLT Pro Compute (Photon),01-Nov-2026,100000,Yes
+U270513,C024,AWS Enterprise DLT Pro Compute (Photon),01-Dec-2026,100000,Yes
+U648417,C024,AWS Enterprise Jobs Compute,01-Jan-2026,100000,Yes
+U820242,C024,AWS Enterprise Jobs Compute,01-Feb-2026,100000,Yes
+U128149,C024,AWS Enterprise Jobs Compute,01-Mar-2026,100000,Yes
+U386862,C024,AWS Enterprise Jobs Compute,01-Apr-2026,100000,Yes
+U884634,C024,AWS Enterprise Jobs Compute,01-May-2026,100000,Yes
+U421392,C024,AWS Enterprise Jobs Compute,01-Jun-2026,100000,Yes
+U381645,C024,AWS Enterprise Jobs Compute,01-Jul-2026,100000,Yes
+U383974,C024,AWS Enterprise Jobs Compute,01-Aug-2026,100000,Yes
+U749037,C024,AWS Enterprise Jobs Compute,01-Sep-2026,100000,Yes
+U450805,C024,AWS Enterprise Jobs Compute,01-Oct-2026,100000,Yes
+U824578,C024,AWS Enterprise Jobs Compute,01-Nov-2026,100000,Yes
+U245149,C024,AWS Enterprise Jobs Compute,01-Dec-2026,100000,Yes
+U845877,C024,AWS Enterprise DLT Core Compute,01-Jan-2026,100000,Yes
+U910793,C024,AWS Enterprise DLT Core Compute,01-Feb-2026,100000,Yes
+U211775,C024,AWS Enterprise DLT Core Compute,01-Mar-2026,100000,Yes
+U974992,C024,AWS Enterprise DLT Core Compute,01-Apr-2026,100000,Yes
+U585049,C024,AWS Enterprise DLT Core Compute,01-May-2026,100000,Yes
+U597299,C024,AWS Enterprise DLT Core Compute,01-Jun-2026,100000,Yes
+U846828,C024,AWS Enterprise DLT Core Compute,01-Jul-2026,100000,Yes
+U162920,C024,AWS Enterprise DLT Core Compute,01-Aug-2026,100000,Yes
+U171275,C024,AWS Enterprise DLT Core Compute,01-Sep-2026,100000,Yes
+U424200,C024,AWS Enterprise DLT Core Compute,01-Oct-2026,100000,Yes
+U489227,C024,AWS Enterprise DLT Core Compute,01-Nov-2026,100000,Yes
+U183591,C024,AWS Enterprise DLT Core Compute,01-Dec-2026,100000,Yes
+U840477,C024,AWS Enterprise Serverless Real-Time Inference,01-Jan-2026,100000,No
+U189753,C024,AWS Enterprise Serverless Real-Time Inference,01-Feb-2026,100000,No
+U687015,C024,AWS Enterprise Serverless Real-Time Inference,01-Mar-2026,100000,No
+U618180,C024,AWS Enterprise Serverless Real-Time Inference,01-Apr-2026,100000,No
+U648587,C024,AWS Enterprise Serverless Real-Time Inference,01-May-2026,100000,No
+U966410,C024,AWS Enterprise Serverless Real-Time Inference,01-Jun-2026,100000,No
+U197189,C024,AWS Enterprise Serverless Real-Time Inference,01-Jul-2026,100000,No
+U649505,C024,AWS Enterprise Serverless Real-Time Inference,01-Aug-2026,100000,No
+U122445,C024,AWS Enterprise Serverless Real-Time Inference,01-Sep-2026,100000,No
+U125377,C024,AWS Enterprise Serverless Real-Time Inference,01-Oct-2026,100000,No
+U599490,C024,AWS Enterprise Serverless Real-Time Inference,01-Nov-2026,100000,No
+U680387,C024,AWS Enterprise Serverless Real-Time Inference,01-Dec-2026,100000,No
+U382411,C024,AWS Enterprise OpenAI Model Serving,01-Jan-2026,100000,No
+U546858,C024,AWS Enterprise OpenAI Model Serving,01-Feb-2026,100000,No
+U856548,C024,AWS Enterprise OpenAI Model Serving,01-Mar-2026,100000,No
+U744128,C024,AWS Enterprise OpenAI Model Serving,01-Apr-2026,100000,No
+U411726,C024,AWS Enterprise OpenAI Model Serving,01-May-2026,100000,No
+U832174,C024,AWS Enterprise OpenAI Model Serving,01-Jun-2026,100000,No
+U688927,C024,AWS Enterprise OpenAI Model Serving,01-Jul-2026,100000,No
+U575645,C024,AWS Enterprise OpenAI Model Serving,01-Aug-2026,100000,No
+U108595,C024,AWS Enterprise OpenAI Model Serving,01-Sep-2026,100000,No
+U378853,C024,AWS Enterprise OpenAI Model Serving,01-Oct-2026,100000,No
+U241520,C024,AWS Enterprise OpenAI Model Serving,01-Nov-2026,100000,No
+U534494,C024,AWS Enterprise OpenAI Model Serving,01-Dec-2026,100000,No
+U313029,C025,AWS Enterprise Database Serverless Compute,01-Jan-2026,100000,Yes
+U642525,C025,AWS Enterprise Database Serverless Compute,01-Feb-2026,100000,Yes
+U360059,C025,AWS Enterprise Database Serverless Compute,01-Mar-2026,100000,Yes
+U702806,C025,AWS Enterprise Database Serverless Compute,01-Apr-2026,100000,Yes
+U442671,C025,AWS Enterprise Database Serverless Compute,01-May-2026,100000,Yes
+U807678,C025,AWS Enterprise Database Serverless Compute,01-Jun-2026,100000,Yes
+U342683,C025,AWS Enterprise Database Serverless Compute,01-Jul-2026,100000,Yes
+U562065,C025,AWS Enterprise Database Serverless Compute,01-Aug-2026,100000,Yes
+U261823,C025,AWS Enterprise Database Serverless Compute,01-Sep-2026,100000,Yes
+U477901,C025,AWS Enterprise Database Serverless Compute,01-Oct-2026,100000,Yes
+U827899,C025,AWS Enterprise Database Serverless Compute,01-Nov-2026,100000,Yes
+U535429,C025,AWS Enterprise Database Serverless Compute,01-Dec-2026,100000,Yes
+U575506,C025,AWS Enterprise SQL Pro Compute,01-Jan-2026,100000,Yes
+U693846,C025,AWS Enterprise SQL Pro Compute,01-Feb-2026,100000,Yes
+U384860,C025,AWS Enterprise SQL Pro Compute,01-Mar-2026,100000,Yes
+U366747,C025,AWS Enterprise SQL Pro Compute,01-Apr-2026,100000,Yes
+U912495,C025,AWS Enterprise SQL Pro Compute,01-May-2026,100000,Yes
+U908707,C025,AWS Enterprise SQL Pro Compute,01-Jun-2026,100000,Yes
+U611628,C025,AWS Enterprise SQL Pro Compute,01-Jul-2026,100000,Yes
+U716800,C025,AWS Enterprise SQL Pro Compute,01-Aug-2026,100000,Yes
+U330130,C025,AWS Enterprise SQL Pro Compute,01-Sep-2026,100000,Yes
+U917794,C025,AWS Enterprise SQL Pro Compute,01-Oct-2026,100000,Yes
+U795879,C025,AWS Enterprise SQL Pro Compute,01-Nov-2026,100000,Yes
+U340730,C025,AWS Enterprise SQL Pro Compute,01-Dec-2026,100000,Yes
+U778180,C025,AWS Enterprise DLT Core Compute,01-Jan-2026,100000,Yes
+U817792,C025,AWS Enterprise DLT Core Compute,01-Feb-2026,100000,Yes
+U231524,C025,AWS Enterprise DLT Core Compute,01-Mar-2026,100000,Yes
+U359712,C025,AWS Enterprise DLT Core Compute,01-Apr-2026,100000,Yes
+U139022,C025,AWS Enterprise DLT Core Compute,01-May-2026,100000,Yes
+U352227,C025,AWS Enterprise DLT Core Compute,01-Jun-2026,100000,Yes
+U622165,C025,AWS Enterprise DLT Core Compute,01-Jul-2026,100000,Yes
+U520943,C025,AWS Enterprise DLT Core Compute,01-Aug-2026,100000,Yes
+U903607,C025,AWS Enterprise DLT Core Compute,01-Sep-2026,100000,Yes
+U579233,C025,AWS Enterprise DLT Core Compute,01-Oct-2026,100000,Yes
+U909341,C025,AWS Enterprise DLT Core Compute,01-Nov-2026,100000,Yes
+U226488,C025,AWS Enterprise DLT Core Compute,01-Dec-2026,100000,Yes
+U662882,C025,AWS Enterprise All-Purpose Compute (Photon),01-Jan-2026,100000,Yes
+U116682,C025,AWS Enterprise All-Purpose Compute (Photon),01-Feb-2026,100000,Yes
+U996282,C025,AWS Enterprise All-Purpose Compute (Photon),01-Mar-2026,100000,Yes
+U876272,C025,AWS Enterprise All-Purpose Compute (Photon),01-Apr-2026,100000,Yes
+U502315,C025,AWS Enterprise All-Purpose Compute (Photon),01-May-2026,100000,Yes
+U503523,C025,AWS Enterprise All-Purpose Compute (Photon),01-Jun-2026,100000,Yes
+U253671,C025,AWS Enterprise All-Purpose Compute (Photon),01-Jul-2026,100000,Yes
+U201004,C025,AWS Enterprise All-Purpose Compute (Photon),01-Aug-2026,100000,Yes
+U973225,C025,AWS Enterprise All-Purpose Compute (Photon),01-Sep-2026,100000,Yes
+U554593,C025,AWS Enterprise All-Purpose Compute (Photon),01-Oct-2026,100000,Yes
+U771580,C025,AWS Enterprise All-Purpose Compute (Photon),01-Nov-2026,100000,Yes
+U616587,C025,AWS Enterprise All-Purpose Compute (Photon),01-Dec-2026,100000,Yes
+U195627,C025,AWS Public Connectivity Data Processed,01-Jan-2026,100000,No
+U148870,C025,AWS Public Connectivity Data Processed,01-Feb-2026,100000,No
+U959700,C025,AWS Public Connectivity Data Processed,01-Mar-2026,100000,No
+U799632,C025,AWS Public Connectivity Data Processed,01-Apr-2026,100000,No
+U565505,C025,AWS Public Connectivity Data Processed,01-May-2026,100000,No
+U254565,C025,AWS Public Connectivity Data Processed,01-Jun-2026,100000,No
+U324109,C025,AWS Public Connectivity Data Processed,01-Jul-2026,100000,No
+U774881,C025,AWS Public Connectivity Data Processed,01-Aug-2026,100000,No
+U356324,C025,AWS Public Connectivity Data Processed,01-Sep-2026,100000,No
+U775670,C025,AWS Public Connectivity Data Processed,01-Oct-2026,100000,No
+U316299,C025,AWS Public Connectivity Data Processed,01-Nov-2026,100000,No
+U516625,C025,AWS Public Connectivity Data Processed,01-Dec-2026,100000,No
