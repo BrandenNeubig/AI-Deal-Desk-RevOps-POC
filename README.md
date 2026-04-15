@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # AI Deal Desk / RevOps POC
 
 A lightweight proof of concept that simulates Deal Desk and RevOps workflows using a mock Salesforce-style dataset, Python business rules, and the OpenAI API.
@@ -42,3 +43,7 @@ Given a selected quote, the app:
     ├── products.csv
     ├── consumption_usage.csv
     └── approval_rules.json
+=======
+# AI-Deal-Desk-RevOps-POC
+A lightweight proof of concept that simulates Deal Desk and RevOps workflows using a mock Salesforce-style dataset, Python business rules, and the OpenAI API.
+>>>>>>> b6d54100c35d7eb7ae8e4f24326e339cac922f69
