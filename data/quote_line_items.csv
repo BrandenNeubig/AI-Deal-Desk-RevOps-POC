@@ -1,110 +1,110 @@
-qli_id,quote_id,product_name,discount_percent,cross_service_discount_eligible
-QLI161859,Q0011,AWS Enterprise Gemini Model Serving,0,No
-QLI605579,Q0011,AWS Databricks Storage,0,No
-QLI819660,Q0011,AWS Enterprise Clean Rooms Collaborator,0,Yes
-QLI832020,Q0011,AWS Enterprise All-Purpose Compute (Photon),0,Yes
-QLI480648,Q0021,AWS Enterprise DLT Pro Compute (Photon),10,Yes
-QLI641026,Q0021,AWS Enterprise Model Training,0,No
-QLI268128,Q0022,AWS Enterprise DLT Core Compute,20,Yes
-QLI177445,Q0022,AWS Enterprise Anthropic Model Serving,0,No
-QLI442529,Q0022,AWS Enterprise Database Serverless Compute,20,Yes
-QLI689920,Q0022,AWS Enterprise All-Purpose Compute,20,Yes
-QLI896773,Q0031,AWS Inter-Availability Zone Egress,0,No
-QLI311014,Q0031,AWS Enterprise All-Purpose Serverless Compute,25,Yes
-QLI380256,Q0032,AWS Enterprise All-Purpose Serverless Compute,25,Yes
-QLI647462,Q0032,AWS Inter-Region Egress,0,No
-QLI713445,Q0032,AWS Enterprise Anthropic Model Serving,0,No
-QLI774186,Q0032,AWS Enterprise Jobs Compute (Photon),25,Yes
-QLI637528,Q0041,AWS Enterprise All-Purpose Compute (Photon),0,Yes
-QLI937142,Q0041,AWS Enterprise DLT Advanced Compute,0,Yes
-QLI830208,Q0041,AWS Enterprise DLT Advanced Compute (Photon),0,Yes
-QLI375401,Q0041,AWS Enterprise Anthropic Model Serving,0,No
-QLI186844,Q0051,AWS Enterprise All-Purpose Compute (Photon),20,Yes
-QLI171404,Q0051,AWS Public Connectivity Data Processed,0,No
-QLI873743,Q0051,AWS Private Connectivity Endpoint,0,No
-QLI300174,Q0051,AWS Enterprise DLT Core Compute (Photon),20,Yes
-QLI726174,Q0051,AWS Enterprise SQL Pro Compute,20,Yes
-QLI350415,Q0061,AWS Enterprise Anthropic Model Serving,0,No
-QLI661049,Q0061,AWS Enterprise DLT Core Compute,10,Yes
-QLI398102,Q0061,AWS Enterprise DLT Pro Compute (Photon),10,Yes
-QLI165044,Q0071,AWS Enterprise SQL Pro Compute,25,Yes
-QLI283404,Q0071,AWS Inter-Region Egress,0,No
-QLI194289,Q0072,AWS Enterprise OpenAI Model Serving,0,No
-QLI705566,Q0072,AWS Enterprise Jobs Compute,0,Yes
-QLI928472,Q0072,AWS Enterprise Model Training,0,No
-QLI917294,Q0081,AWS Enterprise All-Purpose Compute (Photon),15,Yes
-QLI318231,Q0081,AWS Enterprise DLT Advanced Compute,15,Yes
-QLI785269,Q0082,AWS Private Connectivity Data Processed,0,No
-QLI744839,Q0082,AWS Enterprise Serverless SQL Compute,10,Yes
-QLI498935,Q0082,AWS Enterprise Database Serverless Compute,10,Yes
-QLI191528,Q0091,AWS Enterprise Jobs Light Compute,0,Yes
-QLI380874,Q0091,AWS Private Connectivity Endpoint,0,No
-QLI870018,Q0091,AWS Enterprise All-Purpose Serverless Compute,0,Yes
-QLI210180,Q0091,AWS Enterprise SQL Pro Compute,0,Yes
-QLI257485,Q0101,AWS Enterprise SQL Pro Compute,10,Yes
-QLI970008,Q0101,AWS Public Connectivity Data Processed,0,No
-QLI940893,Q0101,AWS Enterprise DLT Core Compute,10,Yes
-QLI884648,Q0101,AWS Enterprise All-Purpose Compute,10,Yes
-QLI855039,Q0102,AWS Public Connectivity Data Processed,0,No
-QLI403438,Q0102,AWS Enterprise All-Purpose Compute (Photon),30,Yes
-QLI848797,Q0102,AWS Private Connectivity Endpoint,0,No
-QLI593852,Q0111,AWS Enterprise All-Purpose Compute,10,Yes
-QLI966724,Q0111,AWS Enterprise DLT Pro Compute,10,Yes
-QLI949483,Q0112,AWS Enterprise DLT Core Compute,5,Yes
-QLI498184,Q0112,AWS Enterprise DLT Pro Compute,5,Yes
-QLI530121,Q0112,AWS Enterprise All-Purpose Serverless Compute,5,Yes
-QLI832733,Q0112,AWS Enterprise Anthropic Model Serving,0,No
-QLI601203,Q0121,AWS Enterprise Jobs Compute (Photon),30,Yes
-QLI948731,Q0121,AWS Databricks Storage,0,No
-QLI229602,Q0121,AWS Enterprise OpenAI Model Serving,0,No
-QLI887195,Q0121,AWS Enterprise All-Purpose Compute (Photon),30,Yes
-QLI578244,Q0131,AWS Databricks Storage,0,No
-QLI409813,Q0131,AWS Enterprise Jobs Compute (Photon),25,Yes
-QLI648589,Q0131,AWS Internet Egress,0,No
-QLI129145,Q0141,AWS Enterprise DLT Advanced Compute (Photon),10,Yes
-QLI247220,Q0141,AWS Enterprise Gemini Model Serving,0,No
-QLI985066,Q0151,AWS Enterprise SQL Pro Compute,20,Yes
-QLI550677,Q0151,AWS Private Connectivity Endpoint,0,No
-QLI100339,Q0151,AWS Enhanced Security and Compliance,20,Yes
-QLI131665,Q0161,AWS Enterprise Serverless SQL Compute,15,Yes
-QLI888019,Q0161,AWS Databricks Storage,0,No
-QLI634718,Q0161,AWS Internet Egress,0,No
-QLI770440,Q0162,AWS Enterprise SQL Pro Compute,30,Yes
-QLI311493,Q0162,AWS Enterprise Clean Rooms Collaborator,30,Yes
-QLI856117,Q0162,AWS Enterprise OpenAI Model Serving,0,No
-QLI154152,Q0162,AWS Enterprise Jobs Light Compute,30,Yes
-QLI370742,Q0171,AWS Enterprise Gemini Model Serving,0,No
-QLI970373,Q0171,AWS Enterprise DLT Advanced Compute (Photon),25,Yes
-QLI449348,Q0171,AWS Enterprise OpenAI Model Serving,0,No
-QLI697312,Q0172,AWS Enterprise DLT Advanced Compute (Photon),15,Yes
-QLI231208,Q0172,AWS Enterprise DLT Pro Compute,15,Yes
-QLI687016,Q0172,AWS Private Connectivity Data Processed,0,No
-QLI449005,Q0172,AWS Enterprise All-Purpose Compute,15,Yes
-QLI967535,Q0172,AWS Enterprise Gemini Model Serving,0,No
-QLI893073,Q0181,AWS Enterprise Jobs Compute,0,Yes
-QLI778474,Q0181,AWS Enterprise Serverless SQL Compute,0,Yes
-QLI709531,Q0182,AWS Enterprise DLT Advanced Compute,0,Yes
-QLI693956,Q0191,AWS Enterprise Serverless SQL Compute,25,Yes
-QLI671724,Q0191,AWS Inter-Region Egress,0,No
-QLI376337,Q0191,AWS Enterprise DLT Pro Compute,25,Yes
-QLI248017,Q0192,AWS Enterprise SQL Compute,10,Yes
-QLI804268,Q0201,AWS Enterprise Model Training,0,No
-QLI564289,Q0201,AWS Enterprise Jobs Serverless Compute,0,Yes
-QLI260226,Q0201,AWS Public Connectivity Data Processed,0,No
-QLI126267,Q0211,AWS Enterprise All-Purpose Serverless Compute,15,Yes
-QLI769911,Q0211,AWS Enterprise SQL Compute,15,Yes
-QLI493448,Q0211,AWS Inter-Availability Zone Egress,0,No
-QLI788497,Q0211,AWS Enterprise All-Purpose Compute (Photon),15,Yes
-QLI818692,Q0221,AWS Enterprise DLT Pro Compute (Photon),20,Yes
-QLI842355,Q0231,AWS Enterprise All-Purpose Compute,20,Yes
-QLI500301,Q0231,AWS Enterprise All-Purpose Compute (Photon),20,Yes
-QLI654094,Q0231,AWS Inter-Availability Zone Egress,0,No
-QLI188842,Q0231,AWS Enterprise Model Training,0,No
-QLI670783,Q0241,AWS Enhanced Security and Compliance,25,Yes
-QLI772467,Q0241,AWS Enterprise All-Purpose Compute (Photon),25,Yes
-QLI857531,Q0241,AWS Enterprise Jobs Light Compute,25,Yes
-QLI463592,Q0241,AWS Enterprise Gemini Model Serving,0,No
-QLI114595,Q0251,AWS Enterprise Jobs Compute (Photon),20,Yes
-QLI981548,Q0251,AWS Inter-Region Egress,0,No
-QLI556719,Q0251,AWS Enterprise Clean Rooms Collaborator,20,Yes
-QLI292221,Q0251,AWS Enterprise All-Purpose Compute,20,Yes
+qli_id,quote_id,product_name,discount_percent,discount_type
+QLI161859,Q0011,AWS Enterprise Gemini Model Serving,20,Add-on
+QLI605579,Q0011,AWS Databricks Storage,3,Add-on
+QLI819660,Q0011,AWS Enterprise Clean Rooms Collaborator,0,Cross Service Family
+QLI832020,Q0011,AWS Enterprise All-Purpose Compute (Photon),0,Cross Service Family
+QLI480648,Q0021,AWS Enterprise DLT Pro Compute (Photon),10,Cross Service Family
+QLI641026,Q0021,AWS Enterprise Model Training,0,Add-on
+QLI268128,Q0022,AWS Enterprise DLT Core Compute,20,Cross Service Family
+QLI177445,Q0022,AWS Enterprise Anthropic Model Serving,8,Add-on
+QLI442529,Q0022,AWS Enterprise Database Serverless Compute,20,Cross Service Family
+QLI689920,Q0022,AWS Enterprise All-Purpose Compute,20,Cross Service Family
+QLI896773,Q0031,AWS Inter-Availability Zone Egress,7,Add-on
+QLI311014,Q0031,AWS Enterprise All-Purpose Serverless Compute,25,Cross Service Family
+QLI380256,Q0032,AWS Enterprise All-Purpose Serverless Compute,25,Cross Service Family
+QLI647462,Q0032,AWS Inter-Region Egress,7,Add-on
+QLI713445,Q0032,AWS Enterprise Anthropic Model Serving,4,Add-on
+QLI774186,Q0032,AWS Enterprise Jobs Compute (Photon),25,Cross Service Family
+QLI637528,Q0041,AWS Enterprise All-Purpose Compute (Photon),0,Cross Service Family
+QLI937142,Q0041,AWS Enterprise DLT Advanced Compute,0,Cross Service Family
+QLI830208,Q0041,AWS Enterprise DLT Advanced Compute (Photon),0,Cross Service Family
+QLI375401,Q0041,AWS Enterprise Anthropic Model Serving,3,Add-on
+QLI186844,Q0051,AWS Enterprise All-Purpose Compute (Photon),20,Cross Service Family
+QLI171404,Q0051,AWS Public Connectivity Data Processed,17,Add-on
+QLI873743,Q0051,AWS Private Connectivity Endpoint,2,Add-on
+QLI300174,Q0051,AWS Enterprise DLT Core Compute (Photon),20,Cross Service Family
+QLI726174,Q0051,AWS Enterprise SQL Pro Compute,20,Cross Service Family
+QLI350415,Q0061,AWS Enterprise Anthropic Model Serving,18,Add-on
+QLI661049,Q0061,AWS Enterprise DLT Core Compute,10,Cross Service Family
+QLI398102,Q0061,AWS Enterprise DLT Pro Compute (Photon),10,Cross Service Family
+QLI165044,Q0071,AWS Enterprise SQL Pro Compute,25,Cross Service Family
+QLI283404,Q0071,AWS Inter-Region Egress,13,Add-on
+QLI194289,Q0072,AWS Enterprise OpenAI Model Serving,1,Add-on
+QLI705566,Q0072,AWS Enterprise Jobs Compute,0,Cross Service Family
+QLI928472,Q0072,AWS Enterprise Model Training,0,Add-on
+QLI917294,Q0081,AWS Enterprise All-Purpose Compute (Photon),15,Cross Service Family
+QLI318231,Q0081,AWS Enterprise DLT Advanced Compute,15,Cross Service Family
+QLI785269,Q0082,AWS Private Connectivity Data Processed,2,Add-on
+QLI744839,Q0082,AWS Enterprise Serverless SQL Compute,10,Cross Service Family
+QLI498935,Q0082,AWS Enterprise Database Serverless Compute,10,Cross Service Family
+QLI191528,Q0091,AWS Enterprise Jobs Light Compute,0,Cross Service Family
+QLI380874,Q0091,AWS Private Connectivity Endpoint,6,Add-on
+QLI870018,Q0091,AWS Enterprise All-Purpose Serverless Compute,0,Cross Service Family
+QLI210180,Q0091,AWS Enterprise SQL Pro Compute,0,Cross Service Family
+QLI257485,Q0101,AWS Enterprise SQL Pro Compute,10,Cross Service Family
+QLI970008,Q0101,AWS Public Connectivity Data Processed,7,Add-on
+QLI940893,Q0101,AWS Enterprise DLT Core Compute,10,Cross Service Family
+QLI884648,Q0101,AWS Enterprise All-Purpose Compute,10,Cross Service Family
+QLI855039,Q0102,AWS Public Connectivity Data Processed,16,Add-on
+QLI403438,Q0102,AWS Enterprise All-Purpose Compute (Photon),30,Cross Service Family
+QLI848797,Q0102,AWS Private Connectivity Endpoint,19,Add-on
+QLI593852,Q0111,AWS Enterprise All-Purpose Compute,10,Cross Service Family
+QLI966724,Q0111,AWS Enterprise DLT Pro Compute,10,Cross Service Family
+QLI949483,Q0112,AWS Enterprise DLT Core Compute,5,Cross Service Family
+QLI498184,Q0112,AWS Enterprise DLT Pro Compute,5,Cross Service Family
+QLI530121,Q0112,AWS Enterprise All-Purpose Serverless Compute,5,Cross Service Family
+QLI832733,Q0112,AWS Enterprise Anthropic Model Serving,0,Add-on
+QLI601203,Q0121,AWS Enterprise Jobs Compute (Photon),30,Cross Service Family
+QLI948731,Q0121,AWS Databricks Storage,17,Add-on
+QLI229602,Q0121,AWS Enterprise OpenAI Model Serving,6,Add-on
+QLI887195,Q0121,AWS Enterprise All-Purpose Compute (Photon),30,Cross Service Family
+QLI578244,Q0131,AWS Databricks Storage,20,Add-on
+QLI409813,Q0131,AWS Enterprise Jobs Compute (Photon),25,Cross Service Family
+QLI648589,Q0131,AWS Internet Egress,17,Add-on
+QLI129145,Q0141,AWS Enterprise DLT Advanced Compute (Photon),10,Cross Service Family
+QLI247220,Q0141,AWS Enterprise Gemini Model Serving,13,Add-on
+QLI985066,Q0151,AWS Enterprise SQL Pro Compute,20,Cross Service Family
+QLI550677,Q0151,AWS Private Connectivity Endpoint,7,Add-on
+QLI100339,Q0151,AWS Enhanced Security and Compliance,20,Cross Service Family
+QLI131665,Q0161,AWS Enterprise Serverless SQL Compute,15,Cross Service Family
+QLI888019,Q0161,AWS Databricks Storage,14,Add-on
+QLI634718,Q0161,AWS Internet Egress,18,Add-on
+QLI770440,Q0162,AWS Enterprise SQL Pro Compute,30,Cross Service Family
+QLI311493,Q0162,AWS Enterprise Clean Rooms Collaborator,30,Cross Service Family
+QLI856117,Q0162,AWS Enterprise OpenAI Model Serving,8,Add-on
+QLI154152,Q0162,AWS Enterprise Jobs Light Compute,30,Cross Service Family
+QLI370742,Q0171,AWS Enterprise Gemini Model Serving,0,Add-on
+QLI970373,Q0171,AWS Enterprise DLT Advanced Compute (Photon),25,Cross Service Family
+QLI449348,Q0171,AWS Enterprise OpenAI Model Serving,5,Add-on
+QLI697312,Q0172,AWS Enterprise DLT Advanced Compute (Photon),15,Cross Service Family
+QLI231208,Q0172,AWS Enterprise DLT Pro Compute,15,Cross Service Family
+QLI687016,Q0172,AWS Private Connectivity Data Processed,13,Add-on
+QLI449005,Q0172,AWS Enterprise All-Purpose Compute,15,Cross Service Family
+QLI967535,Q0172,AWS Enterprise Gemini Model Serving,10,Add-on
+QLI893073,Q0181,AWS Enterprise Jobs Compute,0,Cross Service Family
+QLI778474,Q0181,AWS Enterprise Serverless SQL Compute,0,Cross Service Family
+QLI709531,Q0182,AWS Enterprise DLT Advanced Compute,0,Cross Service Family
+QLI693956,Q0191,AWS Enterprise Serverless SQL Compute,25,Cross Service Family
+QLI671724,Q0191,AWS Inter-Region Egress,8,Add-on
+QLI376337,Q0191,AWS Enterprise DLT Pro Compute,25,Cross Service Family
+QLI248017,Q0192,AWS Enterprise SQL Compute,10,Cross Service Family
+QLI804268,Q0201,AWS Enterprise Model Training,4,Add-on
+QLI564289,Q0201,AWS Enterprise Jobs Serverless Compute,0,Cross Service Family
+QLI260226,Q0201,AWS Public Connectivity Data Processed,6,Add-on
+QLI126267,Q0211,AWS Enterprise All-Purpose Serverless Compute,15,Cross Service Family
+QLI769911,Q0211,AWS Enterprise SQL Compute,15,Cross Service Family
+QLI493448,Q0211,AWS Inter-Availability Zone Egress,10,Add-on
+QLI788497,Q0211,AWS Enterprise All-Purpose Compute (Photon),15,Cross Service Family
+QLI818692,Q0221,AWS Enterprise DLT Pro Compute (Photon),20,Cross Service Family
+QLI842355,Q0231,AWS Enterprise All-Purpose Compute,20,Cross Service Family
+QLI500301,Q0231,AWS Enterprise All-Purpose Compute (Photon),20,Cross Service Family
+QLI654094,Q0231,AWS Inter-Availability Zone Egress,3,Add-on
+QLI188842,Q0231,AWS Enterprise Model Training,2,Add-on
+QLI670783,Q0241,AWS Enhanced Security and Compliance,25,Cross Service Family
+QLI772467,Q0241,AWS Enterprise All-Purpose Compute (Photon),25,Cross Service Family
+QLI857531,Q0241,AWS Enterprise Jobs Light Compute,25,Cross Service Family
+QLI463592,Q0241,AWS Enterprise Gemini Model Serving,12,Add-on
+QLI114595,Q0251,AWS Enterprise Jobs Compute (Photon),20,Cross Service Family
+QLI981548,Q0251,AWS Inter-Region Egress,3,Add-on
+QLI556719,Q0251,AWS Enterprise Clean Rooms Collaborator,20,Cross Service Family
+QLI292221,Q0251,AWS Enterprise All-Purpose Compute,20,Cross Service Family

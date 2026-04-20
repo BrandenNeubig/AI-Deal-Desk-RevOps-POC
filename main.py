@@ -1,12 +1,15 @@
+
 import json
 import os
 from pathlib import Path
+from typing import Dict, List, Optional, Tuple
 
 import pandas as pd
 from dotenv import load_dotenv
 from openai import OpenAI
 
 DATE_FORMAT = "%d-%b-%Y"
+APPROVAL_HIERARCHY = ["AE", "Manager", "Director", "CRO", "CEO"]
 
 
 def load_data(data_dir: Path):
@@ -15,6 +18,7 @@ def load_data(data_dir: Path):
     opportunities = pd.read_csv(data_dir / "opportunities.csv")
     quotes = pd.read_csv(data_dir / "quotes.csv")
     quote_line_items = pd.read_csv(data_dir / "quote_line_items.csv")
+    products = pd.read_csv(data_dir / "products.csv")
     consumption_usage = pd.read_csv(data_dir / "consumption_usage.csv")
 
     with open(data_dir / "approval_rules.json", "r") as f:
@@ -26,6 +30,7 @@ def load_data(data_dir: Path):
         "opportunities": opportunities,
         "quotes": quotes,
         "quote_line_items": quote_line_items,
+        "products": products,
         "consumption_usage": consumption_usage,
         "approval_rules": approval_rules,
     }
@@ -36,87 +41,185 @@ def get_quote_package(data, quote_id: str):
     opportunities = data["opportunities"]
     accounts = data["accounts"]
     quote_line_items = data["quote_line_items"]
+    products = data["products"]
 
     quote_match = quotes[quotes["quote_id"] == quote_id]
     if quote_match.empty:
-        raise ValueError(f"Quote {quote_id} was not found.")
+        raise ValueError("Quote %s was not found." % quote_id)
 
     quote = quote_match.iloc[0]
     opportunity = opportunities[opportunities["opportunity_id"] == quote["opportunity_id"]].iloc[0]
     account = accounts[accounts["account_id"] == opportunity["account_id"]].iloc[0]
+
     qli = quote_line_items[quote_line_items["quote_id"] == quote_id].copy()
+    qli = qli.merge(
+        products[["product_name", "product_category", "discount_type"]],
+        on="product_name",
+        how="left",
+        suffixes=("", "_product"),
+    )
 
     return quote, opportunity, account, qli
+
+
+def get_pending_quotes(data) -> pd.DataFrame:
+    opportunities = data["opportunities"].copy()
+    quotes = data["quotes"].copy()
+    accounts = data["accounts"].copy()
+
+    pending_opps = opportunities[
+        ~opportunities["stage"].astype(str).str.strip().isin(["Closed Won", "Closed Lost"])
+    ].copy()
+
+    pending_quotes = quotes.merge(
+        pending_opps[["opportunity_id", "account_id", "stage", "type", "close_date"]],
+        on="opportunity_id",
+        how="inner",
+    ).merge(
+        accounts[["account_id", "account_name", "industry", "region"]],
+        on="account_id",
+        how="left",
+    )
+
+    pending_quotes["region"] = pending_quotes["region"].fillna("Unknown")
+    return pending_quotes.sort_values(["region", "account_name", "quote_id"]).reset_index(drop=True)
+
+
+def get_region_quote_counts(data) -> pd.DataFrame:
+    pending_quotes = get_pending_quotes(data)
+    counts = (
+        pending_quotes.groupby("region", as_index=False)["quote_id"]
+        .count()
+        .rename(columns={"quote_id": "Pending Quotes"})
+        .sort_values("region")
+    )
+    return counts
+
+
+def get_discount_tier(matrix: List[Dict], annual_commit: float) -> Optional[Dict]:
+    for tier in matrix:
+        min_commit = float(tier["min_annual_commit"])
+        max_commit = tier["max_annual_commit"]
+        in_range = (
+            annual_commit >= min_commit
+            if max_commit is None
+            else min_commit <= annual_commit < float(max_commit)
+        )
+        if in_range:
+            return tier
+    return None
+
+
+def determine_required_approver(requested_discount: float, approvals: Dict) -> Tuple[str, str]:
+    ae_limit = float(approvals.get("AE", 0))
+    manager_limit = float(approvals.get("Manager", 0))
+    director_limit = float(approvals.get("Director", 0))
+    cro_limit = float(approvals.get("CRO", 0))
+    ceo_limit = float(approvals.get("CEO", 999))
+
+    if requested_discount <= ae_limit:
+        return "AE", "%d%%" % ae_limit
+    if requested_discount <= manager_limit:
+        return "Manager", "%d%%" % manager_limit
+    if requested_discount <= director_limit:
+        return "Director", "%d%%" % director_limit
+    if requested_discount <= cro_limit:
+        return "CRO", "%d%%" % cro_limit
+    return "CEO", "%d%%" % ceo_limit
+
+
+def get_quote_discount_summary(quote, qli: pd.DataFrame, approval_rules: Dict) -> Dict:
+    annual_commit = float(quote["annual_commit"])
+    cross_service_requested = float(quote.get("cross_service_discount_percent", 0))
+
+    cross_matrix = approval_rules.get("cross_service_preapproved_discount_matrix", [])
+    cross_tier = get_discount_tier(cross_matrix, annual_commit)
+    if cross_tier:
+        cross_approvals = cross_tier.get("approvals", {})
+        cross_required, cross_max = determine_required_approver(
+            cross_service_requested,
+            cross_approvals,
+        )
+        cross_ae_limit = float(cross_approvals.get("AE", 0))
+    else:
+        cross_required, cross_max = "Unknown", "N/A"
+        cross_ae_limit = 0.0
+
+    add_on_qli = qli[
+        qli["discount_type"].astype(str).str.strip().str.lower() == "add-on"
+    ].copy()
+    add_on_requested = (
+        float(pd.to_numeric(add_on_qli["discount_percent"], errors="coerce").fillna(0).max())
+        if not add_on_qli.empty
+        else 0.0
+    )
+
+    add_on_matrix = approval_rules.get("add_on_preapproved_discount_matrix", [])
+    add_on_tier = get_discount_tier(add_on_matrix, annual_commit)
+    if add_on_tier:
+        add_on_approvals = add_on_tier.get("approvals", {})
+        add_on_required, add_on_max = determine_required_approver(
+            add_on_requested,
+            add_on_approvals,
+        )
+        add_on_ae_limit = float(add_on_approvals.get("AE", 0))
+    else:
+        add_on_required, add_on_max = "Unknown", "N/A"
+        add_on_ae_limit = 0.0
+
+    cross_ratio_to_ae = round(cross_service_requested / cross_ae_limit, 2) if cross_ae_limit > 0 else None
+    add_on_ratio_to_ae = round(add_on_requested / add_on_ae_limit, 2) if add_on_ae_limit > 0 else None
+
+    return {
+        "annual_commit": annual_commit,
+        "term_months": int(quote["term_months"]),
+        "cross_service_requested_discount": cross_service_requested,
+        "cross_service_ae_preapproved_discount": cross_ae_limit,
+        "cross_service_ratio_to_ae_preapproved": cross_ratio_to_ae,
+        "cross_service_approver_required": cross_required,
+        "cross_service_approver_max_discount": cross_max,
+        "add_on_requested_discount": add_on_requested,
+        "add_on_ae_preapproved_discount": add_on_ae_limit,
+        "add_on_ratio_to_ae_preapproved": add_on_ratio_to_ae,
+        "add_on_approver_required": add_on_required,
+        "add_on_approver_max_discount": add_on_max,
+    }
 
 
 def check_quote_approvals(quote, qli, approval_rules):
     reasons = []
     highest_required_approval = None
+    discount_summary = get_quote_discount_summary(quote, qli, approval_rules)
 
-    annual_commit = float(quote["annual_commit"])
-    cross_service_discount = float(quote["cross_service_discount_percent"])
-    term_months = int(quote["term_months"])
-
-    approval_hierarchy = ["AE", "Manager", "Director", "CRO", "CEO"]
-
-    def update_highest(level):
+    def update_highest(level: str):
         nonlocal highest_required_approval
-        if level not in approval_hierarchy:
+        if level not in APPROVAL_HIERARCHY:
             return
         if highest_required_approval is None:
             highest_required_approval = level
-        elif approval_hierarchy.index(level) > approval_hierarchy.index(highest_required_approval):
+        elif APPROVAL_HIERARCHY.index(level) > APPROVAL_HIERARCHY.index(highest_required_approval):
             highest_required_approval = level
 
-    # Cross-service preapproved discount matrix
-    matrix = approval_rules.get("cross_service_preapproved_discount_matrix", [])
-    applicable_tier = None
-
-    for tier in matrix:
-        min_commit = float(tier["min_annual_commit"])
-        max_commit = tier["max_annual_commit"]
-
-        if max_commit is None:
-            if annual_commit >= min_commit:
-                applicable_tier = tier
-                break
-        else:
-            if min_commit <= annual_commit < float(max_commit):
-                applicable_tier = tier
-                break
-
-    if applicable_tier:
-        approvals = applicable_tier.get("approvals", {})
-
-        ae_limit = float(approvals.get("AE", 0))
-        manager_limit = float(approvals.get("Manager", 0))
-        director_limit = float(approvals.get("Director", 0))
-        cro_limit = float(approvals.get("CRO", 0))
-
-        if cross_service_discount <= ae_limit:
-            pass  # preapproved, no escalation needed
-        elif cross_service_discount <= manager_limit:
-            reasons.append(
-                f"Manager approval required: {cross_service_discount:.1f}% cross-service discount exceeds AE preapproval limit of {ae_limit:.1f}% for annual commit ${annual_commit:,.0f}."
+    cross_required = discount_summary["cross_service_approver_required"]
+    if cross_required != "AE" and cross_required != "Unknown":
+        reasons.append(
+            "%s approval required for cross-service discount request of %.1f%%." % (
+                cross_required,
+                discount_summary["cross_service_requested_discount"],
             )
-            update_highest("Manager")
-        elif cross_service_discount <= director_limit:
-            reasons.append(
-                f"Director approval required: {cross_service_discount:.1f}% cross-service discount exceeds Manager preapproval limit of {manager_limit:.1f}% for annual commit ${annual_commit:,.0f}."
-            )
-            update_highest("Director")
-        elif cross_service_discount <= cro_limit:
-            reasons.append(
-                f"CRO approval required: {cross_service_discount:.1f}% cross-service discount exceeds Director preapproval limit of {director_limit:.1f}% for annual commit ${annual_commit:,.0f}."
-            )
-            update_highest("CRO")
-        else:
-            reasons.append(
-                f"CEO approval required: {cross_service_discount:.1f}% cross-service discount exceeds CRO preapproval limit of {cro_limit:.1f}% for annual commit ${annual_commit:,.0f}."
-            )
-            update_highest("CEO")
+        )
+        update_highest(cross_required)
 
-    # Short-term high-commit rule
+    add_on_required = discount_summary["add_on_approver_required"]
+    if add_on_required != "AE" and add_on_required != "Unknown":
+        reasons.append(
+            "%s approval required for add-on discount request of %.1f%%." % (
+                add_on_required,
+                discount_summary["add_on_requested_discount"],
+            )
+        )
+        update_highest(add_on_required)
+
     short_term_rule = approval_rules.get("short_term_high_commit")
     if short_term_rule:
         conditions = short_term_rule.get("conditions", {})
@@ -125,13 +228,14 @@ def check_quote_approvals(quote, qli, approval_rules):
         approval_required = short_term_rule.get("approval_required", "CRO")
         reason = short_term_rule.get("reason", "Short-term high-value deal requires review.")
 
-        if term_months == required_term and annual_commit >= min_annual_commit:
-            reasons.append(f"{approval_required} approval required: {reason}")
+        if int(quote["term_months"]) == required_term and float(quote["annual_commit"]) >= min_annual_commit:
+            reasons.append("%s approval required: %s" % (approval_required, reason))
             update_highest(approval_required)
 
     return {
         "reasons": reasons,
-        "highest_required_approval": highest_required_approval
+        "highest_required_approval": highest_required_approval,
+        "discount_summary": discount_summary,
     }
 
 
@@ -143,7 +247,7 @@ def get_consumption_summary(data, account_id: str):
     if account_contracts.empty:
         return {
             "status": "No contract found",
-            "message": "This account has no matching contract records."
+            "message": "This account has no matching contract records.",
         }
 
     account_contract_ids = account_contracts["contract_id"].tolist()
@@ -152,7 +256,7 @@ def get_consumption_summary(data, account_id: str):
     if account_usage.empty:
         return {
             "status": "No usage found",
-            "message": "This account has no matching monthly consumption records."
+            "message": "This account has no matching monthly consumption records.",
         }
 
     account_usage["month_dt"] = pd.to_datetime(account_usage["month"], format=DATE_FORMAT)
@@ -163,6 +267,16 @@ def get_consumption_summary(data, account_id: str):
     latest_contract = account_contracts.sort_values("end_date").iloc[-1]
     total_commit_value = float(latest_contract["total_commit_value"])
     term_months = int(latest_contract["term_months"])
+
+    monthly_usage = (
+        account_usage.groupby("month_dt", as_index=False)["consumed_value"]
+        .sum()
+        .sort_values("month_dt")
+    )
+    trailing_3_avg = float(
+        monthly_usage["consumed_value"].tail(3).mean()
+    ) if not monthly_usage.empty else 0.0
+    annualized_trailing_3_months = trailing_3_avg * 12
 
     commit_used_pct = (total_consumed / total_commit_value) if total_commit_value else 0
 
@@ -180,11 +294,12 @@ def get_consumption_summary(data, account_id: str):
     return {
         "status": status,
         "months_observed": months_observed,
-        "latest_usage_month": latest_month.strftime("%d-%b-%Y"),
+        "latest_usage_month": latest_month.strftime(DATE_FORMAT),
         "total_commit_value": int(total_commit_value),
         "total_consumed_to_date": int(total_consumed),
         "commit_used_percent": round(commit_used_pct * 100, 1),
         "average_monthly_burn": round(avg_monthly_burn, 2),
+        "annualized_trailing_3_months": round(annualized_trailing_3_months, 2),
         "estimated_runway_months": None if runway_months is None else round(runway_months, 1),
     }
 
@@ -209,7 +324,7 @@ def get_industry_quote_context(data, selected_quote_id: str, limit: int = 10):
         return {
             "selected_industry": None,
             "industry_benchmark_summary": "No industry context found.",
-            "peer_quotes": []
+            "peer_quotes": [],
         }
 
     selected_industry = selected_row.iloc[0]["industry"]
@@ -223,7 +338,7 @@ def get_industry_quote_context(data, selected_quote_id: str, limit: int = 10):
         return {
             "selected_industry": selected_industry,
             "industry_benchmark_summary": "No peer quotes found in this industry.",
-            "peer_quotes": []
+            "peer_quotes": [],
         }
 
     peer_quotes = peer_quotes.sort_values(
@@ -253,9 +368,9 @@ def get_industry_quote_context(data, selected_quote_id: str, limit: int = 10):
             "peer_quote_count": peer_count,
             "average_discount_percent": avg_discount,
             "max_discount_percent": max_discount,
-            "average_annual_commit": avg_annual_commit
+            "average_annual_commit": avg_annual_commit,
         },
-        "peer_quotes": peer_quotes_sample
+        "peer_quotes": peer_quotes_sample,
     }
 
 
@@ -283,20 +398,23 @@ def build_review_payload(data, quote_id: str):
             "close_date": opportunity["close_date"],
         },
         "quote": {
+            "quote_id": quote["quote_id"],
             "annual_commit": int(quote["annual_commit"]),
             "term_months": int(quote["term_months"]),
             "total_contract_value": int(quote["total_contract_value"]),
             "cross_service_discount_percent": float(quote["cross_service_discount_percent"]),
+            "business_justification": str(quote.get("business_justification", "")),
         },
         "quote_line_items": qli[[
             "product_name",
             "discount_percent",
-            "cross_service_discount_eligible"
+            "discount_type",
         ]].to_dict(orient="records"),
         "approval_reasons": approval_result["reasons"],
-   	"highest_required_approval": approval_result["highest_required_approval"],
-    	"consumption_summary": consumption_summary,
-    	"industry_quote_context": industry_context,
+        "highest_required_approval": approval_result["highest_required_approval"],
+        "discount_summary": approval_result["discount_summary"],
+        "consumption_summary": consumption_summary,
+        "industry_quote_context": industry_context,
     }
     return payload
 
@@ -312,26 +430,27 @@ def explain_with_openai(payload):
     response = client.responses.create(
         model="gpt-5.4-mini",
         input=f"""
-You are a friendly Deal Desk analyst.
-Explain the result like the user is brand new to OpenAI and sales operations.
+You are a Deal Desk assistant for a proof of concept.
+Be concise. Prefer a single sentence when possible.
+If more than one sentence is needed, use very short bullet points.
+Do not be verbose.
 
 Here is the review payload:
 {json.dumps(payload, indent=2)}
 
 Please answer with:
-1. Whether approval is needed based on the business rules
-2. Why it is needed
-3. Whether the business case justification strengthens the request, if the business case justification is blank, reject the quote
-4. Whether this quote looks aggressive, typical, or favorable compared with peer quotes in the same industry
-5. Whether there is an expansion signal from consumption
-6. A short recommended next step, if the business case justification is blank, inform the user to supply one and resubmit
+1. Approval status
+2. Key reason or reasons
+3. Business justification quality
+4. Peer discount comparison
+5. Consumption signal
+6. Recommended next step
 
 Important:
 - Do not override the business rules decision
-- Use the business_case_justification as additional context
-- Use the industry_quote_context to compare this quote against peer quotes
-- If the justification is weak or empty, say so gently
-- Keep it simple, warm, and under 200 words
+- Use the business_justification from the quote as context
+- Keep the tone practical and executive-friendly
+- Keep the response under 90 words
 """
     )
     return response.output_text, response.usage
@@ -339,10 +458,10 @@ Important:
 
 def main():
     data_dir = Path("data")
-    quote_id = "Q0011"
+    pending_quotes = load_data(data_dir)
+    quote_id = "Q0021"
 
-    data = load_data(data_dir)
-    payload = build_review_payload(data, quote_id)
+    payload = build_review_payload(pending_quotes, quote_id)
 
     print("\n=== STRUCTURED REVIEW PAYLOAD ===")
     print(json.dumps(payload, indent=2))

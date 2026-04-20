@@ -52,5 +52,51 @@
     },
     "approval_required": "CRO",
     "reason": "High-value deal with only 12-month term; review for missed multi-year opportunity"
-  }
+  },
+  "add_on_preapproved_discount_matrix": [
+    {
+      "min_annual_commit": 0,
+      "max_annual_commit": 100000,
+      "approvals": {
+        "AE": 5,
+        "Manager": 10,
+        "Director": 15,
+        "CRO": 20,
+        "CEO": 999
+      }
+    },
+    {
+      "min_annual_commit": 100000,
+      "max_annual_commit": 500000,
+      "approvals": {
+        "AE": 10,
+        "Manager": 10,
+        "Director": 15,
+        "CRO": 20,
+        "CEO": 999
+      }
+    },
+    {
+      "min_annual_commit": 500000,
+      "max_annual_commit": 1000000,
+      "approvals": {
+        "AE": 10,
+        "Manager": 15,
+        "Director": 15,
+        "CRO": 25,
+        "CEO": 999
+      }
+    },
+    {
+      "min_annual_commit": 1000000,
+      "max_annual_commit": null,
+      "approvals": {
+        "AE": 15,
+        "Manager": 15,
+        "Director": 20,
+        "CRO": 25,
+        "CEO": 999
+      }
+    }
+  ]
 }

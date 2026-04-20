@@ -4,23 +4,23 @@ A002,Enterprise Account 2,Healthcare,EMEA,3100000,30-Nov-2027
 A003,Enterprise Account 3,Public Sector,APAC,250000,31-Oct-2027
 A004,Enterprise Account 4,Public Sector,EMEA,2450000,31-Oct-2027
 A005,Enterprise Account 5,Healthcare,EMEA,600000,31-Jan-2026
-A006,Enterprise Account 6,Media,,800000,28-Feb-2026
+A006,Enterprise Account 6,Media,LATAM,800000,28-Feb-2026
 A007,Enterprise Account 7,Manufacturing,APAC,2300000,31-Oct-2027
 A008,Enterprise Account 8,Finance,APAC,400000,31-Jul-2026
 A009,Enterprise Account 9,Retail,EMEA,400000,31-Mar-2026
 A010,Enterprise Account 10,Healthcare,APAC,2350000,28-Feb-2027
 A011,Enterprise Account 11,Media,APAC,2750000,28-Feb-2026
-A012,Enterprise Account 12,Media,,2350000,30-Jun-2027
-A013,Enterprise Account 13,Technology,,3450000,28-Feb-2026
+A012,Enterprise Account 12,Media,US-East,2350000,30-Jun-2027
+A013,Enterprise Account 13,Technology,US-East,3450000,28-Feb-2026
 A014,Enterprise Account 14,Retail,APAC,3200000,30-Jun-2027
 A015,Enterprise Account 15,Healthcare,EMEA,2950000,30-Sep-2026
-A016,Enterprise Account 16,Public Sector,,1650000,31-Dec-2027
+A016,Enterprise Account 16,Public Sector,LATAM,1650000,31-Dec-2027
 A017,Enterprise Account 17,Healthcare,EMEA,2650000,31-Jul-2027
 A018,Enterprise Account 18,Retail,APAC,500000,30-Nov-2026
 A019,Enterprise Account 19,Public Sector,EMEA,3050000,28-Feb-2027
-A020,Enterprise Account 20,Healthcare,,150000,31-Mar-2026
-A021,Enterprise Account 21,Technology,,200000,31-Dec-2026
+A020,Enterprise Account 20,Healthcare,US-West,150000,31-Mar-2026
+A021,Enterprise Account 21,Technology,US-East,200000,31-Dec-2026
 A022,Enterprise Account 22,Media,EMEA,3300000,31-May-2027
-A023,Enterprise Account 23,Finance,,3150000,28-Feb-2027
+A023,Enterprise Account 23,Finance,US-East,3150000,28-Feb-2027
 A024,Enterprise Account 24,Energy,APAC,1850000,30-Nov-2026
 A025,Enterprise Account 25,Public Sector,EMEA,2650000,31-May-2027

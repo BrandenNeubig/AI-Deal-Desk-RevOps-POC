@@ -1,32 +1,32 @@
-product_id,product_name,product_category,pricing_model,cross_service_discount_eligible
-P001,AWS Enterprise Jobs Light Compute,Jobs,Commit-Based,Yes
-P002,AWS Enterprise Jobs Compute,Jobs,Commit-Based,Yes
-P003,AWS Enterprise Jobs Compute (Photon),Jobs,Commit-Based,Yes
-P004,AWS Enterprise All-Purpose Compute,All-Purpose,Commit-Based,Yes
-P005,AWS Enterprise All-Purpose Compute (Photon),All-Purpose,Commit-Based,Yes
-P006,AWS Enterprise DLT Core Compute,DLT,Commit-Based,Yes
-P007,AWS Enterprise DLT Pro Compute,DLT,Commit-Based,Yes
-P008,AWS Enterprise DLT Advanced Compute,DLT,Commit-Based,Yes
-P009,AWS Enterprise DLT Core Compute (Photon),DLT,Commit-Based,Yes
-P010,AWS Enterprise DLT Pro Compute (Photon),DLT,Commit-Based,Yes
-P011,AWS Enterprise DLT Advanced Compute (Photon),DLT,Commit-Based,Yes
-P012,AWS Enterprise SQL Compute,SQL,Commit-Based,Yes
-P013,AWS Enterprise SQL Pro Compute,SQL,Commit-Based,Yes
-P014,AWS Enterprise Serverless SQL Compute,SQL,Consumption,Yes
-P015,AWS Enterprise Jobs Serverless Compute,Jobs,Consumption,Yes
-P016,AWS Enterprise All-Purpose Serverless Compute,All-Purpose,Consumption,Yes
-P017,AWS Enhanced Security and Compliance,Security,Subscription,Yes
-P018,AWS Enterprise Clean Rooms Collaborator,Clean Rooms,Subscription,Yes
-P019,AWS Enterprise Database Serverless Compute,Database,Consumption,Yes
-P020,AWS Enterprise Serverless Real-Time Inference,Model Inference,Consumption,No
-P021,AWS Enterprise Model Training,Model Training,Consumption,No
-P022,AWS Public Connectivity Data Processed,Networking,Usage-Based,No
-P023,AWS Private Connectivity Data Processed,Networking,Usage-Based,No
-P024,AWS Private Connectivity Endpoint,Networking,Usage-Based,No
-P025,AWS Inter-Region Egress,Networking,Usage-Based,No
-P026,AWS Inter-Availability Zone Egress,Networking,Usage-Based,No
-P027,AWS Internet Egress,Networking,Usage-Based,No
-P028,AWS Databricks Storage,Storage,Capacity-Based,No
-P029,AWS Enterprise OpenAI Model Serving,Model Serving,Consumption,No
-P030,AWS Enterprise Anthropic Model Serving,Model Serving,Consumption,No
-P031,AWS Enterprise Gemini Model Serving,Model Serving,Consumption,No
+product_id,product_name,product_category,discount_type
+P001,AWS Enterprise Jobs Light Compute,Jobs,Cross Service Family
+P002,AWS Enterprise Jobs Compute,Jobs,Cross Service Family
+P003,AWS Enterprise Jobs Compute (Photon),Jobs,Cross Service Family
+P004,AWS Enterprise All-Purpose Compute,All-Purpose,Cross Service Family
+P005,AWS Enterprise All-Purpose Compute (Photon),All-Purpose,Cross Service Family
+P006,AWS Enterprise DLT Core Compute,DLT,Cross Service Family
+P007,AWS Enterprise DLT Pro Compute,DLT,Cross Service Family
+P008,AWS Enterprise DLT Advanced Compute,DLT,Cross Service Family
+P009,AWS Enterprise DLT Core Compute (Photon),DLT,Cross Service Family
+P010,AWS Enterprise DLT Pro Compute (Photon),DLT,Cross Service Family
+P011,AWS Enterprise DLT Advanced Compute (Photon),DLT,Cross Service Family
+P012,AWS Enterprise SQL Compute,SQL,Cross Service Family
+P013,AWS Enterprise SQL Pro Compute,SQL,Cross Service Family
+P014,AWS Enterprise Serverless SQL Compute,SQL,Cross Service Family
+P015,AWS Enterprise Jobs Serverless Compute,Jobs,Cross Service Family
+P016,AWS Enterprise All-Purpose Serverless Compute,All-Purpose,Cross Service Family
+P017,AWS Enhanced Security and Compliance,Security,Cross Service Family
+P018,AWS Enterprise Clean Rooms Collaborator,Clean Rooms,Cross Service Family
+P019,AWS Enterprise Database Serverless Compute,Database,Cross Service Family
+P020,AWS Enterprise Serverless Real-Time Inference,Model Inference,Add-on
+P021,AWS Enterprise Model Training,Model Training,Add-on
+P022,AWS Public Connectivity Data Processed,Networking,Add-on
+P023,AWS Private Connectivity Data Processed,Networking,Add-on
+P024,AWS Private Connectivity Endpoint,Networking,Add-on
+P025,AWS Inter-Region Egress,Networking,Add-on
+P026,AWS Inter-Availability Zone Egress,Networking,Add-on
+P027,AWS Internet Egress,Networking,Add-on
+P028,AWS Databricks Storage,Storage,Add-on
+P029,AWS Enterprise OpenAI Model Serving,Model Serving,Add-on
+P030,AWS Enterprise Anthropic Model Serving,Model Serving,Add-on
+P031,AWS Enterprise Gemini Model Serving,Model Serving,Add-on

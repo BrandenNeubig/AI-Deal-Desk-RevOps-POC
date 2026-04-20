@@ -1,36 +1,36 @@
-quote_id,opportunity_id,cross_service_discount_percent,annual_commit,term_months,total_contract_value
-Q0011,O0011,0,200000,36,600000
-Q0021,O0021,10,250000,36,750000
-Q0022,O0022,20,2800000,12,2800000
-Q0031,O0031,25,2800000,24,5600000
-Q0032,O0032,25,2750000,36,8250000
-Q0041,O0041,0,1550000,36,4650000
-Q0051,O0051,20,2550000,36,7650000
-Q0061,O0061,10,1500000,36,4500000
-Q0071,O0071,25,1350000,12,1350000
-Q0072,O0072,0,550000,24,1100000
-Q0081,O0081,15,2100000,24,4200000
-Q0082,O0082,10,2700000,36,8100000
-Q0091,O0091,0,1100000,12,1100000
-Q0101,O0101,10,350000,24,700000
-Q0102,O0102,30,400000,24,800000
-Q0111,O0111,10,1550000,24,3100000
-Q0112,O0112,5,1850000,36,5550000
-Q0121,O0121,30,550000,36,1650000
-Q0131,O0131,25,1750000,12,1750000
-Q0141,O0141,10,2800000,36,8400000
-Q0151,O0151,20,1950000,24,3900000
-Q0161,O0161,15,2650000,12,2650000
-Q0162,O0162,30,2300000,36,6900000
-Q0171,O0171,25,1500000,24,3000000
-Q0172,O0172,15,1650000,12,1650000
-Q0181,O0181,0,2850000,24,5700000
-Q0182,O0182,0,450000,24,900000
-Q0191,O0191,25,2150000,12,2150000
-Q0192,O0192,10,1500000,36,4500000
-Q0201,O0201,0,1250000,24,2500000
-Q0211,O0211,15,2650000,24,5300000
-Q0221,O0221,20,2250000,36,6750000
-Q0231,O0231,20,1450000,12,1450000
-Q0241,O0241,25,1500000,12,1500000
-Q0251,O0251,20,2100000,36,6300000
+quote_id,opportunity_id,cross_service_discount_percent,annual_commit,term_months,total_contract_value,business_justification
+Q0011,O0011,0,200000,36,600000,Discount requested to support budget constraints while expanding platform adoption across an additional business unit.
+Q0021,O0021,10,250000,36,750000,Customer is requesting improved pricing to align with a competitive renewal and secure a multi-year commitment.
+Q0022,O0022,20,2800000,12,2800000,Customer is consolidating spend and asking for improved terms in exchange for a larger annual commitment.
+Q0031,O0031,25,2800000,24,5600000,Pricing support is requested to win a strategic new logo with strong long-term expansion potential.
+Q0032,O0032,25,2750000,36,8250000,Pricing support is requested to win a strategic new logo with strong long-term expansion potential.
+Q0041,O0041,0,1550000,36,4650000,Commercial flexibility is needed to close before quarter end and prevent the deal from slipping into the next cycle.
+Q0051,O0051,20,2550000,36,7650000,Discount requested to support budget constraints while expanding platform adoption across an additional business unit.
+Q0061,O0061,10,1500000,36,4500000,Customer is seeking pricing relief due to reduced budget availability but remains committed to the overall program.
+Q0071,O0071,25,1350000,12,1350000,Discount requested to support budget constraints while expanding platform adoption across an additional business unit.
+Q0072,O0072,0,550000,24,1100000,Request supports a competitive bake-off where stronger pricing is needed to improve win probability.
+Q0081,O0081,15,2100000,24,4200000,Additional discount is being requested to accelerate procurement approval and finalize the transaction this quarter.
+Q0082,O0082,10,2700000,36,8100000,Customer is requesting improved pricing to align with a competitive renewal and secure a multi-year commitment.
+Q0091,O0091,0,1100000,12,1100000,Customer is requesting improved pricing to align with a competitive renewal and secure a multi-year commitment.
+Q0101,O0101,10,350000,24,700000,Discount requested to support budget constraints while expanding platform adoption across an additional business unit.
+Q0102,O0102,30,400000,24,800000,Pricing support is requested to win a strategic new logo with strong long-term expansion potential.
+Q0111,O0111,10,1550000,24,3100000,Pricing support is requested to win a strategic new logo with strong long-term expansion potential.
+Q0112,O0112,5,1850000,36,5550000,Customer is seeking pricing relief due to reduced budget availability but remains committed to the overall program.
+Q0121,O0121,30,550000,36,1650000,Request supports a competitive bake-off where stronger pricing is needed to improve win probability.
+Q0131,O0131,25,1750000,12,1750000,Customer is requesting improved pricing to align with a competitive renewal and secure a multi-year commitment.
+Q0141,O0141,10,2800000,36,8400000,Customer is seeking pricing relief due to reduced budget availability but remains committed to the overall program.
+Q0151,O0151,20,1950000,24,3900000,Pricing support is requested to win a strategic new logo with strong long-term expansion potential.
+Q0161,O0161,15,2650000,12,2650000,Customer is seeking pricing relief due to reduced budget availability but remains committed to the overall program.
+Q0162,O0162,30,2300000,36,6900000,Additional discount is being requested to accelerate procurement approval and finalize the transaction this quarter.
+Q0171,O0171,25,1500000,24,3000000,Pricing support is requested to win a strategic new logo with strong long-term expansion potential.
+Q0172,O0172,15,1650000,12,1650000,Commercial concession is intended to support an upsell tied to broader platform standardization across the account.
+Q0181,O0181,0,2850000,24,5700000,Request supports a competitive bake-off where stronger pricing is needed to improve win probability.
+Q0182,O0182,0,450000,24,900000,Customer is consolidating spend and asking for improved terms in exchange for a larger annual commitment.
+Q0191,O0191,25,2150000,12,2150000,Customer is requesting improved pricing to align with a competitive renewal and secure a multi-year commitment.
+Q0192,O0192,10,1500000,36,4500000,Commercial flexibility is needed to close before quarter end and prevent the deal from slipping into the next cycle.
+Q0201,O0201,0,1250000,24,2500000,Additional discount is being requested to accelerate procurement approval and finalize the transaction this quarter.
+Q0211,O0211,15,2650000,24,5300000,Exception requested to protect an at-risk renewal and preserve existing ARR while the account evaluates expansion.
+Q0221,O0221,20,2250000,36,6750000,Customer is consolidating spend and asking for improved terms in exchange for a larger annual commitment.
+Q0231,O0231,20,1450000,12,1450000,Commercial flexibility is needed to close before quarter end and prevent the deal from slipping into the next cycle.
+Q0241,O0241,25,1500000,12,1500000,Pricing support is requested to win a strategic new logo with strong long-term expansion potential.
+Q0251,O0251,20,2100000,36,6300000,Exception requested to protect an at-risk renewal and preserve existing ARR while the account evaluates expansion.
