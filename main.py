@@ -51,37 +51,88 @@ def get_quote_package(data, quote_id: str):
 
 def check_quote_approvals(quote, qli, approval_rules):
     reasons = []
+    highest_required_approval = None
 
-    cross_service_discount = float(quote["cross_service_discount_percent"])
     annual_commit = float(quote["annual_commit"])
+    cross_service_discount = float(quote["cross_service_discount_percent"])
     term_months = int(quote["term_months"])
 
-    if cross_service_discount > 20:
-        reasons.append(approval_rules["cross_service_discount_over_20"])
+    approval_hierarchy = ["AE", "Manager", "Director", "CRO", "CEO"]
 
-    if cross_service_discount > 25:
-        reasons.append(approval_rules["cross_service_discount_over_25"])
+    def update_highest(level):
+        nonlocal highest_required_approval
+        if level not in approval_hierarchy:
+            return
+        if highest_required_approval is None:
+            highest_required_approval = level
+        elif approval_hierarchy.index(level) > approval_hierarchy.index(highest_required_approval):
+            highest_required_approval = level
 
-    if term_months > 24:
-        reasons.append(approval_rules["term_over_24_months"])
+    # Cross-service preapproved discount matrix
+    matrix = approval_rules.get("cross_service_preapproved_discount_matrix", [])
+    applicable_tier = None
 
-    if annual_commit > 500000:
-        reasons.append(approval_rules["annual_commit_over_500k"])
+    for tier in matrix:
+        min_commit = float(tier["min_annual_commit"])
+        max_commit = tier["max_annual_commit"]
 
-    has_non_eligible = (
-        qli["cross_service_discount_eligible"]
-        .astype(str)
-        .str.strip()
-        .str.lower()
-        == "no"
-    ).any()
-    if has_non_eligible:
-        reasons.append(approval_rules["contains_non_eligible_skus"])
+        if max_commit is None:
+            if annual_commit >= min_commit:
+                applicable_tier = tier
+                break
+        else:
+            if min_commit <= annual_commit < float(max_commit):
+                applicable_tier = tier
+                break
 
-    if len(qli) > 1:
-        reasons.append(approval_rules["multi_product_quote"])
+    if applicable_tier:
+        approvals = applicable_tier.get("approvals", {})
 
-    return reasons
+        ae_limit = float(approvals.get("AE", 0))
+        manager_limit = float(approvals.get("Manager", 0))
+        director_limit = float(approvals.get("Director", 0))
+        cro_limit = float(approvals.get("CRO", 0))
+
+        if cross_service_discount <= ae_limit:
+            pass  # preapproved, no escalation needed
+        elif cross_service_discount <= manager_limit:
+            reasons.append(
+                f"Manager approval required: {cross_service_discount:.1f}% cross-service discount exceeds AE preapproval limit of {ae_limit:.1f}% for annual commit ${annual_commit:,.0f}."
+            )
+            update_highest("Manager")
+        elif cross_service_discount <= director_limit:
+            reasons.append(
+                f"Director approval required: {cross_service_discount:.1f}% cross-service discount exceeds Manager preapproval limit of {manager_limit:.1f}% for annual commit ${annual_commit:,.0f}."
+            )
+            update_highest("Director")
+        elif cross_service_discount <= cro_limit:
+            reasons.append(
+                f"CRO approval required: {cross_service_discount:.1f}% cross-service discount exceeds Director preapproval limit of {director_limit:.1f}% for annual commit ${annual_commit:,.0f}."
+            )
+            update_highest("CRO")
+        else:
+            reasons.append(
+                f"CEO approval required: {cross_service_discount:.1f}% cross-service discount exceeds CRO preapproval limit of {cro_limit:.1f}% for annual commit ${annual_commit:,.0f}."
+            )
+            update_highest("CEO")
+
+    # Short-term high-commit rule
+    short_term_rule = approval_rules.get("short_term_high_commit")
+    if short_term_rule:
+        conditions = short_term_rule.get("conditions", {})
+        required_term = int(conditions.get("term_months", 0))
+        min_annual_commit = float(conditions.get("min_annual_commit", 0))
+        approval_required = short_term_rule.get("approval_required", "CRO")
+        reason = short_term_rule.get("reason", "Short-term high-value deal requires review.")
+
+        if term_months == required_term and annual_commit >= min_annual_commit:
+            reasons.append(f"{approval_required} approval required: {reason}")
+            update_highest(approval_required)
+
+    return {
+        "reasons": reasons,
+        "highest_required_approval": highest_required_approval
+    }
 
 
 def get_consumption_summary(data, account_id: str):
@@ -210,7 +261,7 @@ def get_industry_quote_context(data, selected_quote_id: str, limit: int = 10):
 
 def build_review_payload(data, quote_id: str):
     quote, opportunity, account, qli = get_quote_package(data, quote_id)
-    approval_reasons = check_quote_approvals(quote, qli, data["approval_rules"])
+    approval_result = check_quote_approvals(quote, qli, data["approval_rules"])
     consumption_summary = get_consumption_summary(data, account["account_id"])
     industry_context = get_industry_quote_context(data, quote_id)
 
@@ -242,9 +293,10 @@ def build_review_payload(data, quote_id: str):
             "discount_percent",
             "cross_service_discount_eligible"
         ]].to_dict(orient="records"),
-        "approval_reasons": approval_reasons,
-        "consumption_summary": consumption_summary,
-        "industry_quote_context": industry_context,
+        "approval_reasons": approval_result["reasons"],
+   	"highest_required_approval": approval_result["highest_required_approval"],
+    	"consumption_summary": consumption_summary,
+    	"industry_quote_context": industry_context,
     }
     return payload
 

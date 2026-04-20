@@ -46,9 +46,61 @@ else:
     ].iloc[0]
 
     st.subheader("Quote Details")
-    st.write("Annual Commit:", selected_quote["annual_commit"])
-    st.write("Discount %:", selected_quote["cross_service_discount_percent"])
-    st.write("Term Months:", selected_quote["term_months"])
+
+    annual_commit = float(selected_quote["annual_commit"])
+    requested_discount = float(selected_quote["cross_service_discount_percent"])
+    term_months = int(selected_quote["term_months"])
+
+    matrix = data["approval_rules"].get("cross_service_preapproved_discount_matrix", [])
+    approver_required = "Unknown"
+    approver_max_discount = "N/A"
+
+    for tier in matrix:
+        min_commit = float(tier["min_annual_commit"])
+        max_commit = tier["max_annual_commit"]
+
+        in_range = (
+            annual_commit >= min_commit
+            if max_commit is None
+            else min_commit <= annual_commit < float(max_commit)
+        )
+
+        if in_range:
+            approvals = tier.get("approvals", {})
+
+            ae_limit = float(approvals.get("AE", 0))
+            manager_limit = float(approvals.get("Manager", 0))
+            director_limit = float(approvals.get("Director", 0))
+            cro_limit = float(approvals.get("CRO", 0))
+            ceo_limit = float(approvals.get("CEO", 999))
+
+            if requested_discount <= ae_limit:
+                approver_required = "AE"
+                approver_max_discount = f"{ae_limit:.0f}%"
+            elif requested_discount <= manager_limit:
+                approver_required = "Manager"
+                approver_max_discount = f"{manager_limit:.0f}%"
+            elif requested_discount <= director_limit:
+                approver_required = "Director"
+                approver_max_discount = f"{director_limit:.0f}%"
+            elif requested_discount <= cro_limit:
+                approver_required = "CRO"
+                approver_max_discount = f"{cro_limit:.0f}%"
+            else:
+                approver_required = "CEO"
+                approver_max_discount = f"{ceo_limit:.0f}%"
+
+            break
+
+    quote_details_df = pd.DataFrame([{
+        "Annual Commit": f"${annual_commit:,.0f}",
+        "Term (months)": term_months,
+        "Requested Discount": f"{requested_discount:.1f}%",
+        "Approver Required": approver_required,
+        "Approver Max Discount": approver_max_discount
+    }])
+
+    st.dataframe(quote_details_df, hide_index=True, use_container_width=True)
 
     business_case_justification = st.text_area(
         "Business Case Justification",
@@ -101,8 +153,13 @@ else:
 
         if payload["approval_reasons"]:
             st.error("Approval required")
+
+            if payload.get("highest_required_approval"):
+                st.warning(f"Highest Approval Required: {payload['highest_required_approval']}")
+
             for reason in payload["approval_reasons"]:
                 st.write("-", reason)
+
         else:
             st.success("No approval required")
 

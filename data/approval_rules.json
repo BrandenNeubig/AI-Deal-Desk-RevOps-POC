@@ -1,8 +1,56 @@
 {
-  "cross_service_discount_over_20": "Deal Desk approval required",
-  "cross_service_discount_over_25": "Finance approval required",
-  "term_over_24_months": "Finance approval required",
-  "annual_commit_over_500k": "VP approval required",
-  "contains_non_eligible_skus": "Review non-eligible SKUs; cross-service discount does not apply to those lines",
-  "multi_product_quote": "Legal review recommended"
+  "cross_service_preapproved_discount_matrix": [
+    {
+      "min_annual_commit": 0,
+      "max_annual_commit": 100000,
+      "approvals": {
+        "AE": 10,
+        "Manager": 20,
+        "Director": 30,
+        "CRO": 40,
+        "CEO": 999
+      }
+    },
+    {
+      "min_annual_commit": 100000,
+      "max_annual_commit": 500000,
+      "approvals": {
+        "AE": 20,
+        "Manager": 25,
+        "Director": 35,
+        "CRO": 45,
+        "CEO": 999
+      }
+    },
+    {
+      "min_annual_commit": 500000,
+      "max_annual_commit": 1000000,
+      "approvals": {
+        "AE": 25,
+        "Manager": 30,
+        "Director": 35,
+        "CRO": 50,
+        "CEO": 999
+      }
+    },
+    {
+      "min_annual_commit": 1000000,
+      "max_annual_commit": null,
+      "approvals": {
+        "AE": 30,
+        "Manager": 35,
+        "Director": 40,
+        "CRO": 55,
+        "CEO": 999
+      }
+    }
+  ],
+  "short_term_high_commit": {
+    "conditions": {
+      "term_months": 12,
+      "min_annual_commit": 500000
+    },
+    "approval_required": "CRO",
+    "reason": "High-value deal with only 12-month term; review for missed multi-year opportunity"
+  }
 }

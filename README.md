@@ -1,49 +1,79 @@
-<<<<<<< HEAD
 # AI Deal Desk / RevOps POC
 
-A lightweight proof of concept that simulates Deal Desk and RevOps workflows using a mock Salesforce-style dataset, Python business rules, and the OpenAI API.
+A Streamlit-based proof of concept showing how AI can augment legacy Deal Desk workflows without replacing human approval authority.
 
-## What it does
+## Core Concept
 
-This project:
-- loads mock CRM-style account, contract, quote, and consumption data
-- evaluates quote approval requirements using Python rules
-- analyzes customer consumption against committed spend
-- uses OpenAI to generate a plain-English Deal Desk summary
+This project uses a two-layer model:
 
-## Example workflow
+- **Luna (Guardrails)**  
+  Deterministic rules engine for approval thresholds, policy enforcement, and routing.
 
-Given a selected quote, the app:
-1. finds the related opportunity and account
-2. checks approval rules
-3. reviews consumption trends
-4. produces an AI-generated recommendation
+- **Sol (Judgment)**  
+  AI-assisted summary layer that explains deal context, compares peer quotes, and recommends next steps.
 
-## Tech stack
+The system does **not** make approval decisions on behalf of the business.  
+It evaluates rules, summarizes context, and supports human reviewers.
 
-- Python
-- pandas
-- OpenAI API
-- python-dotenv
+---
 
-## Project structure
+## Current Features
+
+- Mock Salesforce-style commit / consumption dataset
+- Quote selection by account and quote in Streamlit
+- Structured review payload combining:
+  - account context
+  - opportunity context
+  - quote details
+  - quote line items
+  - consumption summary
+  - industry peer quote context
+- Cross-service preapproved discount approval matrix
+- Short-term high-commit CRO review rule
+- Approval decision section with highest required approver
+- AI Deal Desk summary using OpenAI
+- Requested Quote vs Industry Peers chart
+
+---
+
+## Approval Rules
+
+Current approval logic includes:
+
+### 1. Cross-Service Preapproved Discount Matrix
+Approval authority is determined by:
+- annual commit tier
+- requested cross-service discount
+
+Approver levels include:
+- AE
+- Manager
+- Director
+- CRO
+- CEO
+
+### 2. Short-Term High-Commit Rule
+A quote requires CRO review when:
+- `term_months = 12`
+- and `annual_commit >= 500000`
+
+This is intended to flag large single-year deals that may represent a missed multi-year opportunity.
+
+---
+
+## Project Structure
 
 ```text
-.
+AI-Deal-Desk-RevOps-POC/
+├── app.py
 ├── main.py
 ├── requirements.txt
-├── README.md
-├── .gitignore
+├── .env
 └── data/
     ├── accounts.csv
     ├── contracts.csv
     ├── opportunities.csv
     ├── quotes.csv
     ├── quote_line_items.csv
-    ├── products.csv
     ├── consumption_usage.csv
     └── approval_rules.json
-=======
-# AI-Deal-Desk-RevOps-POC
-A lightweight proof of concept that simulates Deal Desk and RevOps workflows using a mock Salesforce-style dataset, Python business rules, and the OpenAI API.
->>>>>>> b6d54100c35d7eb7ae8e4f24326e339cac922f69
