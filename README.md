@@ -2,6 +2,8 @@
 
 A Streamlit-based proof of concept showing how an AI Deal Desk assistant can augment legacy Deal Desk workflows without replacing human approval authority.
 
+Take a look at: https://shepherdsystems.streamlit.app
+
 ## Core Concept
 
 This project uses a two-layer model:
