@@ -422,8 +422,16 @@ def build_review_payload(data, quote_id: str):
 def explain_with_openai(payload):
     load_dotenv()
     api_key = os.getenv("OPENAI_API_KEY")
+
+    try:
+        import streamlit as st
+        if not api_key and "OPENAI_API_KEY" in st.secrets:
+            api_key = st.secrets["OPENAI_API_KEY"]
+    except Exception:
+        pass
+
     if not api_key:
-        raise RuntimeError("OPENAI_API_KEY is missing. Put it in a .env file.")
+        raise RuntimeError("OPENAI_API_KEY is missing.")
 
     client = OpenAI(api_key=api_key)
 
