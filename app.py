@@ -611,7 +611,7 @@ st.subheader("Deal Investment Details")
 st.caption("Deal investment amounts are a pool of funds that can be applied as discounts for PS&T products and other non-product based products.")
 st.dataframe(table4_df, hide_index=True, use_container_width=True)
 
-st.subheader("Clause Modifications")
+st.subheader("Quote Clause Modifications")
 clause_modifications = payload.get("clause_modifications", [])
 clause_classifications = payload.get("clause_modification_classification", [])
 if clause_modifications:
