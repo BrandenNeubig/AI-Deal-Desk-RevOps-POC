@@ -98,5 +98,59 @@
         "CEO": 999
       }
     }
-  ]
+  ],
+  "payment_terms_rule": {
+    "condition": {
+      "required_payment_terms": "Net 30"
+    },
+    "approval_required": "Finance",
+    "approval_rule": "Non-standard Payment Terms",
+    "reason": "Payment terms other than Net 30 require Finance review."
+  },
+  "deal_investment_rule": {
+    "conditions": {
+      "max_preapproved_percent_of_annual_commit": 10
+    },
+    "approval_required": "CRO",
+    "approval_rule": "Deal Investment Threshold",
+    "reason": "Requested deal investment exceeds 10% of annual commit."
+  },
+  "deal_investment_preapproved": {
+    "ae_preapproved_percent_of_annual_commit": 10,
+    "description": "AE preapproved deal investment pool expressed as a percent of annual commit."
+  },
+  "demand_planning_rule": {
+    "conditions": {
+      "demand_planning_complete": "No",
+      "requested_deal_investment_greater_than": 0
+    },
+    "approval_required": "Practice Manager",
+    "approval_rule": "Demand Planning Review",
+    "reason": "Demand planning is incomplete while deal investment funds are requested; Practice Manager review is required to validate PS&T capacity and scope."
+  },
+  "annualized_consumption_rule": {
+    "conditions": {
+      "annual_commit_less_than_annualized_t3m": true
+    },
+    "approval_required": "Finance",
+    "approval_rule": "Annual Commit Below Annualized T3M",
+    "reason": "Proposed annual commit is below the customer annualized trailing 3-month run-rate, indicating potential under-sizing, demand planning risk, or missed expansion opportunity."
+  },
+  "clause_modification_rules": {
+    "Publicity / Reference Rights": {
+      "approval_required": "Legal",
+      "approval_rule": "Publicity / Reference Rights Modification",
+      "reason": "Customer modified publicity or reference rights language; Legal review is required before accepting non-standard approval rights or reference limitations."
+    },
+    "Renewal": {
+      "approval_required": "Finance",
+      "approval_rule": "Renewal Terms Modification",
+      "reason": "Customer modified renewal language; Finance review is required because renewal mechanics, pricing protection, or auto-renewal treatment may affect forecast and future revenue."
+    },
+    "Usage / Overages": {
+      "approval_required": "Finance",
+      "approval_rule": "Usage / Overages Modification",
+      "reason": "Customer modified usage or overage language; Finance review is required because true-up, overage billing, and consumption treatment may affect revenue recognition or demand planning."
+    }
+  }
 }
