@@ -112,6 +112,242 @@ def render_wrapped_table(df: pd.DataFrame, column_widths: dict = None) -> str:
     return "".join(rows)
 
 
+def build_approval_packet_pdf(payload: dict, discount_summary: dict, support_reason: str, ai_summary_df: pd.DataFrame = None) -> bytes:
+    """Build a lightweight PDF approval packet for download and future Slack upload."""
+    try:
+        from io import BytesIO
+        from reportlab.lib import colors
+        from reportlab.lib.pagesizes import letter
+        from reportlab.lib.styles import getSampleStyleSheet
+        from reportlab.lib.units import inch
+        from reportlab.platypus import SimpleDocTemplate, Paragraph, Spacer, Table, TableStyle
+    except ImportError as exc:
+        raise ImportError("reportlab is required to generate approval packet PDFs. Install it with: python3 -m pip install reportlab") from exc
+
+    buffer = BytesIO()
+    doc = SimpleDocTemplate(
+        buffer,
+        pagesize=letter,
+        rightMargin=0.5 * inch,
+        leftMargin=0.5 * inch,
+        topMargin=0.5 * inch,
+        bottomMargin=0.5 * inch,
+    )
+    styles = getSampleStyleSheet()
+    title_style = styles["Title"]
+    heading_style = styles["Heading2"]
+    body_style = styles["BodyText"]
+    body_style.wordWrap = "CJK"
+
+    def clean(value) -> str:
+        if value is None:
+            return ""
+        try:
+            if pd.isna(value):
+                return ""
+        except Exception:
+            pass
+        return str(value)
+
+    def money(value) -> str:
+        try:
+            return "${:,.0f}".format(float(value or 0))
+        except Exception:
+            return "$0"
+
+    def pct(value) -> str:
+        try:
+            return "{:.1f}%".format(float(value or 0))
+        except Exception:
+            return "0.0%"
+
+    def para(value):
+        return Paragraph(clean(value).replace("\n", "<br/>") or "-", body_style)
+
+    def section(title: str):
+        story.append(Spacer(1, 0.16 * inch))
+        story.append(Paragraph(title, heading_style))
+
+    def simple_table(rows, col_widths=None):
+        table = Table(rows, colWidths=col_widths, hAlign="LEFT")
+        table.setStyle(TableStyle([
+            ("BACKGROUND", (0, 0), (-1, 0), colors.HexColor("#f1f5f9")),
+            ("TEXTCOLOR", (0, 0), (-1, 0), colors.HexColor("#111827")),
+            ("GRID", (0, 0), (-1, -1), 0.5, colors.HexColor("#d1d5db")),
+            ("VALIGN", (0, 0), (-1, -1), "TOP"),
+            ("FONTNAME", (0, 0), (-1, 0), "Helvetica-Bold"),
+            ("FONTSIZE", (0, 0), (-1, -1), 8),
+            ("LEADING", (0, 0), (-1, -1), 10),
+            ("LEFTPADDING", (0, 0), (-1, -1), 6),
+            ("RIGHTPADDING", (0, 0), (-1, -1), 6),
+            ("TOPPADDING", (0, 0), (-1, -1), 5),
+            ("BOTTOMPADDING", (0, 0), (-1, -1), 5),
+        ]))
+        story.append(table)
+
+    account = payload.get("account", {})
+    quote = payload.get("quote", {})
+    opportunity = payload.get("opportunity", {})
+    consumption = payload.get("consumption_summary", {})
+
+    story = []
+    story.append(Paragraph("Luna y Sol Approval Packet", title_style))
+    story.append(Paragraph("Generated approval support packet for human-reviewed Deal Desk workflow routing.", body_style))
+
+    section("Support Request")
+    story.append(para(support_reason))
+
+    section("Quote Overview")
+    simple_table([
+        [para("Field"), para("Value")],
+        [para("Quote ID"), para(payload.get("quote_id", quote.get("quote_id", "")))],
+        [para("Account"), para(account.get("account_name", ""))],
+        [para("Region"), para(account.get("region", ""))],
+        [para("Industry"), para(account.get("industry", ""))],
+        [para("Opportunity Type"), para(opportunity.get("type", ""))],
+        [para("Annual Commit"), para(money(discount_summary.get("annual_commit", quote.get("annual_commit", 0))))],
+        [para("Total Contract Value"), para(money(discount_summary.get("total_contract_value", quote.get("total_contract_value", 0))))],
+        [para("Annualized T3M"), para(money(consumption.get("annualized_trailing_3_months", 0)))],
+        [para("Term Months"), para(discount_summary.get("term_months", quote.get("term_months", "")))],
+        [para("Payment Terms"), para(discount_summary.get("payment_terms", quote.get("payment_terms", "")))],
+        [para("Demand Planning Complete"), para(discount_summary.get("demand_planning_complete", quote.get("demand_planning_complete", "")))],
+        [para("Quote Memo Modified"), para(discount_summary.get("quote_memo_modified", quote.get("quote_memo_modified", "")))],
+    ], [2.0 * inch, 5.0 * inch])
+
+    section("Commercial Review")
+    simple_table([
+        [para("Commercial Metric"), para("Requested"), para("vs AE Preapproved"), para("Approver Required"), para("Approver Max")],
+        [
+            para("Cross-Service Discount"),
+            para(pct(discount_summary.get("cross_service_requested_discount", 0))),
+            para("{:.2f}x".format(discount_summary.get("cross_service_ratio_to_ae_preapproved")) if discount_summary.get("cross_service_ratio_to_ae_preapproved") is not None else "N/A"),
+            para(discount_summary.get("cross_service_approver_required", "")),
+            para(discount_summary.get("cross_service_approver_max_discount", "")),
+        ],
+        [
+            para("Add-on Discount"),
+            para(pct(discount_summary.get("add_on_requested_discount", 0))),
+            para("{:.2f}x".format(discount_summary.get("add_on_ratio_to_ae_preapproved")) if discount_summary.get("add_on_ratio_to_ae_preapproved") is not None else "N/A"),
+            para(discount_summary.get("add_on_approver_required", "")),
+            para(discount_summary.get("add_on_approver_max_discount", "")),
+        ],
+        [
+            para("Requested Deal Investment"),
+            para(money(discount_summary.get("requested_deal_investment", 0))),
+            para("{:.2f}x".format(discount_summary.get("deal_investment_ratio_to_ae_preapproved")) if discount_summary.get("deal_investment_ratio_to_ae_preapproved") is not None else "N/A"),
+            para("Policy Review"),
+            para(money(discount_summary.get("deal_investment_ae_preapproved_amount", 0))),
+        ],
+    ], [1.6 * inch, 1.2 * inch, 1.2 * inch, 1.5 * inch, 1.2 * inch])
+
+    section("Approval Requests")
+    approval_details = payload.get("approval_details", [])
+    if approval_details:
+        approval_rows = [[para("Approval Rule"), para("Approver"), para("Reason")]]
+        for item in approval_details:
+            approval_rows.append([
+                para(item.get("Approval Rule", "")),
+                para(item.get("Approver", "")),
+                para(item.get("Reason", "")),
+            ])
+        simple_table(approval_rows, [1.7 * inch, 1.3 * inch, 4.0 * inch])
+    else:
+        story.append(para("No approval required."))
+
+    section("Business Case Justification")
+    story.append(para(quote.get("business_justification", "No business justification provided.")))
+
+    section("Clause / Legal Review")
+    clause_modifications = payload.get("clause_modifications", [])
+    if clause_modifications:
+        clause_rows = [[para("Clause Topic"), para("Original Clause"), para("Modified Clause")]]
+        for item in clause_modifications:
+            clause_rows.append([
+                para(item.get("clause_topic", item.get("memo_topic", ""))),
+                para(item.get("original_clause", "")),
+                para(item.get("modified_clause", "")),
+            ])
+        simple_table(clause_rows, [1.2 * inch, 2.9 * inch, 2.9 * inch])
+    else:
+        story.append(para("No clause modifications found for this quote."))
+
+    if ai_summary_df is not None and not ai_summary_df.empty:
+        section("Sol AI Deal Desk Summary")
+        ai_rows = [[para("Review Area"), para("Summary")]]
+        for _, row in ai_summary_df.iterrows():
+            ai_rows.append([para(row.get("Review Area", "")), para(row.get("Summary", ""))])
+        simple_table(ai_rows, [2.0 * inch, 5.0 * inch])
+
+    doc.build(story)
+    buffer.seek(0)
+    return buffer.getvalue()
+
+
+def upload_approval_packet_to_slack(slack_bot_token: str, slack_channel_id: str, pdf_bytes: bytes, filename: str, title: str, initial_comment: str) -> dict:
+    """Upload an approval packet PDF to Slack using Slack's external file upload flow."""
+    import json
+    import urllib.error
+    import urllib.parse
+    import urllib.request
+
+    def call_slack_form_api(method_name: str, payload: dict) -> dict:
+        encoded_payload = urllib.parse.urlencode(payload).encode("utf-8")
+        request = urllib.request.Request(
+            f"https://slack.com/api/{method_name}",
+            data=encoded_payload,
+            headers={
+                "Authorization": f"Bearer {slack_bot_token}",
+                "Content-Type": "application/x-www-form-urlencoded",
+            },
+            method="POST",
+        )
+        with urllib.request.urlopen(request) as response:
+            return json.loads(response.read().decode("utf-8"))
+
+    upload_url_response = call_slack_form_api(
+        "files.getUploadURLExternal",
+        {
+            "filename": filename,
+            "length": str(len(pdf_bytes)),
+        },
+    )
+
+    if not upload_url_response.get("ok"):
+        return upload_url_response
+
+    upload_url = upload_url_response.get("upload_url")
+    file_id = upload_url_response.get("file_id")
+
+    upload_request = urllib.request.Request(
+        upload_url,
+        data=pdf_bytes,
+        headers={
+            "Content-Type": "application/octet-stream",
+            "Content-Length": str(len(pdf_bytes)),
+        },
+        method="POST",
+    )
+
+    with urllib.request.urlopen(upload_request) as upload_response:
+        upload_response.read()
+
+    complete_response = call_slack_form_api(
+        "files.completeUploadExternal",
+        {
+            "files": json.dumps([
+                {
+                    "id": file_id,
+                    "title": title,
+                }
+            ]),
+            "channel_id": slack_channel_id,
+            "initial_comment": initial_comment,
+        },
+    )
+
+    return complete_response
+
+
 def build_ai_summary_table(summary: str) -> pd.DataFrame:
     review_areas = [
         "Approval Status",
@@ -258,7 +494,7 @@ def render_quote_template(payload: dict, template_path: Path) -> str:
     for row in payload.get("clause_modifications", []):
         clause_rows.append(
             "<tr>"
-            f"<td style='padding:8px;border:1px solid #e5e7eb;vertical-align:top;overflow-wrap:break-word;'>{_escape(row.get('clause_topic', ''))}</td>"
+            f"<td style='padding:8px;border:1px solid #e5e7eb;vertical-align:top;overflow-wrap:break-word;'>{_escape(row.get('memo_topic') or row.get('clause_topic') or row.get('topic') or 'Modified Terms')}</td>"
             f"<td style='padding:8px;border:1px solid #e5e7eb;vertical-align:top;overflow-wrap:break-word;line-height:1.45;'>{_escape(row.get('original_clause', ''))}</td>"
             f"<td style='padding:8px;border:1px solid #e5e7eb;vertical-align:top;overflow-wrap:break-word;line-height:1.45;'>{_escape(row.get('modified_clause', ''))}</td>"
             "</tr>"
@@ -284,7 +520,7 @@ def render_quote_template(payload: dict, template_path: Path) -> str:
         if str(modified_clause).strip():
             memo_rows.append(
                 "<tr>"
-                f"<td style='padding:8px;border:1px solid #e5e7eb;vertical-align:top;overflow-wrap:break-word;width:22%;'>{_escape(row.get('clause_topic', ''))}</td>"
+                f"<td style='padding:8px;border:1px solid #e5e7eb;vertical-align:top;overflow-wrap:break-word;width:22%;'>{_escape(row.get('memo_topic') or row.get('clause_topic') or row.get('topic') or 'Modified Terms')}</td>"
                 f"<td style='padding:8px;border:1px solid #e5e7eb;vertical-align:top;overflow-wrap:break-word;line-height:1.45;'>{_escape(modified_clause)}</td>"
                 "</tr>"
             )
@@ -418,8 +654,15 @@ def build_industry_peer_comparison_table(data, payload, industry_context, discou
 def build_redline_display_rows(clause_modifications):
     rows = []
     for item in clause_modifications:
+        topic = (
+            item.get("memo_topic")
+            or item.get("clause_topic")
+            or item.get("topic")
+            or item.get("approval_rule")
+            or "Modified Terms"
+        )
         rows.append({
-            "Clause Topic": item.get("memo_topic", ""),
+            "Clause Topic": topic,
             "Original Clause": item.get("original_clause", ""),
             "Modified Clause": item.get("modified_clause", ""),
         })
@@ -650,7 +893,16 @@ if business_justification and str(business_justification).strip():
 else:
     st.info("No business justification provided in quotes.csv for this quote.")
 
+if "evaluated_quote_id" not in st.session_state:
+    st.session_state["evaluated_quote_id"] = None
+
+if selected_quote_id != st.session_state.get("evaluated_quote_id"):
+    st.session_state["evaluated_quote_id"] = None
+
 if st.button("Evaluate Quote", type="primary"):
+    st.session_state["evaluated_quote_id"] = selected_quote_id
+
+if st.session_state.get("evaluated_quote_id") == selected_quote_id:
     industry_context = payload["industry_quote_context"]
     selected_industry = industry_context.get("selected_industry") or payload.get("account", {}).get("industry")
     if selected_industry and str(selected_industry).strip():
@@ -697,8 +949,9 @@ if st.button("Evaluate Quote", type="primary"):
     st.subheader("AI Deal Desk Summary")
 
     try:
-        summary, usage = explain_with_openai(payload)
-        ai_summary_df = build_ai_summary_table(summary)
+        with st.spinner("Sol is reviewing the quote and preparing the AI Deal Desk Summary..."):
+            summary, usage = explain_with_openai(payload)
+            ai_summary_df = build_ai_summary_table(summary)
         st.markdown(render_ai_summary_table(ai_summary_df), unsafe_allow_html=True)
     except Exception as e:
         st.warning("OpenAI error: %s" % e)
@@ -709,5 +962,102 @@ if st.button("Evaluate Quote", type="primary"):
     st.markdown(quote_template_html, unsafe_allow_html=True)
 
     st.subheader("Quote Tools")
+    st.caption("One-click assisted actions for downstream Deal Desk workflows. These actions are human-reviewed and do not approve quotes automatically.")
+
     st.info("Transfer Quote to Customer Schedule (Coming soon)")
+    st.info("Request Support via Slack")
+
+    support_reason = st.text_area(
+        "Reason for Support",
+        "Please review this quote for approval routing, commercial risk, and any missing inputs before customer-facing quote finalization.",
+        height=120,
+    )
+
+    support_message = f"""
+:sos: Deal Desk Support Requested
+
+Quote: {payload.get("quote_id", selected_quote_id)}
+Account: {payload.get("account", {}).get("account_name", "")}
+Region: {payload.get("account", {}).get("region", "")}
+Annual Commit: ${float(discount_summary.get("annual_commit", 0)):,.0f}
+Requested Cross-Service Discount: {float(discount_summary.get("cross_service_requested_discount", 0)):.1f}%
+Approver Required: {discount_summary.get("cross_service_approver_required", "")}
+
+Reason for Support:
+{support_reason}
+""".strip()
+
+    edited_support_message = support_message
+
+    try:
+        approval_packet_pdf = build_approval_packet_pdf(
+            payload,
+            discount_summary,
+            support_reason,
+            ai_summary_df if "ai_summary_df" in locals() else None,
+        )
+    except ImportError as e:
+        approval_packet_pdf = None
+        st.warning(str(e))
+    except Exception as e:
+        approval_packet_pdf = None
+        st.error(f"Unable to generate approval packet PDF: {e}")
+
+    if st.button("Post Support Request + Approval Packet to Slack", key=f"post_support_to_slack_{selected_quote_id}"):
+        slack_bot_token = st.secrets.get("SLACK_BOT_TOKEN", "")
+        slack_channel_id = st.secrets.get("SLACK_CHANNEL_ID", "")
+
+        if not slack_bot_token or not slack_channel_id:
+            st.error("Slack is not configured. Add SLACK_BOT_TOKEN and SLACK_CHANNEL_ID to .streamlit/secrets.toml.")
+        elif approval_packet_pdf is None:
+            st.error("Approval packet PDF could not be generated, so the Slack request was not posted.")
+        else:
+            try:
+                import json
+                import urllib.error
+                import urllib.request
+
+                slack_payload = {
+                    "channel": slack_channel_id,
+                    "text": edited_support_message,
+                }
+
+                request = urllib.request.Request(
+                    "https://slack.com/api/chat.postMessage",
+                    data=json.dumps(slack_payload).encode("utf-8"),
+                    headers={
+                        "Authorization": f"Bearer {slack_bot_token}",
+                        "Content-Type": "application/json; charset=utf-8",
+                    },
+                    method="POST",
+                )
+
+                with urllib.request.urlopen(request) as response:
+                    slack_response = json.loads(response.read().decode("utf-8"))
+
+                if not slack_response.get("ok"):
+                    st.error(f"Slack message error: {slack_response.get('error', 'Unknown error')}")
+                else:
+                    packet_filename = f"approval_packet_{selected_quote_id}.pdf"
+                    packet_title = f"Approval Packet - {selected_quote_id}"
+                    upload_response = upload_approval_packet_to_slack(
+                        slack_bot_token=slack_bot_token,
+                        slack_channel_id=slack_channel_id,
+                        pdf_bytes=approval_packet_pdf,
+                        filename=packet_filename,
+                        title=packet_title,
+                        initial_comment=f"Attached approval packet for {selected_quote_id}.",
+                    )
+
+                    if upload_response.get("ok"):
+                        st.success("Support request and approval packet posted to Slack.")
+                    else:
+                        st.warning(
+                            "Support request posted, but the approval packet upload failed: "
+                            f"{upload_response.get('error', 'Unknown error')}"
+                        )
+            except urllib.error.HTTPError as e:
+                st.error(f"Slack HTTP error: {e.code} {e.reason}")
+            except Exception as e:
+                st.error(f"Unable to post to Slack: {e}")
 
