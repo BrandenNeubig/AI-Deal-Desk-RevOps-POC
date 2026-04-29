@@ -963,10 +963,19 @@ if st.session_state.get("evaluated_quote_id") == selected_quote_id:
     st.markdown(quote_template_html, unsafe_allow_html=True)
 
     st.subheader("Quote Tools")
-    st.caption("One-click assisted actions for downstream Deal Desk workflows. These actions are human-reviewed and do not approve quotes automatically.")
+    st.caption("One-click assisted actions for downstream Deal Desk workflows.")
 
     st.info("Transfer Quote to Customer Schedule (Coming soon)")
+
+    st.info("Reserve Deal Desk Open Office Hours")
+    st.caption("Reserve a 15-minute support window in hosted Deal Desk office hours for Sales to review the quote with cross-functional teams.")
+    st.link_button(
+        "Reserve Office Hours",
+        "https://calendly.com/branden-neubig/deal-desk-office-hours?month=2026-06&date=2026-06-29",
+    )
+
     st.info("Request Support via Slack")
+    st.caption("Post a human-reviewed support request and approval packet to the configured Slack channel.")
 
     support_reason = st.text_area(
         "Reason for Support",
