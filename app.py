@@ -887,6 +887,7 @@ if clause_modifications:
 else:
     st.info("No clause modifications found for this quote.")
 
+
 st.subheader("Business Case Justification")
 if business_justification and str(business_justification).strip():
     st.write(business_justification)
