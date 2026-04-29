@@ -10,7 +10,6 @@ from main import (
     build_review_payload,
     explain_with_openai,
     get_pending_quotes,
-    get_region_quote_counts,
 )
 
 
@@ -210,7 +209,6 @@ def format_number(value) -> str:
         return "N/A"
 
 
-
 def _escape(value) -> str:
     if value is None:
         return ""
@@ -336,6 +334,8 @@ def render_quote_template(payload: dict, template_path: Path) -> str:
     for placeholder, value in replacements.items():
         rendered = rendered.replace(placeholder, value)
     return rendered
+
+
 def build_industry_peer_comparison_table(data, payload, industry_context, discount_summary) -> pd.DataFrame:
     quotes = data["quotes"].copy()
     opportunities = data["opportunities"].copy()
@@ -442,7 +442,6 @@ data_dir = Path("data")
 data = load_data(data_dir)
 
 pending_quotes_df = get_pending_quotes(data)
-region_counts_df = get_region_quote_counts(data)
 
 DEAL_DESK_SLA_HOURS = 4
 

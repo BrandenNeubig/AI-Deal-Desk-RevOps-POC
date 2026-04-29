@@ -31,7 +31,7 @@ def load_data(data_dir: Path):
             "modified_clause",
         ])
 
-    with open(data_dir / "approval_rules.json", "r") as f:
+    with open(data_dir / "approval_rules.json", "r", encoding="utf-8") as f:
         approval_rules = json.load(f)
 
     return {
@@ -59,8 +59,16 @@ def get_quote_package(data, quote_id: str):
         raise ValueError("Quote %s was not found." % quote_id)
 
     quote = quote_match.iloc[0]
-    opportunity = opportunities[opportunities["opportunity_id"] == quote["opportunity_id"]].iloc[0]
-    account = accounts[accounts["account_id"] == opportunity["account_id"]].iloc[0]
+
+    opportunity_match = opportunities[opportunities["opportunity_id"] == quote["opportunity_id"]]
+    if opportunity_match.empty:
+        raise ValueError("Opportunity %s was not found for quote %s." % (quote["opportunity_id"], quote_id))
+    opportunity = opportunity_match.iloc[0]
+
+    account_match = accounts[accounts["account_id"] == opportunity["account_id"]]
+    if account_match.empty:
+        raise ValueError("Account %s was not found for quote %s." % (opportunity["account_id"], quote_id))
+    account = account_match.iloc[0]
 
     qli = quote_line_items[quote_line_items["quote_id"] == quote_id].copy()
     qli = qli.merge(
@@ -663,10 +671,10 @@ Important:
 
 def main():
     data_dir = Path("data")
-    pending_quotes = load_data(data_dir)
+    data = load_data(data_dir)
     quote_id = "Q0021"
 
-    payload = build_review_payload(pending_quotes, quote_id)
+    payload = build_review_payload(data, quote_id)
 
     print("\n=== STRUCTURED REVIEW PAYLOAD ===")
     print(json.dumps(payload, indent=2))
