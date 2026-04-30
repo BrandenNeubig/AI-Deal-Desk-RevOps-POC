@@ -10,12 +10,13 @@
     </div>
   </div>
 
-  <h3 style="margin:0 0 10px 0;">Customer & Quote Summary</h3>
+  <h3 style="margin:0 0 10px 0;">Quote Information</h3>
   <table style="border-collapse:collapse;width:100%;table-layout:fixed;margin-bottom:18px;">
     <tbody>
-      <tr><td style="padding:8px;border:1px solid #e5e7eb;background:#f8fafc;width:24%;"><strong>Account</strong></td><td style="padding:8px;border:1px solid #e5e7eb;">{{account_name}}</td><td style="padding:8px;border:1px solid #e5e7eb;background:#f8fafc;width:24%;"><strong>Quote ID</strong></td><td style="padding:8px;border:1px solid #e5e7eb;">{{quote_id}}</td></tr>
+      <tr><td style="padding:8px;border:1px solid #e5e7eb;background:#f8fafc;width:24%;"><strong>Customer Name</strong></td><td style="padding:8px;border:1px solid #e5e7eb;">{{account_name}}</td><td style="padding:8px;border:1px solid #e5e7eb;background:#f8fafc;width:24%;"><strong>Quote ID</strong></td><td style="padding:8px;border:1px solid #e5e7eb;">{{quote_id}}</td></tr>
       <tr><td style="padding:8px;border:1px solid #e5e7eb;background:#f8fafc;"><strong>Annual Commit</strong></td><td style="padding:8px;border:1px solid #e5e7eb;">{{annual_commit}}</td><td style="padding:8px;border:1px solid #e5e7eb;background:#f8fafc;"><strong>Total Contract Amount</strong></td><td style="padding:8px;border:1px solid #e5e7eb;">{{total_contract_value}}</td></tr>
       <tr><td style="padding:8px;border:1px solid #e5e7eb;background:#f8fafc;"><strong>Term</strong></td><td style="padding:8px;border:1px solid #e5e7eb;">{{term_months}} months</td><td style="padding:8px;border:1px solid #e5e7eb;background:#f8fafc;"><strong>Payment Terms</strong></td><td style="padding:8px;border:1px solid #e5e7eb;">{{payment_terms}}</td></tr>
+      <tr><td style="padding:8px;border:1px solid #e5e7eb;background:#f8fafc;"><strong>Rollover %</strong></td><td style="padding:8px;border:1px solid #e5e7eb;">{{requested_rollover}}</td><td style="padding:8px;border:1px solid #e5e7eb;background:#f8fafc;"><strong>Demand Planning</strong></td><td style="padding:8px;border:1px solid #e5e7eb;">{{demand_planning_complete}}</td></tr>
     </tbody>
   </table>
 
@@ -25,13 +26,14 @@
       <tr><td style="padding:8px;border:1px solid #e5e7eb;background:#f8fafc;width:35%;"><strong>Cross-Service Discount</strong></td><td style="padding:8px;border:1px solid #e5e7eb;">{{cross_service_discount}}</td></tr>
       <tr><td style="padding:8px;border:1px solid #e5e7eb;background:#f8fafc;"><strong>Add-on Discount</strong></td><td style="padding:8px;border:1px solid #e5e7eb;">{{add_on_discount}}</td></tr>
       <tr><td style="padding:8px;border:1px solid #e5e7eb;background:#f8fafc;"><strong>Customer Investment Funds</strong></td><td style="padding:8px;border:1px solid #e5e7eb;">{{requested_deal_investment}}</td></tr>
+      <tr><td style="padding:8px;border:1px solid #e5e7eb;background:#f8fafc;"><strong>Requested Rollover</strong></td><td style="padding:8px;border:1px solid #e5e7eb;">{{requested_rollover}}</td></tr>
     </tbody>
   </table>
   <div style="font-size:13px;color:#6b7280;margin-bottom:18px;line-height:1.5;">
     Discounts are applied to the Company SKU list published on the Company website. Customer may reference the website SKU list for applicable list pricing.
   </div>
 
-  <h3 style="margin:0 0 10px 0;">Order Form Memo</h3>
+  <h3 style="margin:0 0 10px 0;">Memo</h3>
   <div style="font-size:13px;color:#6b7280;margin-bottom:8px;">Memo terms are populated from the selected quote. Modified clauses are included using the customer-modified language.</div>
   <table style="border-collapse:collapse;width:100%;table-layout:fixed;margin-bottom:18px;">
     <thead><tr><th style="padding:8px;border:1px solid #e5e7eb;background:#f8fafc;text-align:left;width:22%;">Memo Topic</th><th style="padding:8px;border:1px solid #e5e7eb;background:#f8fafc;text-align:left;width:78%;">Memo Language</th></tr></thead>

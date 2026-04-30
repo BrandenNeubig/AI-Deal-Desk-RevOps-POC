@@ -115,6 +115,126 @@ def get_region_quote_counts(data) -> pd.DataFrame:
     return counts
 
 
+
+
+def recommend_pending_quote(pending_quotes_df: pd.DataFrame) -> Dict:
+    """Recommend which pending quote Deal Desk should prioritize next."""
+    if pending_quotes_df is None or pending_quotes_df.empty:
+        return {
+            "quote_id": None,
+            "priority_level": "No pending quotes",
+            "priority_score": 0,
+            "summary": "No pending quotes are available for prioritization.",
+            "reasons": [],
+        }
+
+    scored_quotes = pending_quotes_df.copy()
+
+    def numeric_column(column_name: str, default_value: float = 0.0) -> pd.Series:
+        if column_name not in scored_quotes.columns:
+            return pd.Series([default_value] * len(scored_quotes), index=scored_quotes.index)
+        return pd.to_numeric(scored_quotes[column_name], errors="coerce").fillna(default_value)
+
+    annual_commit = numeric_column("annual_commit")
+    max_annual_commit = max(float(annual_commit.max() or 0), 1.0)
+    annual_commit_score = (annual_commit / max_annual_commit * 25).clip(0, 25)
+
+    quote_age_hours = numeric_column("quote_age_hours")
+    quote_age_score = (quote_age_hours / 4 * 15).clip(0, 15)
+
+    stage_values = scored_quotes["stage"] if "stage" in scored_quotes.columns else pd.Series([""] * len(scored_quotes), index=scored_quotes.index)
+    stage_weights = {
+        "Negotiation": 20,
+        "Negotiation/Review": 20,
+        "Proposal/Price Quote": 18,
+        "Qualification": 12,
+        "Prospecting": 6,
+        "Discovery": 6,
+        "Value Proposition": 10,
+        "Procurement": 16,
+        "Legal Review": 16,
+    }
+    stage_score = stage_values.astype(str).map(stage_weights).fillna(8)
+
+    sla_status = scored_quotes["sla_status"] if "sla_status" in scored_quotes.columns else pd.Series([""] * len(scored_quotes), index=scored_quotes.index)
+    sla_score = sla_status.astype(str).str.contains("Past SLA", case=False, na=False).map({True: 20, False: 0})
+
+    requested_rollover = numeric_column("requested_rollover")
+    rollover_score = requested_rollover.apply(lambda value: 8 if float(value or 0) > 0 else 0)
+
+    payment_terms = scored_quotes["payment_terms"] if "payment_terms" in scored_quotes.columns else pd.Series([""] * len(scored_quotes), index=scored_quotes.index)
+    payment_terms_score = payment_terms.astype(str).str.replace(" ", "", regex=False).str.lower().ne("net30").map({True: 6, False: 0})
+
+    demand_planning = scored_quotes["demand_planning_complete"] if "demand_planning_complete" in scored_quotes.columns else pd.Series([""] * len(scored_quotes), index=scored_quotes.index)
+    demand_planning_score = demand_planning.astype(str).str.strip().str.lower().eq("no").map({True: 5, False: 0})
+
+    memo_modified = scored_quotes["quote_memo_modified"] if "quote_memo_modified" in scored_quotes.columns else pd.Series([""] * len(scored_quotes), index=scored_quotes.index)
+    memo_score = memo_modified.astype(str).str.strip().str.lower().eq("yes").map({True: 5, False: 0})
+
+    cross_service_discount = numeric_column("cross_service_discount_percent")
+    discount_score = (cross_service_discount / 50 * 6).clip(0, 6)
+
+    scored_quotes["priority_score"] = (
+        annual_commit_score
+        + quote_age_score
+        + stage_score
+        + sla_score
+        + rollover_score
+        + payment_terms_score
+        + demand_planning_score
+        + memo_score
+        + discount_score
+    ).round(1)
+
+    sort_columns = ["priority_score"]
+    if "annual_commit" in scored_quotes.columns:
+        sort_columns.append("annual_commit")
+    if "quote_age_hours" in scored_quotes.columns:
+        sort_columns.append("quote_age_hours")
+
+    top_quote = scored_quotes.sort_values(by=sort_columns, ascending=[False] * len(sort_columns)).iloc[0]
+
+    reasons = []
+    if float(top_quote.get("annual_commit", 0) or 0) > 0:
+        reasons.append("high commercial value with annual commit of $%s" % format(float(top_quote.get("annual_commit", 0)), ",.0f"))
+    if str(top_quote.get("sla_status", "")).lower().startswith("past sla") or float(top_quote.get("quote_age_hours", 0) or 0) > 4:
+        reasons.append("quote is past the 4-hour Deal Desk SLA")
+    if str(top_quote.get("stage", "")).strip():
+        reasons.append("opportunity stage is %s" % str(top_quote.get("stage", "")).strip())
+    if float(top_quote.get("requested_rollover", 0) or 0) > 0:
+        reasons.append("requested rollover adds Finance review complexity")
+    if str(top_quote.get("demand_planning_complete", "")).strip().lower() == "no":
+        reasons.append("demand planning is incomplete")
+    if str(top_quote.get("payment_terms", "")).replace(" ", "").lower() != "net30":
+        reasons.append("payment terms are non-standard")
+    if str(top_quote.get("quote_memo_modified", "")).strip().lower() == "yes":
+        reasons.append("customer memo terms were modified")
+
+    score = float(top_quote.get("priority_score", 0) or 0)
+    if score >= 70:
+        priority_level = "High"
+    elif score >= 45:
+        priority_level = "Medium"
+    else:
+        priority_level = "Low"
+
+    quote_id = str(top_quote.get("quote_id", ""))
+    account_name = str(top_quote.get("account_name", ""))
+    summary = "Prioritize %s%s because it has %s." % (
+        quote_id,
+        " for " + account_name if account_name else "",
+        "; ".join(reasons[:5]) if reasons else "the highest combined prioritization score",
+    )
+
+    return {
+        "quote_id": quote_id,
+        "account_name": account_name,
+        "priority_level": priority_level,
+        "priority_score": round(score, 1),
+        "summary": summary,
+        "reasons": reasons,
+    }
+
 def get_discount_tier(matrix: List[Dict], annual_commit: float) -> Optional[Dict]:
     for tier in matrix:
         min_commit = float(tier["min_annual_commit"])
@@ -186,6 +306,8 @@ def get_quote_discount_summary(quote, qli: pd.DataFrame, approval_rules: Dict) -
         add_on_required, add_on_max = "Unknown", "N/A"
         add_on_ae_limit = 0.0
 
+    requested_rollover = float(quote.get("requested_rollover", 0) or 0)
+
     requested_deal_investment = float(quote.get("requested_deal_investment", 0) or 0)
     requested_deal_investment_percent = (
         round((requested_deal_investment / annual_commit) * 100, 1)
@@ -212,6 +334,7 @@ def get_quote_discount_summary(quote, qli: pd.DataFrame, approval_rules: Dict) -
         "quote_memo_modified": str(quote.get("quote_memo_modified", "")),
         "term_months": int(quote["term_months"]),
         "payment_terms": str(quote.get("payment_terms", "")),
+        "requested_rollover": requested_rollover,
         "cross_service_requested_discount": cross_service_requested,
         "cross_service_ae_preapproved_discount": cross_ae_limit,
         "cross_service_ratio_to_ae_preapproved": cross_ratio_to_ae,

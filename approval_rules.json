@@ -153,10 +153,7 @@
       "reason": "Customer modified usage or overage language; Finance review is required because true-up, overage billing, and consumption treatment may affect revenue recognition or demand planning."
     },
     "Rollover": {
-      "approval_required": [
-        "Finance",
-        "Practice Manager"
-      ],
+      "approval_required": "Finance",
       "approval_rule": "Rollover Clause Modification",
       "reason": "Customer modified rollover language; Finance review is required for commercial and revenue impact, and Practice Manager review may be required when demand planning is incomplete or adoption risk is present."
     }
