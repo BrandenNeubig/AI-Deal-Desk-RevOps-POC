@@ -1,36 +1,42 @@
 # Luna y Sol Shepherd Systems
 
-A Streamlit-based proof of concept showing how an AI Deal Desk assistant can augment legacy Deal Desk workflows without replacing human approval authority.
+**Luna y Sol Shepherd Systems** is a Streamlit-based AI Deal Desk / RevOps proof of concept that demonstrates how AI can augment quote review workflows without replacing human approval authority.
 
-Take a look at: https://shepherdsystems.streamlit.app
+The app combines deterministic approval rules, mock Salesforce-style quote data, AI-assisted deal summaries, peer comparison context, and workflow integrations to simulate a modern Deal Desk review experience.
+
+**Live app:** https://shepherdsystems.streamlit.app  
+**GitHub repo:** https://github.com/BrandenNeubig/AI-Deal-Desk-RevOps-POC
 
 If the Streamlit app is suspended when you open it, click **Wake up** and give it a moment to restart.
 
 ## Core Concept
 
-This project uses a two-layer model:
+The project is built around a two-layer model:
 
 - **Luna (Guardrails)**  
-  Deterministic rules engine for approval thresholds, policy enforcement, clause modification review, demand planning checks, SLA aging, and routing.
+  A deterministic rules engine for approval thresholds, policy enforcement, clause modification review, demand planning checks, SLA aging, and routing.
 
 - **Sol (Judgment)**  
-  AI-assisted summary layer that explains deal context, compares peer quotes, identifies commercial risks, and recommends next steps.
+  An AI-assisted insights layer that summarizes deal context, compares peer quotes, identifies commercial risks, and recommends next steps.
 
 The system does **not** make approval decisions on behalf of the business.  
 It evaluates rules, summarizes context, and supports human reviewers.
 
 ---
 
-## Current Positioning
+## Portfolio Positioning
 
-This POC is designed to demonstrate how AI can function as a Deal Desk assistant layered on top of legacy systems, structured quote data, business rules, and unstructured order form memo language.
+This project was built as a portfolio demonstration during a job search to show practical AI application in a real Deal Desk workflow.
+
+Rather than using AI as an autonomous approver, the POC shows how AI can be layered on top of legacy systems, structured quote data, business rules, and unstructured order form memo language to help reviewers move faster with better context.
 
 Key themes:
-- deterministic approvals remain in place
-- AI provides explanation, triage, and reviewer guidance
-- the workflow is designed for human decision support, not autonomous approval
-- the system supports both structured quote review and simulated order form memo review
-- the interface is branded as **Luna y Sol Shepherd Systems** to reinforce the dual-model concept
+- deterministic approval logic remains the source of truth
+- AI provides explanation, triage, peer context, and reviewer guidance
+- human approvers retain final decision authority
+- the workflow supports both structured quote review and simulated order form memo review
+- downstream actions such as Slack support requests and office-hours scheduling are connected to the review workflow
+- the **Luna y Sol Shepherd Systems** branding reinforces the dual-model concept: rules-based guardrails plus AI-assisted judgment
 
 ---
 
@@ -41,6 +47,7 @@ Key themes:
 - Pending quote aging by region against a 4-hour Deal Desk SLA
 - Quote age and SLA status tracking
 - Pending Quotes section filtered by selected region
+- Quote prioritization button that recommends the next quote to review and updates the selected quote
 - Business justification pulled directly from `quotes.csv`
 - Quote Details section showing:
   - annual commit
@@ -48,6 +55,7 @@ Key themes:
   - demand planning status
   - term months
   - payment terms
+  - rollover percentage
 - Cross-service discount review table
 - Add-on discount review table
 - Customer investment funds review table
@@ -57,7 +65,11 @@ Key themes:
 - AI summary table with cleaner formatting for multi-part recommendations
 - Requested Quote vs Industry Peers table using industry peer medians instead of averages
 - Quote Preview generated from the selected quote
-- Quote Tools section with placeholder workflow action: **Transfer Quote to Customer Schedule (Coming soon)**
+- Quote Tools section with downstream workflow actions:
+  - Quote Preview
+  - Transfer Quote to Customer Schedule Template
+  - Reserve Deal Desk Open Office Hours via Calendly
+  - Request Support via Slack
 - Custom logo and branded header for **Luna y Sol Shepherd Systems**
 
 ---
@@ -111,7 +123,13 @@ A quote requires Finance review when:
 
 This flags potential under-sizing, demand planning risk, or missed expansion opportunity.
 
-### 8. Clause Modification Review Rules
+### 8. Rollover Review Rule
+A quote requires review when:
+- rollover percentage is greater than 0%
+
+This flags situations where unused prior-period commitment is being carried into a new commercial period and may require Finance, Deal Desk, or leadership review depending on policy.
+
+### 9. Clause Modification Review Rules
 Simulated order form memo modifications can route to Legal or Finance depending on the clause topic and business impact.
 
 Example clause topics include:
@@ -132,6 +150,7 @@ Recent dataset updates include:
   - `demand_planning_complete`
   - `quote_memo_modified`
   - `quote_age_hours`
+  - `rollover_percentage`
 - `contracts.csv` includes:
   - `trailing_3_months`
   - `annualized_t3m`
@@ -154,6 +173,7 @@ The current app is designed around pending deal triage rather than manual accoun
 Current GUI behavior:
 - show pending quote aging by region against a 4-hour SLA
 - filter pending quotes by selected region
+- recommend the highest-priority quote for review
 - select a pending quote for review
 - display quote details in focused approval-review tables
 - show clause modifications and simulated redlines when applicable
@@ -162,7 +182,7 @@ Current GUI behavior:
 - summarize context through Sol’s AI assistant layer
 - show industry peer median comparisons across commercial metrics
 - generate a customer-facing Quote Preview based on the selected quote
-- expose Quote Tools for future workflow actions
+- expose Quote Tools for customer-facing quote preview, schedule template generation, Calendly office-hours scheduling, and Slack support requests
 
 The header uses the **Luna y Sol Shepherd Systems** name and custom shepherd logo.
 
@@ -187,6 +207,20 @@ The template also includes:
 - modified memo clauses when a quote has an order form memo modification
 - customer investment fund language stating that funds must be used within twelve months or expire
 - a scheduling note instructing the customer to contact their Practice Manager for scheduling
+
+---
+
+## Demo Workflow
+
+A typical demo flow:
+
+1. Review pending quote aging by region and SLA status.
+2. Use **Recommend Quote to Prioritize** to identify the next quote for review.
+3. Review quote details, discount authority, rollover, deal investment funds, clause modifications, and business justification.
+4. Click **Evaluate Quote** to run Luna’s approval rules and Sol’s AI-assisted summary.
+5. Compare the requested quote against same-industry peer medians.
+6. Review the approval matrix, approval details, and AI-generated Deal Desk summary.
+7. Use Quote Tools to preview a customer-facing quote, generate or upload a customer schedule, reserve Deal Desk office hours, or request support via Slack.
 
 ---
 
@@ -216,4 +250,4 @@ AI-Deal-Desk-RevOps-POC/
 
 ## Note
 
-ChatGPT was used to assist the author with code generation, iteration, and refinement for this proof of concept.
+ChatGPT was used to assist the author with code generation, debugging, iteration, documentation, and refinement for this proof of concept. The business logic, workflow design, validation, and final implementation decisions were reviewed and directed by the author.
