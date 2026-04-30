@@ -455,6 +455,18 @@ def check_quote_approvals(quote, qli, approval_rules, memo_classifications=None)
             ),
         )
 
+    requested_rollover = float(discount_summary.get("requested_rollover", quote.get("requested_rollover", 0)) or 0)
+    if requested_rollover > 0:
+        rollover_rule = approval_rules.get("rollover_rule", {})
+        add_approval(
+            rollover_rule.get("approval_rule", "Requested Rollover"),
+            rollover_rule.get("approval_required", "Finance"),
+            rollover_rule.get(
+                "reason",
+                "Requested rollover requires Finance review because unused prepaid commit carrying forward may affect renewal economics, forecast quality, and future consumption treatment."
+            ),
+        )
+
     demand_planning_rule = approval_rules.get("demand_planning_rule", {})
     demand_planning_required_value = str(
         demand_planning_rule.get("conditions", {}).get("demand_planning_complete", "No")
@@ -468,6 +480,17 @@ def check_quote_approvals(quote, qli, approval_rules, memo_classifications=None)
             demand_planning_rule.get(
                 "reason",
                 "Demand planning is incomplete while deal investment funds are requested; Practice Manager review is required to validate PS&T capacity and scope."
+            ),
+        )
+
+    rollover_without_demand_plan_rule = approval_rules.get("rollover_without_demand_plan_rule", {})
+    if requested_rollover > 0 and demand_planning_value == demand_planning_required_value:
+        add_approval(
+            rollover_without_demand_plan_rule.get("approval_rule", "Requested Rollover Without Demand Plan"),
+            rollover_without_demand_plan_rule.get("approval_required", "Finance + Practice Manager"),
+            rollover_without_demand_plan_rule.get(
+                "reason",
+                "Requested rollover with incomplete demand planning requires Finance and Practice Manager review to validate renewal economics, consumption assumptions, and implementation/adoption plan."
             ),
         )
 
@@ -717,6 +740,7 @@ def build_review_payload(data, quote_id: str):
             "quote_memo_modified": str(quote.get("quote_memo_modified", "")),
             "term_months": int(quote["term_months"]),
             "payment_terms": str(quote.get("payment_terms", "")),
+            "requested_rollover": float(quote.get("requested_rollover", 0) or 0),
             "total_contract_value": int(quote["total_contract_value"]),
             "requested_deal_investment": float(quote.get("requested_deal_investment", 0) or 0),
             "cross_service_discount_percent": float(quote["cross_service_discount_percent"]),
